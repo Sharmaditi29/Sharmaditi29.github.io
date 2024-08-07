@@ -11,7 +11,7 @@ showInMenu: true
 
 Namastey🙏!! Hello👋 !!! Moin👋!!!
 
-I am Aditi Sharma, a nature enthusiast, love for science and research!Since childhood, I have been among those kids where people are mostly annoyed,Why??? Because I always asked a lot of questions!!! Starting from asking questions to start finding an answer on my own, I started a journey in research as a PhD student.
+I am Aditi Sharma, a nature enthusiast, science lover and a full-time researcher.Since childhood, I've been one of those kids who annoyed people because I always asked a lot of questions. Starting from asking questions to start finding an answer on my own, I started a journey in research as a PhD student.
 
 Find more about me and my several experiences of my journey abroad!!!
 Enjoyy!!!
