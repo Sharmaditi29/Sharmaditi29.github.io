@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glomerular Spatial Map</title>
+    <meta
+      name="description"
+      content="An interactive glomerular map inspired by the UKE/IMS Xenium crescentic glomerulonephritis dataset."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header">
+        <a class="back-link" href="/">Aditi Sharma</a>
+        <p class="kicker">Spatial kidney disease explorer</p>
+        <h1>Glomerular injury, as a living map</h1>
+        <p class="lede">
+          A compact, browser-native visualization modelled from the xenium-cgn
+          crescentic glomerulonephritis workflow: cells, local signals, and
+          tissue-state changes inside one glomerular niche.
+        </p>
+      </header>
+
+      <section class="workspace" aria-label="Interactive glomerular map">
+        <aside class="control-panel" aria-label="Map controls">
+          <div>
+            <p class="panel-label">Disease state</p>
+            <div class="stage-tabs" id="stageTabs" role="tablist" aria-label="Disease state"></div>
+          </div>
+
+          <div>
+            <p class="panel-label">Visible layers</p>
+            <div class="toggle-list" id="layerToggles"></div>
+          </div>
+
+          <div class="sample-panel">
+            <p class="panel-label">Dataset frame</p>
+            <dl>
+              <div>
+                <dt>Spatial assay</dt>
+                <dd>Xenium in situ transcriptomics</dd>
+              </div>
+              <div>
+                <dt>Study model</dt>
+                <dd>Crescentic glomerulonephritis</dd>
+              </div>
+              <div>
+                <dt>Display data</dt>
+                <dd>Curated, downsampled summary</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+
+        <section class="map-panel">
+          <div class="map-heading">
+            <div>
+              <p class="panel-label">Central visual map</p>
+              <h2 id="stageTitle">Control glomerulus</h2>
+            </div>
+            <div class="stage-meter" aria-label="Disease progression">
+              <span>Control</span>
+              <div class="meter-track">
+                <span id="meterFill"></span>
+              </div>
+              <span>Crescent</span>
+            </div>
+          </div>
+
+          <div class="svg-wrap">
+            <svg
+              id="glomerulusMap"
+              viewBox="0 0 940 720"
+              role="img"
+              aria-labelledby="mapTitle mapDesc"
+            >
+              <title id="mapTitle">Interactive glomerular spatial map</title>
+              <desc id="mapDesc">
+                Stylized map of a glomerulus showing cell populations and
+                signalling pathways across crescentic kidney disease states.
+              </desc>
+              <defs>
+                <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="oklch(0.22 0.035 250)" flood-opacity="0.14" />
+                </filter>
+                <radialGradient id="tissueGradient" cx="48%" cy="44%" r="68%">
+                  <stop offset="0%" stop-color="oklch(0.985 0.018 88)" />
+                  <stop offset="58%" stop-color="oklch(0.948 0.022 77)" />
+                  <stop offset="100%" stop-color="oklch(0.9 0.028 60)" />
+                </radialGradient>
+                <radialGradient id="stressGradient" cx="54%" cy="48%" r="58%">
+                  <stop offset="0%" stop-color="oklch(0.79 0.14 32)" stop-opacity="0.65" />
+                  <stop offset="56%" stop-color="oklch(0.68 0.15 28)" stop-opacity="0.2" />
+                  <stop offset="100%" stop-color="oklch(0.68 0.15 28)" stop-opacity="0" />
+                </radialGradient>
+                <marker id="arrowPd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="oklch(0.6 0.16 42)" />
+                </marker>
+                <marker id="arrowTgf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="oklch(0.5 0.14 178)" />
+                </marker>
+                <marker id="arrowIfn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="oklch(0.52 0.13 262)" />
+                </marker>
+              </defs>
+              <g id="staticLayer"></g>
+              <g id="stressLayer"></g>
+              <g id="signalLayer"></g>
+              <g id="cellLayer"></g>
+              <g id="labelLayer"></g>
+            </svg>
+            <div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <aside class="reading-panel" aria-label="Current state details">
+          <div class="state-card">
+            <p class="panel-label">Current reading</p>
+            <h3 id="readingTitle">Spatial baseline</h3>
+            <p id="readingText"></p>
+          </div>
+
+          <div>
+            <p class="panel-label">Cell composition index</p>
+            <div class="bar-list" id="compositionBars"></div>
+          </div>
+
+          <div>
+            <p class="panel-label">Active signals</p>
+            <div class="signal-list" id="signalList"></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="source-band" aria-label="Dataset sources">
+        <div>
+          <p class="panel-label">Data source</p>
+          <p>
+            Built from a small curated summary of the UKE/IMS
+            <a href="https://github.com/imsb-uke/xenium-cgn" target="_blank" rel="noreferrer">xenium-cgn</a>
+            analysis workflow and the associated spatial kidney disease paper.
+            The raw spatial datasets are listed by the authors as GEO
+            <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE294965" target="_blank" rel="noreferrer">GSE294965</a>
+            and snRNA-seq
+            <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303481" target="_blank" rel="noreferrer">GSE303481</a>.
+          </p>
+        </div>
+        <div>
+          <p class="panel-label">Prototype scope</p>
+          <p>
+            The embedded numbers are relative display indices, not a substitute
+            for full-resolution Xenium coordinates. The structure is ready for
+            a future export of cell centroids, annotations, and pathway scores.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
