@@ -1,0 +1,119 @@
+import { mkdir, rm, writeFile } from 'node:fs/promises'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { build } from 'esbuild'
+
+const currentDir = path.dirname(fileURLToPath(import.meta.url))
+const appRoot = path.resolve(currentDir, '..')
+const outputRoot = path.resolve(appRoot, '../../static/Experiments/wortspiel')
+const assetsRoot = path.join(outputRoot, 'assets')
+
+await rm(outputRoot, { recursive: true, force: true })
+await mkdir(assetsRoot, { recursive: true })
+
+await build({
+  absWorkingDir: appRoot,
+  entryPoints: ['src/static-entry.tsx'],
+  outfile: path.join(assetsRoot, 'app.js'),
+  bundle: true,
+  format: 'esm',
+  target: ['es2020'],
+  minify: true,
+  jsx: 'automatic',
+  define: {
+    'process.env.NODE_ENV': '"production"',
+  },
+})
+
+const html = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#fbf4e8',
+              paper: '#fffaf1',
+              ink: '#213547',
+              notebook: '#6f7d89',
+              sun: '#f5c55c',
+              apricot: '#f29f6b',
+              blush: '#db6b5f',
+              leaf: '#7bb26a',
+              sky: '#88a8d8',
+              line: '#eadbc5'
+            },
+            boxShadow: {
+              card: '0 20px 40px rgba(33, 53, 71, 0.08)',
+              soft: '0 10px 24px rgba(33, 53, 71, 0.08)'
+            },
+            fontFamily: {
+              display: ['"Bricolage Grotesque"', 'sans-serif'],
+              body: ['"Nunito"', 'sans-serif']
+            },
+            backgroundImage: {
+              rulebook:
+                'linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.65)), repeating-linear-gradient(180deg, transparent 0, transparent 34px, rgba(234,219,197,0.65) 34px, rgba(234,219,197,0.65) 35px)'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        color: #213547;
+        background: #fbf4e8;
+        font-family: 'Nunito', sans-serif;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        background:
+          radial-gradient(circle at top left, rgba(245, 197, 92, 0.16), transparent 26%),
+          radial-gradient(circle at top right, rgba(219, 107, 95, 0.12), transparent 24%),
+          linear-gradient(180deg, #fbf4e8 0%, #f8efe1 100%);
+        color: #213547;
+      }
+
+      #root {
+        min-height: 100vh;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+    </style>
+    <title>WortSpiel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>
+`
+
+await writeFile(path.join(outputRoot, 'index.html'), html, 'utf8')
+
+process.exit(0)
