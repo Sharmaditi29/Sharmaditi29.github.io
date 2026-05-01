@@ -1,0 +1,47 @@
+{{- define "main" -}}
+
+{{- partial "navbar.html" . -}}
+{{- partial "navbar-clone.html" . -}}
+
+<section class="section projects-section">
+  <div class="container projects-shell project-single-shell">
+    <div class="project-backlink">
+      <a href="{{ "projects/" | relURL }}">All projects</a>
+    </div>
+
+    <header class="project-single-hero">
+      <div class="project-card-meta">
+        {{- with .Params.status -}}<span class="project-pill">{{ . }}</span>{{- end -}}
+        {{- with .Params.projectType -}}<span class="project-meta-text">{{ . }}</span>{{- end -}}
+      </div>
+      <h1 class="title is-2 section-title">{{ .Title }}</h1>
+      {{- with .Params.subtitle -}}
+      <p class="projects-subtitle">{{ . }}</p>
+      {{- end -}}
+      {{- with .Params.stack -}}
+      <p class="project-stack project-stack-single">{{ delimit . " / " }}</p>
+      {{- end -}}
+      <div class="project-card-actions project-single-actions">
+        {{- with .Params.projectUrl -}}
+        <a href="{{ . }}" class="button is-primary" target="_blank" rel="noreferrer">Launch demo</a>
+        {{- end -}}
+        {{- with .Params.codeUrl -}}
+        <a href="{{ . }}" class="button is-light" target="_blank" rel="noreferrer">View source</a>
+        {{- end -}}
+      </div>
+      <div class="divider"></div>
+    </header>
+
+    <div class="content project-single-content has-text-justified">
+      {{- .Content -}}
+    </div>
+  </div>
+</section>
+
+{{- partial "footer.html" . -}}
+
+<div id="backtotop"><a href="#"></a></div>
+
+{{- partial "sidebar.html" . -}}
+
+{{- end -}}

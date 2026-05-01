@@ -1,0 +1,97 @@
+{{- define "main" -}}
+
+{{- partial "navbar.html" . -}}
+{{- partial "navbar-clone.html" . -}}
+
+<section class="section projects-section">
+  <div class="container projects-shell">
+    <header class="projects-hero">
+      <p class="projects-kicker">Projects</p>
+      <h1 class="title is-2 section-title">{{- .Title -}}</h1>
+      {{- with .Params.subtitle -}}
+      <p class="projects-subtitle">{{ . }}</p>
+      {{- end -}}
+      <div class="divider"></div>
+      <div class="content projects-intro">
+        {{- .Content -}}
+      </div>
+    </header>
+
+    {{- $featured := where .RegularPages "Params.featured" true -}}
+    {{- $others := where .RegularPages "Params.featured" "!=" true -}}
+    {{- $featured = $featured.ByDate.Reverse -}}
+    {{- $others = $others.ByDate.Reverse -}}
+
+    <div class="projects-grid">
+      {{- range $featured -}}
+      <article class="project-card project-card-featured">
+        <div class="project-card-body">
+          <div class="project-card-meta">
+            {{- with .Params.status -}}<span class="project-pill">{{ . }}</span>{{- end -}}
+            {{- with .Params.projectType -}}<span class="project-meta-text">{{ . }}</span>{{- end -}}
+          </div>
+          <h2 class="project-card-title"><a href="{{- .Permalink | relURL -}}">{{ .Title }}</a></h2>
+          <p class="project-card-summary">
+            {{- if .Params.summary -}}
+              {{- .Params.summary -}}
+            {{- else -}}
+              {{- .Plain -}}
+            {{- end -}}
+          </p>
+          {{- with .Params.stack -}}
+          <p class="project-stack">{{ delimit . " / " }}</p>
+          {{- end -}}
+        </div>
+        <div class="project-card-actions">
+          <a href="{{- .Permalink | relURL -}}" class="button is-primary">Open project</a>
+          {{- with .Params.projectUrl -}}
+          <a href="{{ . }}" class="button is-light" target="_blank" rel="noreferrer">Live demo</a>
+          {{- end -}}
+          {{- with .Params.codeUrl -}}
+          <a href="{{ . }}" class="button is-light" target="_blank" rel="noreferrer">Source</a>
+          {{- end -}}
+        </div>
+      </article>
+      {{- end -}}
+
+      {{- range $others -}}
+      <article class="project-card">
+        <div class="project-card-body">
+          <div class="project-card-meta">
+            {{- with .Params.status -}}<span class="project-pill">{{ . }}</span>{{- end -}}
+            {{- with .Params.projectType -}}<span class="project-meta-text">{{ . }}</span>{{- end -}}
+          </div>
+          <h2 class="project-card-title"><a href="{{- .Permalink | relURL -}}">{{ .Title }}</a></h2>
+          <p class="project-card-summary">
+            {{- if .Params.summary -}}
+              {{- .Params.summary -}}
+            {{- else -}}
+              {{- .Plain -}}
+            {{- end -}}
+          </p>
+          {{- with .Params.stack -}}
+          <p class="project-stack">{{ delimit . " / " }}</p>
+          {{- end -}}
+        </div>
+        <div class="project-card-actions">
+          <a href="{{- .Permalink | relURL -}}" class="button is-primary">Open project</a>
+          {{- with .Params.projectUrl -}}
+          <a href="{{ . }}" class="button is-light" target="_blank" rel="noreferrer">Live demo</a>
+          {{- end -}}
+          {{- with .Params.codeUrl -}}
+          <a href="{{ . }}" class="button is-light" target="_blank" rel="noreferrer">Source</a>
+          {{- end -}}
+        </div>
+      </article>
+      {{- end -}}
+    </div>
+  </div>
+</section>
+
+{{- partial "footer.html" . -}}
+
+<div id="backtotop"><a href="#"></a></div>
+
+{{- partial "sidebar.html" . -}}
+
+{{- end -}}
