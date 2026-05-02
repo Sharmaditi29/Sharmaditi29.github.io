@@ -6,6 +6,8 @@ interface SentencePracticeProps {
   answer?: SentenceAnswer
   currentIndex: number
   totalCards: number
+  languageLabel: string
+  sentencePlaceholder: string
   onPrevious: () => void
   onNext: () => void
   onSave: (text: string) => void
@@ -16,6 +18,8 @@ export function SentencePractice({
   answer,
   currentIndex,
   totalCards,
+  languageLabel,
+  sentencePlaceholder,
   onPrevious,
   onNext,
   onSave,
@@ -58,16 +62,16 @@ export function SentencePractice({
           Write your own sentence using {card.german}.
         </h3>
         <p className="mt-3 text-base leading-7 text-notebook">
-          Keep it simple. One clear sentence is enough for a good daily win.
+          One simple {languageLabel.toLowerCase()} sentence is enough.
         </p>
 
         <label className="mt-6 block">
-          <span className="sr-only">Your German sentence</span>
+          <span className="sr-only">Your sentence</span>
           <textarea
             value={text}
             onChange={(event) => setText(event.target.value)}
             rows={5}
-            placeholder={`Zum Beispiel: Ich ... ${card.german} ...`}
+            placeholder={sentencePlaceholder}
             className="w-full rounded-[22px] border border-line bg-paper px-4 py-4 text-base text-ink shadow-soft outline-none transition focus:border-sun"
           />
         </label>

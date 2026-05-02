@@ -1,29 +1,12 @@
 import { mkdir, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { build } from 'esbuild'
+import { execFileSync } from 'node:child_process'
 
 const currentDir = path.dirname(fileURLToPath(import.meta.url))
 const appRoot = path.resolve(currentDir, '..')
 const outputRoot = path.resolve(appRoot, '../../static/Experiments/wortspiel')
 const assetsRoot = path.join(outputRoot, 'assets')
-
-await rm(outputRoot, { recursive: true, force: true })
-await mkdir(assetsRoot, { recursive: true })
-
-await build({
-  absWorkingDir: appRoot,
-  entryPoints: ['src/static-entry.tsx'],
-  outfile: path.join(assetsRoot, 'app.js'),
-  bundle: true,
-  format: 'esm',
-  target: ['es2020'],
-  minify: true,
-  jsx: 'automatic',
-  define: {
-    'process.env.NODE_ENV': '"production"',
-  },
-})
 
 const html = `<!doctype html>
 <html lang="en">
@@ -42,20 +25,24 @@ const html = `<!doctype html>
         theme: {
           extend: {
             colors: {
-              cream: '#fbf4e8',
-              paper: '#fffaf1',
-              ink: '#213547',
-              notebook: '#6f7d89',
-              sun: '#f5c55c',
-              apricot: '#f29f6b',
-              blush: '#db6b5f',
-              leaf: '#7bb26a',
-              sky: '#88a8d8',
-              line: '#eadbc5'
+              cream: '#fff1dc',
+              paper: '#fffafc',
+              ink: '#24324a',
+              notebook: '#6a7294',
+              sun: '#ffcd5c',
+              apricot: '#ff9e68',
+              blush: '#ff5d8f',
+              leaf: '#57b971',
+              sky: '#7ab6ff',
+              bubble: '#8d7cff',
+              mint: '#90ead8',
+              peach: '#ffd7b8',
+              splash: '#5d5fef',
+              line: '#f1d8ea'
             },
             boxShadow: {
-              card: '0 20px 40px rgba(33, 53, 71, 0.08)',
-              soft: '0 10px 24px rgba(33, 53, 71, 0.08)'
+              card: '0 22px 48px rgba(93, 95, 239, 0.12)',
+              soft: '0 12px 28px rgba(255, 93, 143, 0.12)'
             },
             fontFamily: {
               display: ['"Bricolage Grotesque"', 'sans-serif'],
@@ -71,8 +58,8 @@ const html = `<!doctype html>
     </script>
     <style>
       :root {
-        color: #213547;
-        background: #fbf4e8;
+        color: #24324a;
+        background: #fff6fb;
         font-family: 'Nunito', sans-serif;
         font-synthesis: none;
         text-rendering: optimizeLegibility;
@@ -88,10 +75,11 @@ const html = `<!doctype html>
         margin: 0;
         min-width: 320px;
         background:
-          radial-gradient(circle at top left, rgba(245, 197, 92, 0.16), transparent 26%),
-          radial-gradient(circle at top right, rgba(219, 107, 95, 0.12), transparent 24%),
-          linear-gradient(180deg, #fbf4e8 0%, #f8efe1 100%);
-        color: #213547;
+          radial-gradient(circle at top left, rgba(255, 116, 181, 0.18), transparent 24%),
+          radial-gradient(circle at top right, rgba(126, 214, 196, 0.18), transparent 22%),
+          radial-gradient(circle at bottom left, rgba(255, 205, 92, 0.14), transparent 20%),
+          linear-gradient(180deg, #fff6fb 0%, #fff4e7 100%);
+        color: #24324a;
       }
 
       #root {
@@ -114,6 +102,33 @@ const html = `<!doctype html>
 </html>
 `
 
-await writeFile(path.join(outputRoot, 'index.html'), html, 'utf8')
+export async function buildStaticSite() {
+  await rm(outputRoot, { recursive: true, force: true })
+  await mkdir(assetsRoot, { recursive: true })
 
-process.exit(0)
+  execFileSync(
+    path.join(appRoot, 'node_modules', '.bin', 'esbuild'),
+    [
+      'src/static-entry.tsx',
+      '--bundle',
+      '--format=esm',
+      '--target=es2020',
+      '--minify',
+      '--jsx=automatic',
+      `--outfile=${path.join(assetsRoot, 'app.js')}`,
+      '--define:process.env.NODE_ENV="production"',
+    ],
+    {
+      cwd: appRoot,
+      stdio: 'inherit',
+    },
+  )
+
+  await writeFile(path.join(outputRoot, 'index.html'), html, 'utf8')
+}
+
+const isDirectRun = process.argv[1] === fileURLToPath(import.meta.url)
+
+if (isDirectRun) {
+  await buildStaticSite()
+}

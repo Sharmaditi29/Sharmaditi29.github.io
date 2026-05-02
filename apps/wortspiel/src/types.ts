@@ -1,4 +1,5 @@
 export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2'
+export type LearningLanguage = 'german' | 'finnish'
 
 export interface VocabularyCard {
   id: string
@@ -16,6 +17,13 @@ export interface VocabularyCard {
 export interface SentenceAnswer {
   text: string
   submittedAt: string
+}
+
+export interface LanguageOption {
+  id: LearningLanguage
+  label: string
+  accentClass: string
+  sentencePlaceholder: string
 }
 
 export interface DailyActivity {

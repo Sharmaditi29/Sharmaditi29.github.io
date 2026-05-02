@@ -8,6 +8,8 @@ interface PracticeSessionProps {
   cards: VocabularyCard[]
   progress: ProgressState
   selectedLevel: string
+  selectedLanguage: string
+  sentencePlaceholder: string
   onCardFeedback: (cardId: string, outcome: 'known' | 'practice') => void
   onSentenceSave: (cardId: string, text: string) => void
 }
@@ -22,6 +24,8 @@ export function PracticeSession({
   cards,
   progress,
   selectedLevel,
+  selectedLanguage,
+  sentencePlaceholder,
   onCardFeedback,
   onSentenceSave,
 }: PracticeSessionProps) {
@@ -39,17 +43,16 @@ export function PracticeSession({
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
           <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-notebook">
-            Practice session
+            Practice
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold text-ink sm:text-4xl">
-            WortSpiel {selectedLevel}
+            {selectedLanguage} {selectedLevel}
           </h2>
-          <p className="mt-3 max-w-2xl text-base leading-8 text-notebook">
-            Move between flashcards, sentence practice, and quiz mode whenever you
-            want. The app keeps saving your progress locally as you go.
+          <p className="mt-3 max-w-2xl text-base leading-7 text-notebook">
+            Flip cards, write a line, try a quick quiz.
           </p>
         </div>
-        <div className="shrink-0 rounded-[22px] bg-cream/70 px-4 py-3 text-sm font-bold text-notebook">
+        <div className="shrink-0 rounded-[22px] bg-peach/45 px-4 py-3 text-sm font-bold text-notebook">
           {progress.reviewedCardIds.length} unique cards reviewed
         </div>
       </div>
@@ -65,8 +68,8 @@ export function PracticeSession({
               onClick={() => setMode(item.key)}
               className={`rounded-[22px] border p-4 text-left transition ${
                 active
-                  ? 'border-ink bg-ink text-paper shadow-soft'
-                  : 'border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-sun'
+                  ? 'border-splash bg-splash text-paper shadow-soft'
+                  : 'border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble'
               }`}
             >
               <p className="font-bold">{item.title}</p>
@@ -99,11 +102,13 @@ export function PracticeSession({
             totalCards={cards.length}
             onPrevious={goPrevious}
             onNext={goNext}
+            languageLabel={selectedLanguage}
+            sentencePlaceholder={sentencePlaceholder}
             onSave={(text) => onSentenceSave(currentCard.id, text)}
           />
         )}
 
-        {mode === 'quiz' && <QuizMode cards={cards} />}
+        {mode === 'quiz' && <QuizMode cards={cards} languageLabel={selectedLanguage} />}
       </div>
     </section>
   )

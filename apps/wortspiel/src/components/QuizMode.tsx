@@ -4,9 +4,10 @@ import { createQuizItems } from '../utils/quiz'
 
 interface QuizModeProps {
   cards: VocabularyCard[]
+  languageLabel: string
 }
 
-export function QuizMode({ cards }: QuizModeProps) {
+export function QuizMode({ cards, languageLabel }: QuizModeProps) {
   const [items, setItems] = useState<QuizItem[]>(() => createQuizItems(cards))
   const [currentIndex, setCurrentIndex] = useState(0)
   const [feedback, setFeedback] = useState<string | null>(null)
@@ -75,7 +76,9 @@ export function QuizMode({ cards }: QuizModeProps) {
         <h3 className="mt-3 font-display text-3xl font-bold text-ink">
           {currentItem.type === 'meaning'
             ? `Choose the English meaning of “${currentItem.prompt}”.`
-            : `Which article fits “${currentItem.prompt}”?`}
+            : languageLabel === 'German'
+              ? `Which article fits “${currentItem.prompt}”?`
+              : `Match the word “${currentItem.prompt}”.`}
         </h3>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-2">

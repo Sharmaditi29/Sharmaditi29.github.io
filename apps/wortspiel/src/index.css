@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    color: #213547;
-    background: #fbf4e8;
+    color: #24324a;
+    background: #fff6fb;
     font-family: 'Nunito', sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -21,10 +21,11 @@
     margin: 0;
     min-width: 320px;
     background:
-      radial-gradient(circle at top left, rgba(245, 197, 92, 0.16), transparent 26%),
-      radial-gradient(circle at top right, rgba(219, 107, 95, 0.12), transparent 24%),
-      linear-gradient(180deg, #fbf4e8 0%, #f8efe1 100%);
-    color: #213547;
+      radial-gradient(circle at top left, rgba(255, 116, 181, 0.18), transparent 24%),
+      radial-gradient(circle at top right, rgba(126, 214, 196, 0.18), transparent 22%),
+      radial-gradient(circle at bottom left, rgba(255, 205, 92, 0.14), transparent 20%),
+      linear-gradient(180deg, #fff6fb 0%, #fff4e7 100%);
+    color: #24324a;
   }
 
   #root {
