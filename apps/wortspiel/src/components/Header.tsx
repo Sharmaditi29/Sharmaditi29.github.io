@@ -18,10 +18,10 @@ export function Header({ onStart, sessionStarted }: HeaderProps) {
             WortSpiel
           </p>
           <h1 className="max-w-2xl text-balance font-display text-[2.7rem] font-extrabold leading-[0.95] text-ink sm:text-5xl sm:leading-tight">
-            Learn a language.
+            Learn playful words, then revise fast.
           </h1>
           <p className="mt-3 max-w-xl text-base leading-7 text-notebook sm:text-lg">
-            Simple cards, fun colors, quick practice.
+            Flashcards, quick concepts, and a bigger A1 word bank for steady practice.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export function Header({ onStart, sessionStarted }: HeaderProps) {
             {sessionStarted ? 'Keep going' : 'Start A1'}
           </button>
           <span className="rounded-full bg-mint/40 px-4 py-2 text-sm font-bold text-ink">
-            A1 only for now
+            German plus Finnish starter
           </span>
         </div>
       </div>

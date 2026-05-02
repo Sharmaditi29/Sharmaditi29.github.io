@@ -4,9 +4,17 @@ import { LanguageBar } from './components/LanguageBar'
 import { LevelSelector } from './components/LevelSelector'
 import { ProgressDashboard } from './components/ProgressDashboard'
 import { PracticeSession } from './components/PracticeSession'
+import { RevisionLibrary } from './components/RevisionLibrary'
 import { a1Vocabulary } from './data/a1Vocabulary'
 import { finnishVocabulary } from './data/finnishVocabulary'
-import type { CefrLevel, LanguageOption, LearningLanguage, ProgressState } from './types'
+import { finnishRevisionCollection, germanRevisionCollection } from './data/revisionCollections'
+import type {
+  CefrLevel,
+  LanguageOption,
+  LearningLanguage,
+  ProgressState,
+  VocabularyCard,
+} from './types'
 import {
   createDefaultProgress,
   loadProgress,
@@ -20,6 +28,8 @@ function App() {
   const [selectedLanguage, setSelectedLanguage] = useState<LearningLanguage>('german')
   const [sessionStarted, setSessionStarted] = useState(false)
   const [progress, setProgress] = useState<ProgressState>(() => loadProgress() ?? createDefaultProgress())
+  const [germanCards, setGermanCards] = useState<VocabularyCard[]>(a1Vocabulary)
+  const [isGermanDeckLoading, setIsGermanDeckLoading] = useState(true)
 
   const languageOptions: LanguageOption[] = [
     {
@@ -36,12 +46,47 @@ function App() {
     },
   ]
 
-  const currentLanguage = languageOptions.find((option) => option.id === selectedLanguage) ?? languageOptions[0]
-  const currentCards = selectedLanguage === 'german' ? a1Vocabulary : finnishVocabulary
+  const currentLanguage =
+    languageOptions.find((option) => option.id === selectedLanguage) ?? languageOptions[0]
+  const currentCards = selectedLanguage === 'german' ? germanCards : finnishVocabulary
+  const currentRevision =
+    selectedLanguage === 'german' ? germanRevisionCollection : finnishRevisionCollection
 
   useEffect(() => {
     saveProgress(progress)
   }, [progress])
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function loadGermanDeck() {
+      try {
+        const response = await fetch('./data/goethe-a1.json')
+
+        if (!response.ok) {
+          throw new Error(`Failed to load Goethe A1 deck: ${response.status}`)
+        }
+
+        const nextCards = (await response.json()) as VocabularyCard[]
+
+        if (!cancelled && nextCards.length > 0) {
+          setGermanCards(nextCards)
+        }
+      } catch (error) {
+        console.warn('Using starter German deck fallback.', error)
+      } finally {
+        if (!cancelled) {
+          setIsGermanDeckLoading(false)
+        }
+      }
+    }
+
+    void loadGermanDeck()
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   const handleCardFeedback = (cardId: string, outcome: 'known' | 'practice') => {
     setProgress((current) => recordCardFeedback(current, cardId, outcome))
@@ -76,6 +121,20 @@ function App() {
             sentencePlaceholder={currentLanguage.sentencePlaceholder}
             onCardFeedback={handleCardFeedback}
             onSentenceSave={handleSentenceSave}
+          />
+
+          {selectedLanguage === 'german' && isGermanDeckLoading && (
+            <div className="rounded-[24px] border border-line bg-paper/90 px-5 py-4 text-sm font-bold text-notebook shadow-soft">
+              Loading the full Goethe-based German A1 deck. The starter deck stays available while
+              it arrives.
+            </div>
+          )}
+
+          <RevisionLibrary
+            cards={currentCards}
+            revision={currentRevision}
+            selectedLanguage={selectedLanguage}
+            languageLabel={currentLanguage.label}
           />
         </main>
       </div>

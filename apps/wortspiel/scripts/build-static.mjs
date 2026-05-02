@@ -1,4 +1,4 @@
-import { mkdir, rm, writeFile } from 'node:fs/promises'
+import { cp, mkdir, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execFileSync } from 'node:child_process'
@@ -7,6 +7,7 @@ const currentDir = path.dirname(fileURLToPath(import.meta.url))
 const appRoot = path.resolve(currentDir, '..')
 const outputRoot = path.resolve(appRoot, '../../static/Experiments/wortspiel')
 const assetsRoot = path.join(outputRoot, 'assets')
+const publicRoot = path.join(appRoot, 'public')
 
 const html = `<!doctype html>
 <html lang="en">
@@ -105,6 +106,7 @@ const html = `<!doctype html>
 export async function buildStaticSite() {
   await rm(outputRoot, { recursive: true, force: true })
   await mkdir(assetsRoot, { recursive: true })
+  await cp(publicRoot, outputRoot, { recursive: true, force: true })
 
   execFileSync(
     path.join(appRoot, 'node_modules', '.bin', 'esbuild'),

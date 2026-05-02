@@ -14,6 +14,22 @@ export interface VocabularyCard {
   grammarNote?: string
 }
 
+export interface LearningConcept {
+  id: string
+  title: string
+  summary: string
+  bullets: string[]
+  example?: string
+}
+
+export interface RevisionCollection {
+  themes: LearningConcept[]
+  grammar: LearningConcept[]
+  sourceLabel: string
+  sourceHref?: string
+  note: string
+}
+
 export interface SentenceAnswer {
   text: string
   submittedAt: string

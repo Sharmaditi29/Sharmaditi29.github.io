@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Flashcard } from './Flashcard'
 import { QuizMode } from './QuizMode'
 import { SentencePractice } from './SentencePractice'
@@ -33,6 +33,10 @@ export function PracticeSession({
   const [currentIndex, setCurrentIndex] = useState(0)
   const currentCard = cards[currentIndex]
 
+  useEffect(() => {
+    setCurrentIndex(0)
+  }, [cards])
+
   const goPrevious = () =>
     setCurrentIndex((current) => (current === 0 ? cards.length - 1 : current - 1))
   const goNext = () =>
@@ -49,7 +53,7 @@ export function PracticeSession({
             {selectedLanguage} {selectedLevel}
           </h2>
           <p className="mt-3 max-w-2xl text-base leading-7 text-notebook">
-            Flip cards, write a line, try a quick quiz.
+            Flip cards, write a line, revise a concept, then try a quick quiz.
           </p>
         </div>
         <div className="shrink-0 rounded-[22px] bg-peach/45 px-4 py-3 text-sm font-bold text-notebook">
