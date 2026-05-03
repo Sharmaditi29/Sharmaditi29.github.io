@@ -14890,9 +14890,10 @@ function App() {
   }, [progress]);
   (0, import_react6.useEffect)(() => {
     let cancelled = false;
+    const buildId = window.__WORTSPIEL_BUILD_ID__ ? `?v=${window.__WORTSPIEL_BUILD_ID__}` : "";
     async function loadDeck(resourcePath, onSuccess, onDone) {
       try {
-        const response = await fetch(resourcePath);
+        const response = await fetch(`${resourcePath}${buildId}`, { cache: "no-store" });
         if (!response.ok) {
           throw new Error(`Failed to load deck ${resourcePath}: ${response.status}`);
         }
