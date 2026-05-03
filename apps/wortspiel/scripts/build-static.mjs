@@ -2,7 +2,7 @@ import { cp, mkdir, rm, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { spawnSync } from 'node:child_process'
+import { spawn } from 'node:child_process'
 
 const currentDir = path.dirname(fileURLToPath(import.meta.url))
 const appRoot = path.resolve(currentDir, '..')
@@ -89,10 +89,10 @@ const html = `<!doctype html>
         margin: 0;
         min-width: 320px;
         background:
-          radial-gradient(circle at 12% 12%, rgba(141, 124, 255, 0.2), transparent 22%),
-          radial-gradient(circle at 84% 16%, rgba(255, 93, 143, 0.16), transparent 24%),
-          radial-gradient(circle at 18% 84%, rgba(144, 234, 216, 0.18), transparent 24%),
-          radial-gradient(circle at 80% 78%, rgba(255, 205, 92, 0.16), transparent 21%),
+          radial-gradient(circle at 10% 10%, rgba(141, 124, 255, 0.16), transparent 28%),
+          radial-gradient(circle at 88% 14%, rgba(255, 93, 143, 0.12), transparent 28%),
+          radial-gradient(circle at 14% 86%, rgba(144, 234, 216, 0.16), transparent 28%),
+          radial-gradient(circle at 84% 82%, rgba(255, 205, 92, 0.12), transparent 26%),
           linear-gradient(180deg, #fff7fb 0%, #fff7ef 52%, #fdf6ff 100%);
         color: #24324a;
       }
@@ -129,34 +129,34 @@ export async function buildStaticSite() {
     esbuildBinaryCandidates.find((candidate) => existsSync(candidate)) ??
     path.join(appRoot, 'node_modules', '.bin', 'esbuild')
 
-  const result = spawnSync(
-    esbuildBinary,
-    [
-      'src/static-entry.tsx',
-      '--bundle',
-      '--format=esm',
-      '--target=es2020',
-      '--jsx=automatic',
-      `--outfile=${path.join(assetsRoot, 'app.js')}`,
-      '--define:process.env.NODE_ENV="production"',
-    ],
-    {
-      cwd: appRoot,
-      encoding: 'utf8',
-    },
-  )
+  await new Promise((resolve, reject) => {
+    const buildProcess = spawn(
+      esbuildBinary,
+      [
+        'src/static-entry.tsx',
+        '--bundle',
+        '--format=esm',
+        '--target=es2020',
+        '--jsx=automatic',
+        `--outfile=${path.join(assetsRoot, 'app.js')}`,
+        '--define:process.env.NODE_ENV="production"',
+      ],
+      {
+        cwd: appRoot,
+        stdio: 'inherit',
+      },
+    )
 
-  if (result.stdout) {
-    process.stdout.write(result.stdout)
-  }
+    buildProcess.on('error', reject)
+    buildProcess.on('close', (code, signal) => {
+      if (code === 0) {
+        resolve(undefined)
+        return
+      }
 
-  if (result.stderr) {
-    process.stderr.write(result.stderr)
-  }
-
-  if (result.status !== 0) {
-    throw new Error(`esbuild failed with code ${result.status ?? 'null'}`)
-  }
+      reject(new Error(`esbuild failed with code ${code ?? 'null'}${signal ? ` (signal ${signal})` : ''}`))
+    })
+  })
 
   await writeFile(path.join(outputRoot, 'index.html'), html, 'utf8')
 }

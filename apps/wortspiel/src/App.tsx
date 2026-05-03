@@ -11,13 +11,7 @@ import {
   finnishRevisionCollection,
   germanRevisionCollection,
 } from './data/revisionCollections'
-import type {
-  CefrLevel,
-  LanguageOption,
-  LearningLanguage,
-  ProgressState,
-  VocabularyCard,
-} from './types'
+import type { LanguageOption, LearningLanguage, ProgressState, VocabularyCard } from './types'
 import {
   createDefaultProgress,
   loadProgress,
@@ -35,7 +29,6 @@ declare global {
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState<LearningLanguage>('german')
-  const [sessionStarted, setSessionStarted] = useState(false)
   const [progress, setProgress] = useState<ProgressState>(() => loadProgress() ?? createDefaultProgress())
   const [germanCards, setGermanCards] = useState<VocabularyCard[]>(a1Vocabulary)
   const [finnishCards, setFinnishCards] = useState<VocabularyCard[]>(finnishVocabulary)
@@ -81,6 +74,7 @@ function App() {
     languageOptions.find((option) => option.id === selectedLanguage) ?? languageOptions[0]
   const currentCards = cardsByLanguage[selectedLanguage]
   const currentRevision = revisionByLanguage[selectedLanguage]
+  const selectedLevel = 'A1'
 
   useEffect(() => {
     saveProgress(progress)
@@ -136,11 +130,11 @@ function App() {
 
   return (
     <div className="min-h-screen overflow-x-hidden xl:h-screen xl:overflow-hidden">
-      <div className="mx-auto flex min-h-screen w-full max-w-[1480px] flex-col px-3 py-3 sm:px-4 lg:px-5 xl:h-screen">
-        <Header onStart={() => setSessionStarted(true)} sessionStarted={sessionStarted} />
+      <div className="mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-4 py-4 sm:px-5 sm:py-5 lg:px-7 xl:h-screen xl:px-8 xl:py-6">
+        <Header />
 
-        <main className="mt-3 grid flex-1 gap-3 xl:min-h-0 xl:grid-cols-[280px_minmax(0,1fr)]">
-          <aside className="rounded-[28px] border border-line bg-paper/92 p-4 shadow-card xl:flex xl:h-full xl:flex-col">
+        <main className="mt-4 grid flex-1 gap-4 xl:min-h-0 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:gap-5">
+          <aside className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:flex-col">
             <LanguageBar
               options={languageOptions}
               selectedLanguage={selectedLanguage}
@@ -154,21 +148,21 @@ function App() {
             />
           </aside>
 
-          <section className="flex flex-col gap-3 xl:min-h-0 xl:h-full">
+          <section className="flex flex-col gap-4 xl:min-h-0 xl:h-full">
             {selectedLanguage === 'german' && isGermanDeckLoading && (
-              <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+              <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
                 Loading the full Goethe-based German A1 deck.
               </div>
             )}
 
             {selectedLanguage === 'finnish' && isFinnishDeckLoading && (
-              <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+              <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
                 Loading the full Aalto beginner Finnish deck.
               </div>
             )}
 
             {selectedLanguage === 'dutch' && isDutchDeckLoading && (
-              <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+              <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
                 Loading the full Dutch beginner deck.
               </div>
             )}
@@ -190,4 +184,3 @@ function App() {
 }
 
 export default App
-  const selectedLevel: CefrLevel = 'A1'

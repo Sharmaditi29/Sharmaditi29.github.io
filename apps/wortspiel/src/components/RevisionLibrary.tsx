@@ -92,17 +92,17 @@ export function RevisionLibrary({
   }, [revision])
 
   return (
-    <section className="border-t border-line/80 pt-3">
+    <section className="mt-4 rounded-[24px] bg-cream/36 p-4 shadow-soft sm:p-5">
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Revise
           </p>
-          <h2 className="mt-1 font-display text-base font-bold text-ink">Quick help</h2>
+          <h2 className="mt-1 font-display text-lg font-bold text-ink">Quick help</h2>
         </div>
       </div>
 
-      <div className="mt-3 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2">
         {revisionViews.map((item) => {
           const active = item.id === view
 
@@ -124,7 +124,7 @@ export function RevisionLibrary({
       </div>
 
       {view !== 'words' && (
-        <div className="mt-3 grid gap-3">
+        <div className="mt-4 grid gap-3">
           <label className="max-w-xl">
             <span className="mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
               {view === 'themes' ? 'Choose a theme' : 'Choose a concept'}
@@ -154,7 +154,7 @@ export function RevisionLibrary({
           </label>
 
           {currentConcept && (
-            <article className="rounded-[16px] border border-line bg-cream/55 p-3 shadow-soft">
+            <article className="rounded-[18px] border border-line bg-paper/76 p-3.5 shadow-soft">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
                 {view === 'themes' ? `${languageLabel} theme` : `${languageLabel} concept`}
               </p>
@@ -164,13 +164,13 @@ export function RevisionLibrary({
               <p className="mt-1 text-sm leading-5 text-notebook">{currentConcept.summary}</p>
               <ul className="mt-2 grid gap-1.5 text-sm text-ink">
                 {currentConcept.bullets.map((bullet) => (
-                  <li key={bullet} className="rounded-[12px] bg-paper/80 px-2.5 py-2">
+                  <li key={bullet} className="rounded-[12px] bg-cream/55 px-2.5 py-2">
                     {bullet}
                   </li>
                 ))}
               </ul>
               {currentConcept.example && (
-                <p className="mt-2 rounded-[12px] bg-paper px-2.5 py-2 text-sm font-bold text-ink">
+                <p className="mt-2 rounded-[12px] bg-cream/55 px-2.5 py-2 text-sm font-bold text-ink">
                   {currentConcept.example}
                 </p>
               )}
@@ -180,7 +180,7 @@ export function RevisionLibrary({
       )}
 
       {view === 'words' && (
-        <div className="mt-3">
+        <div className="mt-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <label className="min-w-0 flex-1">
               <span className="sr-only">Search the word bank</span>
@@ -203,7 +203,7 @@ export function RevisionLibrary({
             {filteredWordBank.map((entry) => (
               <article
                 key={entry.key}
-                className="rounded-[14px] border border-line bg-cream/55 p-2.5 shadow-soft"
+                className="rounded-[14px] border border-line bg-paper/78 p-2.5 shadow-soft"
               >
                 <p className="font-display text-base font-bold text-ink">{entry.label}</p>
                 <p className="mt-1 text-sm text-notebook">{entry.translations.join(' • ')}</p>

@@ -43,16 +43,16 @@ export function PracticeSession({
     setCurrentIndex((current) => (current === cards.length - 1 ? 0 : current + 1))
 
   return (
-    <section className="rounded-[28px] border border-line bg-paper/92 p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
+    <section className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Practice
           </p>
-          <h2 className="mt-1.5 font-display text-[1.9rem] font-bold text-ink sm:text-[2.2rem]">
+          <h2 className="mt-2 font-display text-[1.95rem] font-bold text-ink sm:text-[2.25rem]">
             {selectedLanguage} {selectedLevel} practice
           </h2>
-          <p className="mt-1.5 max-w-2xl text-sm leading-5 text-notebook">
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-notebook">
             Stay with one small task, then move to the next card.
           </p>
         </div>
@@ -61,7 +61,7 @@ export function PracticeSession({
         </div>
       </div>
 
-      <div className="mt-3 grid gap-2 sm:grid-cols-3">
+      <div className="mt-4 grid gap-2.5 sm:grid-cols-3">
         {modeLabels.map((item) => {
           const active = mode === item.key
 
@@ -85,7 +85,7 @@ export function PracticeSession({
         })}
       </div>
 
-      <div className="mt-4 xl:min-h-0 xl:flex-1">
+      <div className="mt-5 xl:min-h-0 xl:flex-1">
         {mode === 'flashcards' && (
           <Flashcard
             card={currentCard}
