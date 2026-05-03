@@ -1,4 +1,5 @@
 import { cp, mkdir, rm, writeFile } from 'node:fs/promises'
+import { existsSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawnSync } from 'node:child_process'
@@ -9,6 +10,17 @@ const outputRoot = path.resolve(appRoot, '../../static/Experiments/wortspiel')
 const assetsRoot = path.join(outputRoot, 'assets')
 const publicRoot = path.join(appRoot, 'public')
 const buildId = `${Date.now()}`
+
+const esbuildBinaryCandidates = [
+  path.join(
+    appRoot,
+    'node_modules/.pnpm/@esbuild+darwin-arm64@0.18.20/node_modules/@esbuild/darwin-arm64/bin/esbuild',
+  ),
+  path.join(
+    appRoot,
+    'node_modules/.pnpm/@esbuild+darwin-arm64@0.21.5/node_modules/@esbuild/darwin-arm64/bin/esbuild',
+  ),
+]
 
 const html = `<!doctype html>
 <html lang="en">
@@ -113,8 +125,12 @@ export async function buildStaticSite() {
   await mkdir(assetsRoot, { recursive: true })
   await cp(publicRoot, outputRoot, { recursive: true, force: true })
 
+  const esbuildBinary =
+    esbuildBinaryCandidates.find((candidate) => existsSync(candidate)) ??
+    path.join(appRoot, 'node_modules', '.bin', 'esbuild')
+
   const result = spawnSync(
-    path.join(appRoot, 'node_modules', '.bin', 'esbuild'),
+    esbuildBinary,
     [
       'src/static-entry.tsx',
       '--bundle',

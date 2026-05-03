@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Header } from './components/Header'
 import { LanguageBar } from './components/LanguageBar'
-import { LevelSelector } from './components/LevelSelector'
-import { ProgressDashboard } from './components/ProgressDashboard'
 import { PracticeSession } from './components/PracticeSession'
 import { RevisionLibrary } from './components/RevisionLibrary'
 import { a1Vocabulary } from './data/a1Vocabulary'
@@ -36,7 +34,6 @@ declare global {
 }
 
 function App() {
-  const [selectedLevel, setSelectedLevel] = useState<CefrLevel>('A1')
   const [selectedLanguage, setSelectedLanguage] = useState<LearningLanguage>('german')
   const [sessionStarted, setSessionStarted] = useState(false)
   const [progress, setProgress] = useState<ProgressState>(() => loadProgress() ?? createDefaultProgress())
@@ -142,16 +139,14 @@ function App() {
       <div className="mx-auto flex min-h-screen w-full max-w-[1480px] flex-col px-3 py-3 sm:px-4 lg:px-5 xl:h-screen">
         <Header onStart={() => setSessionStarted(true)} sessionStarted={sessionStarted} />
 
-        <main className="mt-3 grid flex-1 gap-3 xl:min-h-0 xl:grid-cols-[300px_minmax(0,1fr)]">
-          <aside className="rounded-[28px] border border-line bg-paper/92 p-4 shadow-card xl:flex xl:h-full xl:flex-col xl:overflow-y-auto">
+        <main className="mt-3 grid flex-1 gap-3 xl:min-h-0 xl:grid-cols-[280px_minmax(0,1fr)]">
+          <aside className="rounded-[28px] border border-line bg-paper/92 p-4 shadow-card xl:flex xl:h-full xl:flex-col">
             <LanguageBar
               options={languageOptions}
               selectedLanguage={selectedLanguage}
               onSelect={setSelectedLanguage}
             />
 
-            <LevelSelector selectedLevel={selectedLevel} onSelect={setSelectedLevel} />
-            <ProgressDashboard progress={progress} deckSize={currentCards.length} />
             <RevisionLibrary
               cards={currentCards}
               revision={currentRevision}
@@ -195,3 +190,4 @@ function App() {
 }
 
 export default App
+  const selectedLevel: CefrLevel = 'A1'

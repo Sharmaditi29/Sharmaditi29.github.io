@@ -12,10 +12,14 @@ export function LanguageBar({ options, selectedLanguage, onSelect }: LanguageBar
       <div className="flex flex-wrap items-end justify-between gap-2">
         <div>
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
-            Language
+            Learn
           </p>
-          <h2 className="mt-1 font-display text-base font-bold text-ink">Choose what to learn.</h2>
+          <h2 className="mt-1 font-display text-base font-bold text-ink">Pick a language.</h2>
         </div>
+
+        <span className="rounded-full bg-mint/40 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink">
+          A1 only
+        </span>
 
         <div className="grid w-full gap-2 sm:grid-cols-3">
           {options.map((option) => {

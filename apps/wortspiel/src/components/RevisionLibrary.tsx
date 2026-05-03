@@ -93,19 +93,12 @@ export function RevisionLibrary({
 
   return (
     <section className="border-t border-line/80 pt-3">
-      <div className="flex flex-wrap items-start justify-between gap-3">
+      <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Revise
           </p>
-          <h2 className="mt-1 font-display text-lg font-bold text-ink">Quick reminders</h2>
-          <p className="mt-1.5 text-sm leading-5 text-notebook">
-            Use a theme, a concept, or the word bank when memory slips.
-          </p>
-        </div>
-
-        <div className="rounded-[18px] bg-cream/70 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-notebook">
-          {wordBank.length} {revision.wordBankLabel}
+          <h2 className="mt-1 font-display text-base font-bold text-ink">Quick help</h2>
         </div>
       </div>
 
@@ -118,7 +111,7 @@ export function RevisionLibrary({
               key={item.id}
               type="button"
               onClick={() => setView(item.id)}
-              className={`rounded-full px-3.5 py-2 text-sm font-bold transition ${
+              className={`rounded-full px-3 py-1.5 text-sm font-bold transition ${
                 active
                   ? 'bg-splash text-white shadow-soft'
                   : 'border border-line bg-cream/60 text-ink hover:-translate-y-0.5 hover:bg-paper'
@@ -131,7 +124,7 @@ export function RevisionLibrary({
       </div>
 
       {view !== 'words' && (
-        <div className="mt-4 grid gap-3">
+        <div className="mt-3 grid gap-3">
           <label className="max-w-xl">
             <span className="mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
               {view === 'themes' ? 'Choose a theme' : 'Choose a concept'}
@@ -146,7 +139,7 @@ export function RevisionLibrary({
                     setSelectedGrammarId(event.target.value)
                   }
                 }}
-                className="w-full appearance-none rounded-[18px] border border-line bg-cream/85 px-4 py-3 pr-10 text-sm font-bold text-ink shadow-soft outline-none transition focus:border-sun"
+                className="w-full appearance-none rounded-[16px] border border-line bg-cream/85 px-4 py-2.5 pr-10 text-sm font-bold text-ink shadow-soft outline-none transition focus:border-sun"
               >
                 {currentConcepts.map((concept) => (
                   <option key={concept.id} value={concept.id}>
@@ -161,23 +154,23 @@ export function RevisionLibrary({
           </label>
 
           {currentConcept && (
-            <article className="rounded-[18px] border border-line bg-cream/55 p-3.5 shadow-soft">
+            <article className="rounded-[16px] border border-line bg-cream/55 p-3 shadow-soft">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
                 {view === 'themes' ? `${languageLabel} theme` : `${languageLabel} concept`}
               </p>
-              <h3 className="mt-2 font-display text-lg font-bold text-ink">
+              <h3 className="mt-1.5 font-display text-base font-bold text-ink">
                 {currentConcept.title}
               </h3>
-              <p className="mt-1.5 text-sm leading-5 text-notebook">{currentConcept.summary}</p>
-              <ul className="mt-2.5 grid gap-2 text-sm text-ink xl:grid-cols-2">
+              <p className="mt-1 text-sm leading-5 text-notebook">{currentConcept.summary}</p>
+              <ul className="mt-2 grid gap-1.5 text-sm text-ink">
                 {currentConcept.bullets.map((bullet) => (
-                  <li key={bullet} className="rounded-[14px] bg-paper/80 px-3 py-2">
+                  <li key={bullet} className="rounded-[12px] bg-paper/80 px-2.5 py-2">
                     {bullet}
                   </li>
                 ))}
               </ul>
               {currentConcept.example && (
-                <p className="mt-2.5 rounded-[14px] bg-paper px-3 py-2.5 text-sm font-bold text-ink">
+                <p className="mt-2 rounded-[12px] bg-paper px-2.5 py-2 text-sm font-bold text-ink">
                   {currentConcept.example}
                 </p>
               )}
@@ -187,8 +180,8 @@ export function RevisionLibrary({
       )}
 
       {view === 'words' && (
-        <div className="mt-4">
-          <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="mt-3">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <label className="min-w-0 flex-1">
               <span className="sr-only">Search the word bank</span>
               <input
@@ -196,25 +189,25 @@ export function RevisionLibrary({
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={`Search ${languageLabel.toLowerCase()} or English`}
-                className="w-full rounded-full border border-line bg-cream/70 px-5 py-3 text-sm text-ink shadow-soft outline-none transition focus:border-sun"
+                className="w-full rounded-full border border-line bg-cream/70 px-4 py-2.5 text-sm text-ink shadow-soft outline-none transition focus:border-sun"
               />
             </label>
-            <div className="rounded-full bg-bubble/20 px-4 py-2 text-sm font-bold text-ink">
+            <div className="rounded-full bg-bubble/20 px-3 py-1.5 text-xs font-bold text-ink">
               {query.trim()
                 ? `${filteredWordBank.length} matches`
-                : `Showing ${filteredWordBank.length} of ${wordBank.length}`}
+                : `${wordBank.length} words`}
             </div>
           </div>
 
-          <div className="mt-4 grid max-h-[14rem] gap-3 overflow-y-auto pr-1 sm:grid-cols-2">
+          <div className="mt-3 grid max-h-[13rem] gap-2 overflow-y-auto pr-1">
             {filteredWordBank.map((entry) => (
               <article
                 key={entry.key}
-                className="rounded-[16px] border border-line bg-cream/55 p-3 shadow-soft"
+                className="rounded-[14px] border border-line bg-cream/55 p-2.5 shadow-soft"
               >
-                <p className="font-display text-lg font-bold text-ink">{entry.label}</p>
-                <p className="mt-1.5 text-sm text-notebook">{entry.translations.join(' • ')}</p>
-                <p className="mt-2.5 text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
+                <p className="font-display text-base font-bold text-ink">{entry.label}</p>
+                <p className="mt-1 text-sm text-notebook">{entry.translations.join(' • ')}</p>
+                <p className="mt-2 text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
                   {entry.category}
                 </p>
               </article>
