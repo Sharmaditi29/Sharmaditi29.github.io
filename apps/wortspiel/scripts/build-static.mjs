@@ -115,7 +115,6 @@ export async function buildStaticSite() {
       '--bundle',
       '--format=esm',
       '--target=es2020',
-      '--minify',
       '--jsx=automatic',
       `--outfile=${path.join(assetsRoot, 'app.js')}`,
       '--define:process.env.NODE_ENV="production"',

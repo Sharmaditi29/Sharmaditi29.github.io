@@ -33,7 +33,7 @@ export function Flashcard({
     .join(' · ')
 
   return (
-    <section className="rounded-[30px] border border-line bg-paper p-6 shadow-card sm:p-8">
+    <section className="rounded-[24px] border border-line bg-paper p-5 shadow-card sm:p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook">
           Card {currentIndex + 1} of {totalCards}
@@ -43,18 +43,18 @@ export function Flashcard({
         </span>
       </div>
 
-      <div className="mt-6 rounded-[28px] border border-line bg-notebook/5 p-6 shadow-soft sm:p-8">
+      <div className="mt-4 rounded-[24px] border border-line bg-notebook/5 p-4 shadow-soft sm:p-5">
         {/* TODO: Add audio pronunciation playback for each card. */}
-        <div className="rounded-[24px] bg-paper/95 bg-rulebook bg-[length:100%_35px] p-8">
-          <p className="text-sm font-extrabold uppercase tracking-[0.28em] text-notebook">
+        <div className="rounded-[20px] bg-paper/95 bg-rulebook bg-[length:100%_35px] p-6">
+          <p className="text-xs font-extrabold uppercase tracking-[0.28em] text-notebook">
             Front of card
           </p>
-          <h3 className="mt-4 font-display text-4xl font-extrabold text-ink sm:text-5xl">
+          <h3 className="mt-4 font-display text-3xl font-extrabold text-ink sm:text-[2.75rem]">
             {card.article ? `${card.article} ${card.german}` : card.german}
           </h3>
-          <p className="mt-3 text-base text-notebook">Tap to reveal what you need.</p>
+          <p className="mt-2 text-sm text-notebook">Tap to reveal what you need.</p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap gap-3">
             <button
               type="button"
               onClick={() => setShowMeaning((current) => !current)}
@@ -72,10 +72,10 @@ export function Flashcard({
           </div>
 
           {(showMeaning || showExample) && (
-            <div className="mt-6 grid gap-4 rounded-[24px] border border-line bg-cream/70 p-5 text-left">
+            <div className="mt-5 grid gap-4 rounded-[20px] border border-line bg-cream/70 p-4 text-left">
               {showMeaning && (
                 <div>
-                  <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
                     Meaning
                   </p>
                   <p className="mt-2 text-lg font-bold text-ink">{card.english}</p>
@@ -85,7 +85,7 @@ export function Flashcard({
 
               {showExample && (
                 <div>
-                  <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
                     Example sentence
                   </p>
                   <p className="mt-2 text-base font-bold text-ink">{card.exampleGerman}</p>
@@ -95,7 +95,7 @@ export function Flashcard({
 
               {card.grammarNote && (
                 <div>
-                  <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
                     Grammar note
                   </p>
                   <p className="mt-2 text-sm text-notebook">{card.grammarNote}</p>
@@ -106,7 +106,7 @@ export function Flashcard({
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-5 flex flex-wrap gap-3">
         <button
           type="button"
           onClick={onKnown}
@@ -123,7 +123,7 @@ export function Flashcard({
         </button>
       </div>
 
-      <div className="mt-6 flex items-center justify-between gap-4">
+      <div className="mt-5 flex items-center justify-between gap-4">
         <button
           type="button"
           onClick={onPrevious}

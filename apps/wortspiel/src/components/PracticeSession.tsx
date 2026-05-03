@@ -43,25 +43,25 @@ export function PracticeSession({
     setCurrentIndex((current) => (current === cards.length - 1 ? 0 : current + 1))
 
   return (
-    <section className="rounded-[30px] border border-line bg-paper/90 p-6 shadow-card sm:p-8">
+    <section className="rounded-[26px] border border-line bg-paper/90 p-5 shadow-card sm:p-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
-          <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-notebook">
+          <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Practice
           </p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-ink sm:text-4xl">
+          <h2 className="mt-2 font-display text-2xl font-bold text-ink sm:text-3xl">
             {selectedLanguage} {selectedLevel}
           </h2>
-          <p className="mt-3 max-w-2xl text-base leading-7 text-notebook">
-            Flip cards, write a line, revise a concept, then try a quick quiz.
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-notebook">
+            Flip cards, write a line, revise one thing, then move on.
           </p>
         </div>
-        <div className="shrink-0 rounded-[22px] bg-peach/45 px-4 py-3 text-sm font-bold text-notebook">
+        <div className="shrink-0 rounded-[18px] bg-peach/45 px-3 py-2 text-sm font-bold text-notebook">
           {progress.reviewedCardIds.length} unique cards reviewed
         </div>
       </div>
 
-      <div className="mt-6 grid gap-3 lg:grid-cols-3">
+      <div className="mt-4 grid gap-3 lg:grid-cols-3">
         {modeLabels.map((item) => {
           const active = mode === item.key
 

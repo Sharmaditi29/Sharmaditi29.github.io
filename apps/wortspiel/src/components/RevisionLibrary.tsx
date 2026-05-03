@@ -92,27 +92,26 @@ export function RevisionLibrary({
   }, [revision])
 
   return (
-    <section className="rounded-[30px] border border-line bg-paper/90 p-6 shadow-card sm:p-8">
+    <section className="border-t border-line/80 pt-4">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
-          <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-notebook">
+          <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Revise
           </p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-ink sm:text-4xl">
-            Concepts and quick reminders
+          <h2 className="mt-2 font-display text-xl font-bold text-ink">
+            Quick reminders
           </h2>
-          <p className="mt-3 max-w-3xl text-base leading-7 text-notebook">
-            If a card gets fuzzy, open a concept, skim a theme, or search the word bank without
-            leaving the page.
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-notebook">
+            Use a theme, a concept, or the word bank when memory slips.
           </p>
         </div>
 
-        <div className="rounded-[24px] bg-cream/70 px-4 py-3 text-sm font-bold text-notebook">
+        <div className="rounded-[18px] bg-cream/70 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-notebook">
           {wordBank.length} {revision.wordBankLabel}
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-4 flex flex-wrap gap-2">
         {revisionViews.map((item) => {
           const active = item.id === view
 
@@ -121,7 +120,7 @@ export function RevisionLibrary({
               key={item.id}
               type="button"
               onClick={() => setView(item.id)}
-              className={`rounded-full px-4 py-2 text-sm font-bold transition ${
+              className={`rounded-full px-3.5 py-2 text-sm font-bold transition ${
                 active
                   ? 'bg-splash text-white shadow-soft'
                   : 'border border-line bg-cream/60 text-ink hover:-translate-y-0.5 hover:bg-paper'
@@ -134,48 +133,53 @@ export function RevisionLibrary({
       </div>
 
       {view !== 'words' && (
-        <div className="mt-6 grid gap-4">
+        <div className="mt-4 grid gap-3">
           <label className="max-w-xl">
-            <span className="mb-2 block text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
+            <span className="mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
               {view === 'themes' ? 'Choose a theme' : 'Choose a concept'}
             </span>
-            <select
-              value={selectedConceptId}
-              onChange={(event) => {
-                if (view === 'themes') {
-                  setSelectedThemeId(event.target.value)
-                } else {
-                  setSelectedGrammarId(event.target.value)
-                }
-              }}
-              className="w-full rounded-[22px] border border-line bg-cream/70 px-4 py-3 text-sm font-bold text-ink shadow-soft outline-none transition focus:border-sun"
-            >
-              {currentConcepts.map((concept) => (
-                <option key={concept.id} value={concept.id}>
-                  {concept.title}
-                </option>
-              ))}
-            </select>
+            <div className="relative">
+              <select
+                value={selectedConceptId}
+                onChange={(event) => {
+                  if (view === 'themes') {
+                    setSelectedThemeId(event.target.value)
+                  } else {
+                    setSelectedGrammarId(event.target.value)
+                  }
+                }}
+                className="w-full appearance-none rounded-[18px] border border-line bg-cream/85 px-4 py-3 pr-10 text-sm font-bold text-ink shadow-soft outline-none transition focus:border-sun"
+              >
+                {currentConcepts.map((concept) => (
+                  <option key={concept.id} value={concept.id}>
+                    {concept.title}
+                  </option>
+                ))}
+              </select>
+              <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-notebook">
+                v
+              </span>
+            </div>
           </label>
 
           {currentConcept && (
-            <article className="rounded-[24px] border border-line bg-cream/55 p-5 shadow-soft">
-              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
+            <article className="rounded-[20px] border border-line bg-cream/55 p-4 shadow-soft">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
                 {view === 'themes' ? 'Theme' : 'Concept'}
               </p>
-              <h3 className="mt-2 font-display text-2xl font-bold text-ink">
+              <h3 className="mt-2 font-display text-xl font-bold text-ink">
                 {currentConcept.title}
               </h3>
-              <p className="mt-3 text-sm leading-6 text-notebook">{currentConcept.summary}</p>
-              <ul className="mt-4 grid gap-2 text-sm text-ink">
+              <p className="mt-2 text-sm leading-6 text-notebook">{currentConcept.summary}</p>
+              <ul className="mt-3 grid gap-2 text-sm text-ink">
                 {currentConcept.bullets.map((bullet) => (
-                  <li key={bullet} className="rounded-[18px] bg-paper/80 px-3 py-2">
+                  <li key={bullet} className="rounded-[16px] bg-paper/80 px-3 py-2">
                     {bullet}
                   </li>
                 ))}
               </ul>
               {currentConcept.example && (
-                <p className="mt-4 rounded-[18px] bg-paper px-3 py-3 text-sm font-bold text-ink">
+                <p className="mt-3 rounded-[16px] bg-paper px-3 py-3 text-sm font-bold text-ink">
                   {currentConcept.example}
                 </p>
               )}
@@ -185,7 +189,7 @@ export function RevisionLibrary({
       )}
 
       {view === 'words' && (
-        <div className="mt-6">
+        <div className="mt-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <label className="min-w-0 flex-1">
               <span className="sr-only">Search the word bank</span>
@@ -204,13 +208,13 @@ export function RevisionLibrary({
             </div>
           </div>
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-4 grid max-h-[20rem] gap-3 overflow-y-auto pr-1 sm:grid-cols-2">
             {filteredWordBank.map((entry) => (
               <article
                 key={entry.key}
-                className="rounded-[22px] border border-line bg-cream/55 p-4 shadow-soft"
+                className="rounded-[18px] border border-line bg-cream/55 p-3.5 shadow-soft"
               >
-                <p className="font-display text-2xl font-bold text-ink">{entry.label}</p>
+                <p className="font-display text-xl font-bold text-ink">{entry.label}</p>
                 <p className="mt-2 text-sm text-notebook">{entry.translations.join(' • ')}</p>
                 <p className="mt-3 text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
                   {entry.category}
@@ -220,23 +224,6 @@ export function RevisionLibrary({
           </div>
         </div>
       )}
-
-      <div className="mt-6 rounded-[24px] border border-dashed border-line bg-paper px-4 py-4 text-sm leading-6 text-notebook">
-        <span className="font-bold text-ink">Source:</span>{' '}
-        {revision.sourceHref ? (
-          <a
-            href={revision.sourceHref}
-            target="_blank"
-            rel="noreferrer"
-            className="font-bold text-splash underline decoration-splash/40 underline-offset-4"
-          >
-            {revision.sourceLabel}
-          </a>
-        ) : (
-          <span className="font-bold text-ink">{revision.sourceLabel}</span>
-        )}
-        . {revision.note}
-      </div>
     </section>
   )
 }

@@ -105,50 +105,49 @@ function App() {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 py-5 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-screen w-full max-w-[1400px] flex-col px-4 py-4 sm:px-5 lg:px-6">
         <Header onStart={() => setSessionStarted(true)} sessionStarted={sessionStarted} />
 
-        <main className="flex flex-1 flex-col gap-6 pb-10">
-          <LanguageBar
-            options={languageOptions}
-            selectedLanguage={selectedLanguage}
-            onSelect={setSelectedLanguage}
-          />
+        <main className="mt-4 grid flex-1 gap-4 xl:grid-cols-[340px_minmax(0,1fr)]">
+          <aside className="rounded-[26px] border border-line bg-paper/90 p-4 shadow-card xl:pb-4">
+            <LanguageBar
+              options={languageOptions}
+              selectedLanguage={selectedLanguage}
+              onSelect={setSelectedLanguage}
+            />
 
-          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <LevelSelector selectedLevel={selectedLevel} onSelect={setSelectedLevel} />
             <ProgressDashboard progress={progress} deckSize={currentCards.length} />
-          </div>
+            <RevisionLibrary
+              cards={currentCards}
+              revision={currentRevision}
+              languageLabel={currentLanguage.label}
+            />
+          </aside>
 
-          <PracticeSession
-            cards={currentCards}
-            progress={progress}
-            selectedLevel={selectedLevel}
-            selectedLanguage={currentLanguage.label}
-            sentencePlaceholder={currentLanguage.sentencePlaceholder}
-            onCardFeedback={handleCardFeedback}
-            onSentenceSave={handleSentenceSave}
-          />
+          <section className="flex flex-col gap-4 xl:min-h-0">
+            {selectedLanguage === 'german' && isGermanDeckLoading && (
+              <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+                Loading the full Goethe-based German A1 deck.
+              </div>
+            )}
 
-          {selectedLanguage === 'german' && isGermanDeckLoading && (
-            <div className="rounded-[24px] border border-line bg-paper/90 px-5 py-4 text-sm font-bold text-notebook shadow-soft">
-              Loading the full Goethe-based German A1 deck. The starter deck stays available while
-              it arrives.
-            </div>
-          )}
+            {selectedLanguage === 'finnish' && isFinnishDeckLoading && (
+              <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+                Loading the full Aalto beginner Finnish deck.
+              </div>
+            )}
 
-          {selectedLanguage === 'finnish' && isFinnishDeckLoading && (
-            <div className="rounded-[24px] border border-line bg-paper/90 px-5 py-4 text-sm font-bold text-notebook shadow-soft">
-              Loading the full Aalto beginner Finnish deck. The starter deck stays available while
-              it arrives.
-            </div>
-          )}
-
-          <RevisionLibrary
-            cards={currentCards}
-            revision={currentRevision}
-            languageLabel={currentLanguage.label}
-          />
+            <PracticeSession
+              cards={currentCards}
+              progress={progress}
+              selectedLevel={selectedLevel}
+              selectedLanguage={currentLanguage.label}
+              sentencePlaceholder={currentLanguage.sentencePlaceholder}
+              onCardFeedback={handleCardFeedback}
+              onSentenceSave={handleSentenceSave}
+            />
+          </section>
         </main>
       </div>
     </div>

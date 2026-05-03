@@ -8,13 +8,13 @@ interface LanguageBarProps {
 
 export function LanguageBar({ options, selectedLanguage, onSelect }: LanguageBarProps) {
   return (
-    <section className="rounded-[28px] border border-line bg-paper/90 p-4 shadow-card sm:p-5">
+    <section className="pb-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-notebook">
-            Learn
+          <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
+            Language
           </p>
-          <h2 className="mt-1 font-display text-2xl font-bold text-ink">Choose a language.</h2>
+          <h2 className="mt-1 font-display text-xl font-bold text-ink">Pick your practice lane.</h2>
         </div>
 
         <div className="flex flex-wrap gap-2">
