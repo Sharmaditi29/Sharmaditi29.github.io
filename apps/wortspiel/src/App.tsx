@@ -23,6 +23,12 @@ import {
   saveSentenceAnswer,
 } from './utils/storage'
 
+declare global {
+  interface Window {
+    __WORTSPIEL_BUILD_ID__?: string
+  }
+}
+
 function App() {
   const [selectedLevel, setSelectedLevel] = useState<CefrLevel>('A1')
   const [selectedLanguage, setSelectedLanguage] = useState<LearningLanguage>('german')
@@ -60,6 +66,7 @@ function App() {
 
   useEffect(() => {
     let cancelled = false
+    const buildId = window.__WORTSPIEL_BUILD_ID__ ? `?v=${window.__WORTSPIEL_BUILD_ID__}` : ''
 
     async function loadDeck(
       resourcePath: string,
@@ -67,7 +74,7 @@ function App() {
       onDone: () => void,
     ) {
       try {
-        const response = await fetch(resourcePath)
+        const response = await fetch(`${resourcePath}${buildId}`, { cache: 'no-store' })
 
         if (!response.ok) {
           throw new Error(`Failed to load deck ${resourcePath}: ${response.status}`)

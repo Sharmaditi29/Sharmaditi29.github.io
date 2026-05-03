@@ -8,6 +8,7 @@ const appRoot = path.resolve(currentDir, '..')
 const outputRoot = path.resolve(appRoot, '../../static/Experiments/wortspiel')
 const assetsRoot = path.join(outputRoot, 'assets')
 const publicRoot = path.join(appRoot, 'public')
+const buildId = `${Date.now()}`
 
 const html = `<!doctype html>
 <html lang="en">
@@ -94,11 +95,14 @@ const html = `<!doctype html>
         font: inherit;
       }
     </style>
+    <script>
+      window.__WORTSPIEL_BUILD_ID__ = '${buildId}'
+    </script>
     <title>WortSpiel</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./assets/app.js"></script>
+    <script type="module" src="./assets/app.js?v=${buildId}"></script>
   </body>
 </html>
 `
