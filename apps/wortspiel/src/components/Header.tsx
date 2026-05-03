@@ -5,22 +5,22 @@ interface HeaderProps {
 
 export function Header({ onStart, sessionStarted }: HeaderProps) {
   return (
-    <header className="relative overflow-hidden rounded-[32px] border border-line bg-paper/95 px-5 py-5 shadow-card sm:px-6 sm:py-5">
-      <div className="absolute inset-x-0 top-0 h-20 bg-splash opacity-[0.05]" />
-      <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-bubble/25 blur-3xl" />
-      <div className="absolute -left-3 bottom-0 h-20 w-20 rounded-full bg-sun/25 blur-3xl" />
-      <div className="absolute right-1/4 top-5 h-14 w-14 rounded-full bg-mint/25 blur-2xl" />
+    <header className="relative overflow-hidden rounded-[30px] border border-line bg-paper/95 px-5 py-4 shadow-card sm:px-6 xl:py-4">
+      <div className="absolute inset-x-0 top-0 h-16 bg-splash opacity-[0.04]" />
+      <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-bubble/22 blur-3xl" />
+      <div className="absolute -left-2 bottom-0 h-16 w-16 rounded-full bg-sun/20 blur-3xl" />
+      <div className="absolute right-1/4 top-4 h-12 w-12 rounded-full bg-mint/20 blur-2xl" />
 
-      <div className="relative flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div className="relative flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
         <div className="min-w-0">
-          <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.28em] text-notebook">
+          <p className="mb-1.5 text-xs font-extrabold uppercase tracking-[0.28em] text-notebook">
             LingoGarden
           </p>
-          <h1 className="max-w-3xl text-balance font-display text-3xl font-extrabold leading-[0.98] text-ink sm:text-[3.85rem]">
-            One playful desk for German, Finnish, and Dutch.
+          <h1 className="max-w-4xl text-balance font-display text-[2.35rem] font-extrabold leading-[0.94] text-ink sm:text-[2.8rem] xl:text-[3rem]">
+            Three beginner decks, one playful desk.
           </h1>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-notebook sm:text-base">
-            Pick a language, revise one idea, then practice one card at a time.
+          <p className="mt-1.5 max-w-3xl text-sm leading-6 text-notebook sm:text-[0.95rem]">
+            German, Finnish, and Dutch practice in one place, with quick revision and one-card study.
           </p>
         </div>
 

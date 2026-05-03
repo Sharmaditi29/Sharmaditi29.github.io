@@ -33,7 +33,7 @@ export function Flashcard({
     .join(' · ')
 
   return (
-    <section className="rounded-[24px] border border-line bg-paper p-5 shadow-card sm:p-6">
+    <section className="rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook">
           Card {currentIndex + 1} of {totalCards}
@@ -43,36 +43,36 @@ export function Flashcard({
         </span>
       </div>
 
-      <div className="mt-4 rounded-[24px] border border-line bg-notebook/5 p-4 shadow-soft sm:p-5">
+      <div className="mt-3 rounded-[22px] border border-line bg-notebook/5 p-3.5 shadow-soft sm:p-4">
         {/* TODO: Add audio pronunciation playback for each card. */}
-        <div className="rounded-[20px] bg-paper/95 bg-rulebook bg-[length:100%_35px] p-6">
+        <div className="rounded-[18px] bg-paper/95 bg-rulebook bg-[length:100%_32px] p-5">
           <p className="text-xs font-extrabold uppercase tracking-[0.28em] text-notebook">
             Word
           </p>
-          <h3 className="mt-4 font-display text-3xl font-extrabold text-ink sm:text-[2.75rem]">
+          <h3 className="mt-3 font-display text-[2.4rem] font-extrabold leading-[0.96] text-ink sm:text-[2.6rem]">
             {card.article ? `${card.article} ${card.german}` : card.german}
           </h3>
-          <p className="mt-2 text-sm text-notebook">Reveal only what you need.</p>
+          <p className="mt-1.5 text-sm text-notebook">Reveal only what you need.</p>
 
-          <div className="mt-5 flex flex-wrap gap-3">
+          <div className="mt-4 flex flex-wrap gap-2.5">
             <button
               type="button"
               onClick={() => setShowMeaning((current) => !current)}
-              className="rounded-full border border-line bg-cream px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
+              className="rounded-full border border-line bg-cream px-4 py-2.5 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
             >
               {showMeaning ? 'Hide meaning' : 'Show meaning'}
             </button>
             <button
               type="button"
               onClick={() => setShowExample((current) => !current)}
-              className="rounded-full border border-line bg-cream px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
+              className="rounded-full border border-line bg-cream px-4 py-2.5 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
             >
               {showExample ? 'Hide example' : 'Show example sentence'}
             </button>
           </div>
 
           {(showMeaning || showExample) && (
-            <div className="mt-5 grid gap-4 rounded-[20px] border border-line bg-cream/70 p-4 text-left">
+            <div className="mt-4 grid gap-3 rounded-[18px] border border-line bg-cream/70 p-3.5 text-left xl:overflow-auto">
               {showMeaning && (
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
@@ -106,35 +106,35 @@ export function Flashcard({
         </div>
       </div>
 
-      <div className="mt-5 flex flex-wrap gap-3">
+      <div className="mt-4 flex flex-wrap gap-2.5">
         <button
           type="button"
           onClick={onKnown}
-          className="rounded-full bg-leaf px-5 py-3 text-sm font-extrabold text-paper transition hover:-translate-y-0.5"
+          className="rounded-full bg-leaf px-4 py-2.5 text-sm font-extrabold text-paper transition hover:-translate-y-0.5"
         >
           I knew this
         </button>
         <button
           type="button"
           onClick={onPractice}
-          className="rounded-full bg-blush px-5 py-3 text-sm font-extrabold text-paper transition hover:-translate-y-0.5"
+          className="rounded-full bg-blush px-4 py-2.5 text-sm font-extrabold text-paper transition hover:-translate-y-0.5"
         >
           I need practice
         </button>
       </div>
 
-      <div className="mt-5 flex items-center justify-between gap-4">
+      <div className="mt-4 flex items-center justify-between gap-4">
         <button
           type="button"
           onClick={onPrevious}
-          className="rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
+          className="rounded-full border border-line bg-paper px-4 py-2.5 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
         >
           Back
         </button>
         <button
           type="button"
           onClick={onNext}
-          className="rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
+          className="rounded-full border border-line bg-paper px-4 py-2.5 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
         >
           Next
         </button>

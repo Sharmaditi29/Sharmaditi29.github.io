@@ -59,7 +59,7 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
   }
 
   return (
-    <section className="rounded-[24px] border border-line bg-paper p-5 shadow-card sm:p-6">
+    <section className="rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook">
           Question {currentIndex + 1} of {total}
@@ -69,11 +69,11 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
         </span>
       </div>
 
-      <div className="mt-4 rounded-[22px] border border-line bg-cream/60 p-5">
+      <div className="mt-3 rounded-[20px] border border-line bg-cream/60 p-4 xl:min-h-0 xl:flex-1">
         <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
           {currentItem.type === 'meaning' ? 'Meaning check' : 'Article check'}
         </p>
-        <h3 className="mt-3 font-display text-2xl font-bold text-ink">
+        <h3 className="mt-2.5 font-display text-[1.8rem] font-bold leading-tight text-ink">
           {currentItem.type === 'meaning'
             ? `Choose the English meaning of “${currentItem.prompt}”.`
             : languageLabel === 'German'
@@ -83,13 +83,13 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
               : `Match the word “${currentItem.prompt}”.`}
         </h3>
 
-        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+        <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
           {currentItem.choices.map((choice) => (
             <button
               key={choice}
               type="button"
               onClick={() => handleChoice(choice)}
-              className="rounded-[22px] border border-line bg-paper px-4 py-4 text-left text-base font-bold text-ink shadow-soft transition hover:-translate-y-0.5 hover:border-sun"
+              className="rounded-[18px] border border-line bg-paper px-4 py-3 text-left text-base font-bold text-ink shadow-soft transition hover:-translate-y-0.5 hover:border-sun"
             >
               {choice}
             </button>
@@ -98,7 +98,7 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
 
         {feedback && (
           <div
-            className={`mt-5 rounded-[18px] px-4 py-3 text-sm font-bold ${
+            className={`mt-4 rounded-[18px] px-4 py-3 text-sm font-bold ${
               answeredCorrectly ? 'bg-leaf/15 text-leaf' : 'bg-blush/10 text-blush'
             }`}
           >
@@ -107,11 +107,11 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
         )}
       </div>
 
-      <div className="mt-5 flex justify-end">
+      <div className="mt-4 flex justify-end">
         <button
           type="button"
           onClick={handleNext}
-          className="rounded-full bg-ink px-5 py-3 text-sm font-extrabold text-paper transition hover:-translate-y-0.5 hover:bg-notebook"
+          className="rounded-full bg-ink px-4 py-2.5 text-sm font-extrabold text-paper transition hover:-translate-y-0.5 hover:bg-notebook"
         >
           {currentIndex === total - 1 ? 'Restart quiz' : 'Next question'}
         </button>

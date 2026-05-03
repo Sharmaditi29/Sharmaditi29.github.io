@@ -1,7 +1,7 @@
 import { cp, mkdir, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { build } from 'esbuild'
+import { spawnSync } from 'node:child_process'
 
 const currentDir = path.dirname(fileURLToPath(import.meta.url))
 const appRoot = path.resolve(currentDir, '..')
@@ -113,18 +113,34 @@ export async function buildStaticSite() {
   await mkdir(assetsRoot, { recursive: true })
   await cp(publicRoot, outputRoot, { recursive: true, force: true })
 
-  await build({
-    absWorkingDir: appRoot,
-    entryPoints: ['src/static-entry.tsx'],
-    bundle: true,
-    format: 'esm',
-    target: ['es2020'],
-    jsx: 'automatic',
-    outfile: path.join(assetsRoot, 'app.js'),
-    define: {
-      'process.env.NODE_ENV': '"production"',
+  const result = spawnSync(
+    path.join(appRoot, 'node_modules', '.bin', 'esbuild'),
+    [
+      'src/static-entry.tsx',
+      '--bundle',
+      '--format=esm',
+      '--target=es2020',
+      '--jsx=automatic',
+      `--outfile=${path.join(assetsRoot, 'app.js')}`,
+      '--define:process.env.NODE_ENV="production"',
+    ],
+    {
+      cwd: appRoot,
+      encoding: 'utf8',
     },
-  })
+  )
+
+  if (result.stdout) {
+    process.stdout.write(result.stdout)
+  }
+
+  if (result.stderr) {
+    process.stderr.write(result.stderr)
+  }
+
+  if (result.status !== 0) {
+    throw new Error(`esbuild failed with code ${result.status ?? 'null'}`)
+  }
 
   await writeFile(path.join(outputRoot, 'index.html'), html, 'utf8')
 }

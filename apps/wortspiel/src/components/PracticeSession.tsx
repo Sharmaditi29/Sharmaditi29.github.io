@@ -43,16 +43,16 @@ export function PracticeSession({
     setCurrentIndex((current) => (current === cards.length - 1 ? 0 : current + 1))
 
   return (
-    <section className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+    <section className="rounded-[28px] border border-line bg-paper/92 p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Practice
           </p>
-          <h2 className="mt-2 font-display text-2xl font-bold text-ink sm:text-3xl">
+          <h2 className="mt-1.5 font-display text-[1.9rem] font-bold text-ink sm:text-[2.2rem]">
             {selectedLanguage} {selectedLevel} practice
           </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-notebook">
+          <p className="mt-1.5 max-w-2xl text-sm leading-5 text-notebook">
             Stay with one small task, then move to the next card.
           </p>
         </div>
@@ -61,7 +61,7 @@ export function PracticeSession({
         </div>
       </div>
 
-      <div className="mt-4 grid gap-2 sm:grid-cols-3">
+      <div className="mt-3 grid gap-2 sm:grid-cols-3">
         {modeLabels.map((item) => {
           const active = mode === item.key
 
@@ -70,7 +70,7 @@ export function PracticeSession({
               key={item.key}
               type="button"
               onClick={() => setMode(item.key)}
-              className={`rounded-[20px] border p-3.5 text-left transition ${
+              className={`rounded-[18px] border p-3 text-left transition ${
                 active
                   ? 'border-splash bg-splash text-paper shadow-soft'
                   : 'border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble'
@@ -85,7 +85,7 @@ export function PracticeSession({
         })}
       </div>
 
-      <div className="mt-6">
+      <div className="mt-4 xl:min-h-0 xl:flex-1">
         {mode === 'flashcards' && (
           <Flashcard
             card={currentCard}

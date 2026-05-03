@@ -138,12 +138,12 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      <div className="mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-3 py-3 sm:px-4 lg:px-5">
+    <div className="min-h-screen overflow-x-hidden xl:h-screen xl:overflow-hidden">
+      <div className="mx-auto flex min-h-screen w-full max-w-[1480px] flex-col px-3 py-3 sm:px-4 lg:px-5 xl:h-screen">
         <Header onStart={() => setSessionStarted(true)} sessionStarted={sessionStarted} />
 
-        <main className="mt-3 grid flex-1 gap-3 xl:min-h-[calc(100vh-11rem)] xl:grid-cols-[330px_minmax(0,1fr)]">
-          <aside className="rounded-[30px] border border-line bg-paper/92 p-4 shadow-card xl:sticky xl:top-3 xl:self-start">
+        <main className="mt-3 grid flex-1 gap-3 xl:min-h-0 xl:grid-cols-[300px_minmax(0,1fr)]">
+          <aside className="rounded-[28px] border border-line bg-paper/92 p-4 shadow-card xl:flex xl:h-full xl:flex-col xl:overflow-y-auto">
             <LanguageBar
               options={languageOptions}
               selectedLanguage={selectedLanguage}
@@ -159,7 +159,7 @@ function App() {
             />
           </aside>
 
-          <section className="flex flex-col gap-3 xl:min-h-0">
+          <section className="flex flex-col gap-3 xl:min-h-0 xl:h-full">
             {selectedLanguage === 'german' && isGermanDeckLoading && (
               <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
                 Loading the full Goethe-based German A1 deck.

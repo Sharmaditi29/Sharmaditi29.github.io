@@ -44,7 +44,7 @@ export function SentencePractice({
   }
 
   return (
-    <section className="rounded-[30px] border border-line bg-paper p-6 shadow-card sm:p-8">
+    <section className="rounded-[24px] border border-line bg-paper p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook">
           Prompt {currentIndex + 1} of {totalCards}
@@ -54,33 +54,33 @@ export function SentencePractice({
         </span>
       </div>
 
-      <div className="mt-6 rounded-[28px] border border-line bg-cream/60 p-6">
+      <div className="mt-4 rounded-[22px] border border-line bg-cream/60 p-5 xl:min-h-0 xl:flex-1">
         <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
           Write
         </p>
-        <h3 className="mt-3 font-display text-3xl font-bold text-ink">
+        <h3 className="mt-2.5 font-display text-[2rem] font-bold leading-tight text-ink">
           Write your own sentence using {card.german}.
         </h3>
-        <p className="mt-3 text-base leading-7 text-notebook">
+        <p className="mt-2 text-sm leading-6 text-notebook">
           One simple {languageLabel.toLowerCase()} sentence is enough.
         </p>
 
-        <label className="mt-6 block">
+        <label className="mt-4 block">
           <span className="sr-only">Your sentence</span>
           <textarea
             value={text}
             onChange={(event) => setText(event.target.value)}
-            rows={5}
+            rows={4}
             placeholder={sentencePlaceholder}
             className="w-full rounded-[22px] border border-line bg-paper px-4 py-4 text-base text-ink shadow-soft outline-none transition focus:border-sun"
           />
         </label>
 
-        <div className="mt-4 flex flex-wrap items-center gap-3">
+        <div className="mt-3 flex flex-wrap items-center gap-2.5">
           <button
             type="button"
             onClick={handleSubmit}
-            className="rounded-full bg-ink px-5 py-3 text-sm font-extrabold text-paper transition hover:-translate-y-0.5 hover:bg-notebook"
+            className="rounded-full bg-ink px-4 py-2.5 text-sm font-extrabold text-paper transition hover:-translate-y-0.5 hover:bg-notebook"
           >
             Save my sentence
           </button>
@@ -93,7 +93,7 @@ export function SentencePractice({
       </div>
 
       {submitted && (
-        <div className="mt-6 rounded-[24px] border border-line bg-paper p-5">
+        <div className="mt-4 rounded-[20px] border border-line bg-paper p-4">
           <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
             Example from the deck
           </p>
@@ -103,18 +103,18 @@ export function SentencePractice({
         </div>
       )}
 
-      <div className="mt-6 flex items-center justify-between gap-4">
+      <div className="mt-4 flex items-center justify-between gap-4">
         <button
           type="button"
           onClick={onPrevious}
-          className="rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
+          className="rounded-full border border-line bg-paper px-4 py-2.5 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
         >
           Back
         </button>
         <button
           type="button"
           onClick={onNext}
-          className="rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
+          className="rounded-full border border-line bg-paper px-4 py-2.5 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
         >
           Next
         </button>

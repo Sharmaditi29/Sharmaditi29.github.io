@@ -92,14 +92,14 @@ export function RevisionLibrary({
   }, [revision])
 
   return (
-    <section className="border-t border-line/80 pt-4">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+    <section className="border-t border-line/80 pt-3">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Revise
           </p>
           <h2 className="mt-1 font-display text-lg font-bold text-ink">Quick reminders</h2>
-          <p className="mt-2 text-sm leading-6 text-notebook">
+          <p className="mt-1.5 text-sm leading-5 text-notebook">
             Use a theme, a concept, or the word bank when memory slips.
           </p>
         </div>
@@ -161,23 +161,23 @@ export function RevisionLibrary({
           </label>
 
           {currentConcept && (
-            <article className="rounded-[20px] border border-line bg-cream/55 p-4 shadow-soft">
+            <article className="rounded-[18px] border border-line bg-cream/55 p-3.5 shadow-soft">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
                 {view === 'themes' ? `${languageLabel} theme` : `${languageLabel} concept`}
               </p>
-              <h3 className="mt-2 font-display text-xl font-bold text-ink">
+              <h3 className="mt-2 font-display text-lg font-bold text-ink">
                 {currentConcept.title}
               </h3>
-              <p className="mt-2 text-sm leading-6 text-notebook">{currentConcept.summary}</p>
-              <ul className="mt-3 grid gap-2 text-sm text-ink">
+              <p className="mt-1.5 text-sm leading-5 text-notebook">{currentConcept.summary}</p>
+              <ul className="mt-2.5 grid gap-2 text-sm text-ink xl:grid-cols-2">
                 {currentConcept.bullets.map((bullet) => (
-                  <li key={bullet} className="rounded-[16px] bg-paper/80 px-3 py-2">
+                  <li key={bullet} className="rounded-[14px] bg-paper/80 px-3 py-2">
                     {bullet}
                   </li>
                 ))}
               </ul>
               {currentConcept.example && (
-                <p className="mt-3 rounded-[16px] bg-paper px-3 py-3 text-sm font-bold text-ink">
+                <p className="mt-2.5 rounded-[14px] bg-paper px-3 py-2.5 text-sm font-bold text-ink">
                   {currentConcept.example}
                 </p>
               )}
@@ -206,15 +206,15 @@ export function RevisionLibrary({
             </div>
           </div>
 
-          <div className="mt-4 grid max-h-[20rem] gap-3 overflow-y-auto pr-1 sm:grid-cols-2">
+          <div className="mt-4 grid max-h-[14rem] gap-3 overflow-y-auto pr-1 sm:grid-cols-2">
             {filteredWordBank.map((entry) => (
               <article
                 key={entry.key}
-                className="rounded-[18px] border border-line bg-cream/55 p-3.5 shadow-soft"
+                className="rounded-[16px] border border-line bg-cream/55 p-3 shadow-soft"
               >
-                <p className="font-display text-xl font-bold text-ink">{entry.label}</p>
-                <p className="mt-2 text-sm text-notebook">{entry.translations.join(' • ')}</p>
-                <p className="mt-3 text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
+                <p className="font-display text-lg font-bold text-ink">{entry.label}</p>
+                <p className="mt-1.5 text-sm text-notebook">{entry.translations.join(' • ')}</p>
+                <p className="mt-2.5 text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
                   {entry.category}
                 </p>
               </article>
