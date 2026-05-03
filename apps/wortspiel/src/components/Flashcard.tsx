@@ -33,7 +33,7 @@ export function Flashcard({
     .join(' · ')
 
   return (
-    <section className="rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5">
+    <section className="rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:flex-col">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook">
           Card {currentIndex + 1} of {totalCards}
@@ -43,9 +43,9 @@ export function Flashcard({
         </span>
       </div>
 
-      <div className="mt-3 rounded-[22px] border border-line bg-notebook/5 p-3.5 shadow-soft sm:p-4">
+      <div className="mt-3 rounded-[22px] border border-line bg-notebook/5 p-3.5 shadow-soft sm:p-4 xl:flex-1">
         {/* TODO: Add audio pronunciation playback for each card. */}
-        <div className="rounded-[18px] bg-paper/95 bg-rulebook bg-[length:100%_32px] p-5">
+        <div className="rounded-[18px] bg-paper/95 bg-rulebook bg-[length:100%_32px] p-5 xl:h-full">
           <p className="text-xs font-extrabold uppercase tracking-[0.28em] text-notebook">
             Word
           </p>

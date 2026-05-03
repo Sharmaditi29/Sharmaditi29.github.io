@@ -11,7 +11,7 @@ export function Header() {
             LingoGarden
           </h1>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-notebook sm:text-[0.95rem]">
-          Beginner practice for German, Finnish, and Dutch, with quick reminders close by and the main card work front and center.
+          Beginner practice for German, Finnish, Dutch, and Hindi, with quick reminders close by and the main card work front and center.
           </p>
         </div>
 
@@ -24,6 +24,9 @@ export function Header() {
           </span>
           <span className="rounded-full bg-leaf px-3.5 py-2 text-sm font-bold text-white shadow-soft">
             Dutch
+          </span>
+          <span className="rounded-full bg-apricot px-3.5 py-2 text-sm font-bold text-white shadow-soft">
+            Hindi
           </span>
         </div>
       </div>

@@ -30,7 +30,7 @@ export function LanguageBar({
         </span>
       </div>
 
-      <div className="mt-4 grid gap-2.5 sm:grid-cols-3">
+      <div className="mt-4 grid grid-cols-2 gap-2.5">
         {options.map((option) => {
           const active = option.id === selectedLanguage
 
@@ -57,7 +57,7 @@ export function LanguageBar({
             <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-notebook">
               Levels
             </p>
-            <p className="mt-1 text-sm text-notebook">More levels will land here later.</p>
+            <p className="mt-1 text-sm text-notebook">A2 to C2 are sprouting soon.</p>
           </div>
         </div>
 

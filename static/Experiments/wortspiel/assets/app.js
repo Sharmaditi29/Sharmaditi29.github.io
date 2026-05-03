@@ -13050,12 +13050,13 @@ function Header() {
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between", children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "max-w-3xl min-w-0", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "font-display text-[1.9rem] font-extrabold leading-none text-ink sm:text-[2.2rem]", children: "LingoGarden" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 max-w-3xl text-sm leading-6 text-notebook sm:text-[0.95rem]", children: "Beginner practice for German, Finnish, and Dutch, with quick reminders close by and the main card work front and center." })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 max-w-3xl text-sm leading-6 text-notebook sm:text-[0.95rem]", children: "Beginner practice for German, Finnish, Dutch, and Hindi, with quick reminders close by and the main card work front and center." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex shrink-0 flex-wrap gap-2.5", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-splash px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "German" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-bubble px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Finnish" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-leaf px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Dutch" })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-leaf px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Dutch" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-apricot px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Hindi" })
       ] })
     ] })
   ] });
@@ -13078,7 +13079,7 @@ function LanguageBar({
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "rounded-full bg-mint/45 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink", children: "A1 live" })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "mt-4 grid gap-2.5 sm:grid-cols-3", children: options.map((option) => {
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "mt-4 grid grid-cols-2 gap-2.5", children: options.map((option) => {
       const active = option.id === selectedLanguage;
       return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
         "button",
@@ -13094,7 +13095,7 @@ function LanguageBar({
     /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "mt-4 border-t border-line/70 pt-4", children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "flex items-center justify-between gap-3", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.2em] text-notebook", children: "Levels" }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "mt-1 text-sm text-notebook", children: "More levels will land here later." })
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "mt-1 text-sm text-notebook", children: "A2 to C2 are sprouting soon." })
       ] }) }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "mt-3 grid grid-cols-3 gap-2", children: levelOptions.map((level) => {
         const active = level === selectedLevel;
@@ -13135,7 +13136,7 @@ function Flashcard({
     setShowExample(false);
   }, [card.id]);
   const nounDetails = [card.article, card.german, card.plural ? `plural: ${card.plural}` : null].filter(Boolean).join(" \xB7 ");
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:flex-col", children: [
     /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { className: "rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook", children: [
         "Card ",
@@ -13145,7 +13146,7 @@ function Flashcard({
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "rounded-full bg-sky/20 px-4 py-2 text-sm font-bold text-ink", children: card.category })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mt-3 rounded-[22px] border border-line bg-notebook/5 p-3.5 shadow-soft sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "rounded-[18px] bg-paper/95 bg-rulebook bg-[length:100%_32px] p-5", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mt-3 rounded-[22px] border border-line bg-notebook/5 p-3.5 shadow-soft sm:p-4 xl:flex-1", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "rounded-[18px] bg-paper/95 bg-rulebook bg-[length:100%_32px] p-5 xl:h-full", children: [
       /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.28em] text-notebook", children: "Word" }),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h3", { className: "mt-3 font-display text-[2.4rem] font-extrabold leading-[0.96] text-ink sm:text-[2.6rem]", children: card.article ? `${card.article} ${card.german}` : card.german }),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "mt-1.5 text-sm text-notebook", children: "Reveal only what you need." }),
@@ -13491,7 +13492,7 @@ function PracticeSession({
   }, [cards]);
   const goPrevious = () => setCurrentIndex((current) => current === 0 ? cards.length - 1 : current - 1);
   const goNext = () => setCurrentIndex((current) => current === cards.length - 1 ? 0 : current + 1);
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:flex-col", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:flex-col", children: [
     /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "min-w-0", children: [
         /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Practice" }),
@@ -13524,7 +13525,7 @@ function PracticeSession({
         item.key
       );
     }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "mt-5", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "mt-5 xl:flex-1", children: [
       mode === "flashcards" && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
         Flashcard,
         {
@@ -13614,25 +13615,25 @@ function RevisionLibrary({
     setSelectedThemeId(revision.themes[0]?.id ?? "");
     setSelectedGrammarId(revision.grammar[0]?.id ?? "");
   }, [revision]);
-  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("section", { className: "mt-4 rounded-[24px] bg-cream/36 p-4 shadow-soft sm:p-5", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("section", { className: "mt-4 flex flex-1 flex-col rounded-[24px] bg-cream/36 p-4 shadow-soft sm:p-5", children: [
     /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "flex flex-wrap items-start justify-between gap-2", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "min-w-0", children: [
       /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Revise" }),
       /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Quick help" })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "mt-4 flex flex-wrap gap-2", children: revisionViews.map((item) => {
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "mt-4 grid grid-cols-3 gap-2", children: revisionViews.map((item) => {
       const active = item.id === view;
       return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
         "button",
         {
           type: "button",
           onClick: () => setView(item.id),
-          className: `rounded-full px-3 py-1.5 text-sm font-bold transition ${active ? "bg-splash text-white shadow-soft" : "border border-line bg-cream/60 text-ink hover:-translate-y-0.5 hover:bg-paper"}`,
+          className: `rounded-full px-3 py-2 text-sm font-bold transition ${active ? "bg-splash text-white shadow-soft" : "border border-line bg-cream/60 text-ink hover:-translate-y-0.5 hover:bg-paper"}`,
           children: item.label
         },
         item.id
       );
     }) }),
-    view !== "words" && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-4 grid gap-3", children: [
+    view !== "words" && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-4 flex flex-1 flex-col gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("label", { className: "max-w-xl", children: [
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? "Choose a theme" : "Choose a concept" }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "relative", children: [
@@ -13654,12 +13655,12 @@ function RevisionLibrary({
           /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "pointer-events-none absolute inset-y-0 right-4 flex items-center text-notebook", children: "v" })
         ] })
       ] }),
-      currentConcept && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("article", { className: "rounded-[18px] border border-line bg-paper/76 p-3.5 shadow-soft", children: [
+      currentConcept && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("article", { className: "flex flex-1 flex-col rounded-[18px] border border-line bg-paper/78 p-4 shadow-soft", children: [
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? `${languageLabel} theme` : `${languageLabel} concept` }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { className: "mt-1.5 font-display text-base font-bold text-ink", children: currentConcept.title }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-1 text-sm leading-5 text-notebook", children: currentConcept.summary }),
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("ul", { className: "mt-2 grid gap-1.5 text-sm text-ink", children: currentConcept.bullets.map((bullet) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("li", { className: "rounded-[12px] bg-cream/55 px-2.5 py-2", children: bullet }, bullet)) }),
-        currentConcept.example && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-2 rounded-[12px] bg-cream/55 px-2.5 py-2 text-sm font-bold text-ink", children: currentConcept.example })
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("ul", { className: "mt-3 flex flex-wrap gap-2 text-sm text-ink", children: currentConcept.bullets.map((bullet) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("li", { className: "rounded-full bg-cream/60 px-3 py-2", children: bullet }, bullet)) }),
+        currentConcept.example && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-3 rounded-[14px] bg-cream/55 px-3 py-3 text-sm font-bold leading-6 text-ink", children: currentConcept.example })
       ] })
     ] }),
     view === "words" && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-4", children: [
@@ -13679,7 +13680,7 @@ function RevisionLibrary({
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "rounded-full bg-bubble/20 px-3 py-1.5 text-xs font-bold text-ink", children: query.trim() ? `${filteredWordBank.length} matches` : `${wordBank.length} words` })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "mt-3 grid max-h-[13rem] gap-2 overflow-y-auto pr-1", children: filteredWordBank.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "mt-3 grid max-h-[20rem] gap-2 overflow-y-auto pr-1 xl:flex-1", children: filteredWordBank.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(
         "article",
         {
           className: "rounded-[14px] border border-line bg-paper/78 p-2.5 shadow-soft",
@@ -13693,6 +13694,32 @@ function RevisionLibrary({
       )) })
     ] })
   ] });
+}
+
+// src/components/StudyFooter.tsx
+var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
+function StudyFooter({ languageLabel }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("section", { className: "rounded-[28px] border border-line bg-paper/92 p-4 shadow-card sm:p-5", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "grid gap-3 lg:grid-cols-[1.1fr_0.9fr_1fr]", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-cream/55 p-4", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Learn in loops" }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "Small wins keep sticking." }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: [
+        "Start with one ",
+        languageLabel.toLowerCase(),
+        " card, write one line, then check yourself in the quiz. The point is rhythm, not rushing."
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-paper p-4 shadow-soft", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Growing next" }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "A2 to C2 are on the way." }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Each next level will unlock longer sentences, richer vocabulary clusters, and stronger review trails." })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-bubble/10 p-4", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Daily help" }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "Use revise before you freeze." }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Themes refresh your context, concepts steady the grammar, and the word bank helps when the right word slips away." })
+    ] })
+  ] }) });
 }
 
 // src/data/a1Vocabulary.ts
@@ -14620,6 +14647,345 @@ var finnishVocabulary = [
   }
 ];
 
+// src/data/hindiVocabulary.ts
+var hindiVocabulary = [
+  {
+    id: "namaste",
+    level: "A1",
+    german: "\u0928\u092E\u0938\u094D\u0924\u0947",
+    english: "hello",
+    category: "Greetings",
+    exampleGerman: "\u0928\u092E\u0938\u094D\u0924\u0947, \u092E\u0947\u0930\u093E \u0928\u093E\u092E \u0905\u0926\u093F\u0924\u093F \u0939\u0948\u0964",
+    exampleEnglish: "Hello, my name is Aditi."
+  },
+  {
+    id: "dhanyavaad",
+    level: "A1",
+    german: "\u0927\u0928\u094D\u092F\u0935\u093E\u0926",
+    english: "thank you",
+    category: "Greetings",
+    exampleGerman: "\u092E\u0926\u0926 \u0915\u0947 \u0932\u093F\u090F \u0927\u0928\u094D\u092F\u0935\u093E\u0926\u0964",
+    exampleEnglish: "Thank you for the help."
+  },
+  {
+    id: "haan",
+    level: "A1",
+    german: "\u0939\u093E\u0901",
+    english: "yes",
+    category: "Basics",
+    exampleGerman: "\u0939\u093E\u0901, \u092E\u0948\u0902 \u0924\u0948\u092F\u093E\u0930 \u0939\u0942\u0901\u0964",
+    exampleEnglish: "Yes, I am ready."
+  },
+  {
+    id: "nahin",
+    level: "A1",
+    german: "\u0928\u0939\u0940\u0902",
+    english: "no / not",
+    category: "Basics",
+    exampleGerman: "\u0928\u0939\u0940\u0902, \u092E\u0941\u091D\u0947 \u091A\u093E\u092F \u0928\u0939\u0940\u0902 \u091A\u093E\u0939\u093F\u090F\u0964",
+    exampleEnglish: "No, I do not want tea."
+  },
+  {
+    id: "pani",
+    level: "A1",
+    german: "\u092A\u093E\u0928\u0940",
+    english: "water",
+    category: "Food",
+    exampleGerman: "\u092E\u0941\u091D\u0947 \u092A\u093E\u0928\u0940 \u091A\u093E\u0939\u093F\u090F\u0964",
+    exampleEnglish: "I need water."
+  },
+  {
+    id: "chai",
+    level: "A1",
+    german: "\u091A\u093E\u092F",
+    english: "tea",
+    category: "Food",
+    exampleGerman: "\u0935\u0939 \u0938\u0941\u092C\u0939 \u091A\u093E\u092F \u092A\u0940\u0924\u0940 \u0939\u0948\u0964",
+    exampleEnglish: "She drinks tea in the morning."
+  },
+  {
+    id: "khana",
+    level: "A1",
+    german: "\u0916\u093E\u0928\u093E",
+    english: "food / to eat",
+    category: "Food",
+    exampleGerman: "\u0939\u092E \u0918\u0930 \u092A\u0930 \u0916\u093E\u0928\u093E \u0916\u093E\u0924\u0947 \u0939\u0948\u0902\u0964",
+    exampleEnglish: "We eat food at home.",
+    grammarNote: "\u0916\u093E\u0928\u093E is both a noun and a verb root in common beginner Hindi."
+  },
+  {
+    id: "ghar",
+    level: "A1",
+    german: "\u0918\u0930",
+    english: "home / house",
+    category: "Home",
+    exampleGerman: "\u092E\u0947\u0930\u093E \u0918\u0930 \u092F\u0939\u093E\u0901 \u0939\u0948\u0964",
+    exampleEnglish: "My home is here."
+  },
+  {
+    id: "kamra",
+    level: "A1",
+    german: "\u0915\u092E\u0930\u093E",
+    english: "room",
+    category: "Home",
+    exampleGerman: "\u092F\u0939 \u0915\u092E\u0930\u093E \u0936\u093E\u0902\u0924 \u0939\u0948\u0964",
+    exampleEnglish: "This room is quiet."
+  },
+  {
+    id: "parivaar",
+    level: "A1",
+    german: "\u092A\u0930\u093F\u0935\u093E\u0930",
+    english: "family",
+    category: "Family",
+    exampleGerman: "\u092E\u0947\u0930\u093E \u092A\u0930\u093F\u0935\u093E\u0930 \u0926\u093F\u0932\u094D\u0932\u0940 \u092E\u0947\u0902 \u0939\u0948\u0964",
+    exampleEnglish: "My family is in Delhi."
+  },
+  {
+    id: "aadmi",
+    level: "A1",
+    german: "\u0906\u0926\u092E\u0940",
+    english: "man",
+    category: "People",
+    exampleGerman: "\u0935\u0939 \u0906\u0926\u092E\u0940 \u092C\u093E\u091C\u093C\u093E\u0930 \u091C\u093E \u0930\u0939\u093E \u0939\u0948\u0964",
+    exampleEnglish: "That man is going to the market."
+  },
+  {
+    id: "aurat",
+    level: "A1",
+    german: "\u0914\u0930\u0924",
+    english: "woman",
+    category: "People",
+    exampleGerman: "\u0935\u0939 \u0914\u0930\u0924 \u0915\u093F\u0924\u093E\u092C \u092A\u0922\u093C \u0930\u0939\u0940 \u0939\u0948\u0964",
+    exampleEnglish: "That woman is reading a book."
+  },
+  {
+    id: "bachcha",
+    level: "A1",
+    german: "\u092C\u091A\u094D\u091A\u093E",
+    english: "child",
+    category: "People",
+    exampleGerman: "\u092C\u091A\u094D\u091A\u093E \u092A\u093E\u0930\u094D\u0915 \u092E\u0947\u0902 \u0916\u0947\u0932 \u0930\u0939\u093E \u0939\u0948\u0964",
+    exampleEnglish: "The child is playing in the park."
+  },
+  {
+    id: "dost",
+    level: "A1",
+    german: "\u0926\u094B\u0938\u094D\u0924",
+    english: "friend",
+    category: "People",
+    exampleGerman: "\u092E\u0947\u0930\u093E \u0926\u094B\u0938\u094D\u0924 \u0906\u091C \u0906 \u0930\u0939\u093E \u0939\u0948\u0964",
+    exampleEnglish: "My friend is coming today."
+  },
+  {
+    id: "school",
+    level: "A1",
+    german: "\u0938\u094D\u0915\u0942\u0932",
+    english: "school",
+    category: "Learning",
+    exampleGerman: "\u0935\u0939 \u0930\u094B\u091C\u093C \u0938\u094D\u0915\u0942\u0932 \u091C\u093E\u0924\u0940 \u0939\u0948\u0964",
+    exampleEnglish: "She goes to school every day."
+  },
+  {
+    id: "kitab",
+    level: "A1",
+    german: "\u0915\u093F\u0924\u093E\u092C",
+    english: "book",
+    category: "Learning",
+    exampleGerman: "\u092E\u0947\u0930\u0940 \u0915\u093F\u0924\u093E\u092C \u092E\u0947\u091C\u093C \u092A\u0930 \u0939\u0948\u0964",
+    exampleEnglish: "My book is on the table."
+  },
+  {
+    id: "bhaasha",
+    level: "A1",
+    german: "\u092D\u093E\u0937\u093E",
+    english: "language",
+    category: "Learning",
+    exampleGerman: "\u0939\u093F\u0928\u094D\u0926\u0940 \u090F\u0915 \u0938\u0941\u0902\u0926\u0930 \u092D\u093E\u0937\u093E \u0939\u0948\u0964",
+    exampleEnglish: "Hindi is a beautiful language."
+  },
+  {
+    id: "bazaar",
+    level: "A1",
+    german: "\u092C\u093E\u091C\u093C\u093E\u0930",
+    english: "market",
+    category: "Shopping",
+    exampleGerman: "\u092E\u0948\u0902 \u0936\u093E\u092E \u0915\u094B \u092C\u093E\u091C\u093C\u093E\u0930 \u091C\u093E\u0924\u0940 \u0939\u0942\u0901\u0964",
+    exampleEnglish: "I go to the market in the evening."
+  },
+  {
+    id: "paise",
+    level: "A1",
+    german: "\u092A\u0948\u0938\u0947",
+    english: "money",
+    category: "Shopping",
+    exampleGerman: "\u092E\u0947\u0930\u0947 \u092A\u093E\u0938 \u092A\u0948\u0938\u0947 \u0939\u0948\u0902\u0964",
+    exampleEnglish: "I have money."
+  },
+  {
+    id: "station",
+    level: "A1",
+    german: "\u0938\u094D\u091F\u0947\u0936\u0928",
+    english: "station",
+    category: "Travel",
+    exampleGerman: "\u0938\u094D\u091F\u0947\u0936\u0928 \u092F\u0939\u093E\u0901 \u0938\u0947 \u092A\u093E\u0938 \u0939\u0948\u0964",
+    exampleEnglish: "The station is near here."
+  },
+  {
+    id: "gaadi",
+    level: "A1",
+    german: "\u0917\u093E\u0921\u093C\u0940",
+    english: "vehicle / car",
+    category: "Travel",
+    exampleGerman: "\u0917\u093E\u0921\u093C\u0940 \u091C\u0932\u094D\u0926\u0940 \u0906 \u0930\u0939\u0940 \u0939\u0948\u0964",
+    exampleEnglish: "The vehicle is arriving soon."
+  },
+  {
+    id: "raasta",
+    level: "A1",
+    german: "\u0930\u093E\u0938\u094D\u0924\u093E",
+    english: "road / way",
+    category: "Travel",
+    exampleGerman: "\u092F\u0939 \u0930\u093E\u0938\u094D\u0924\u093E \u0938\u094D\u091F\u0947\u0936\u0928 \u0924\u0915 \u091C\u093E\u0924\u093E \u0939\u0948\u0964",
+    exampleEnglish: "This road goes to the station."
+  },
+  {
+    id: "aaj",
+    level: "A1",
+    german: "\u0906\u091C",
+    english: "today",
+    category: "Time",
+    exampleGerman: "\u0906\u091C \u092E\u094C\u0938\u092E \u0905\u091A\u094D\u091B\u093E \u0939\u0948\u0964",
+    exampleEnglish: "Today the weather is good."
+  },
+  {
+    id: "kal",
+    level: "A1",
+    german: "\u0915\u0932",
+    english: "tomorrow / yesterday",
+    category: "Time",
+    exampleGerman: "\u0915\u0932 \u092E\u0948\u0902 \u0918\u0930 \u092A\u0930 \u0930\u0939\u0942\u0901\u0917\u0940\u0964",
+    exampleEnglish: "Tomorrow I will stay at home.",
+    grammarNote: "\u0915\u0932 can mean yesterday or tomorrow, the context tells you which one."
+  },
+  {
+    id: "subah",
+    level: "A1",
+    german: "\u0938\u0941\u092C\u0939",
+    english: "morning",
+    category: "Time",
+    exampleGerman: "\u0938\u0941\u092C\u0939 \u092E\u0948\u0902 \u091C\u0932\u094D\u0926\u0940 \u0909\u0920\u0924\u0940 \u0939\u0942\u0901\u0964",
+    exampleEnglish: "I wake up early in the morning."
+  },
+  {
+    id: "shaam",
+    level: "A1",
+    german: "\u0936\u093E\u092E",
+    english: "evening",
+    category: "Time",
+    exampleGerman: "\u0936\u093E\u092E \u0915\u094B \u0939\u092E \u0938\u093E\u0925 \u092A\u0922\u093C\u0924\u0947 \u0939\u0948\u0902\u0964",
+    exampleEnglish: "In the evening we study together."
+  },
+  {
+    id: "bada",
+    level: "A1",
+    german: "\u092C\u0921\u093C\u093E",
+    english: "big",
+    category: "Adjectives",
+    exampleGerman: "\u092F\u0939 \u0918\u0930 \u092C\u0939\u0941\u0924 \u092C\u0921\u093C\u093E \u0939\u0948\u0964",
+    exampleEnglish: "This house is very big."
+  },
+  {
+    id: "chhota",
+    level: "A1",
+    german: "\u091B\u094B\u091F\u093E",
+    english: "small",
+    category: "Adjectives",
+    exampleGerman: "\u0915\u092E\u0930\u093E \u091B\u094B\u091F\u093E \u0932\u0947\u0915\u093F\u0928 \u0938\u093E\u092B\u093C \u0939\u0948\u0964",
+    exampleEnglish: "The room is small but clean."
+  },
+  {
+    id: "achchha",
+    level: "A1",
+    german: "\u0905\u091A\u094D\u091B\u093E",
+    english: "good",
+    category: "Adjectives",
+    exampleGerman: "\u092F\u0939 \u0905\u091A\u094D\u091B\u093E \u0935\u093F\u091A\u093E\u0930 \u0939\u0948\u0964",
+    exampleEnglish: "This is a good idea."
+  },
+  {
+    id: "jana",
+    level: "A1",
+    german: "\u091C\u093E\u0928\u093E",
+    english: "to go",
+    category: "Verbs",
+    exampleGerman: "\u092E\u0948\u0902 \u0905\u092C \u0938\u094D\u0915\u0942\u0932 \u091C\u093E\u0928\u093E \u091A\u093E\u0939\u0924\u0940 \u0939\u0942\u0901\u0964",
+    exampleEnglish: "I want to go to school now."
+  },
+  {
+    id: "aana",
+    level: "A1",
+    german: "\u0906\u0928\u093E",
+    english: "to come",
+    category: "Verbs",
+    exampleGerman: "\u0915\u094D\u092F\u093E \u0924\u0941\u092E \u0915\u0932 \u0906\u0913\u0917\u0947?",
+    exampleEnglish: "Will you come tomorrow?"
+  },
+  {
+    id: "karna",
+    level: "A1",
+    german: "\u0915\u0930\u0928\u093E",
+    english: "to do",
+    category: "Verbs",
+    exampleGerman: "\u092E\u0948\u0902 \u0939\u0930 \u0926\u093F\u0928 \u0905\u092D\u094D\u092F\u093E\u0938 \u0915\u0930\u0924\u0940 \u0939\u0942\u0901\u0964",
+    exampleEnglish: "I practice every day."
+  },
+  {
+    id: "padhna",
+    level: "A1",
+    german: "\u092A\u0922\u093C\u0928\u093E",
+    english: "to read / study",
+    category: "Verbs",
+    exampleGerman: "\u0939\u092E \u0930\u093E\u0924 \u0915\u094B \u0939\u093F\u0928\u094D\u0926\u0940 \u092A\u0922\u093C\u0924\u0947 \u0939\u0948\u0902\u0964",
+    exampleEnglish: "We study Hindi at night."
+  },
+  {
+    id: "likhna",
+    level: "A1",
+    german: "\u0932\u093F\u0916\u0928\u093E",
+    english: "to write",
+    category: "Verbs",
+    exampleGerman: "\u0935\u0939 \u0915\u0949\u092A\u0940 \u092E\u0947\u0902 \u0932\u093F\u0916 \u0930\u0939\u0940 \u0939\u0948\u0964",
+    exampleEnglish: "She is writing in the notebook."
+  },
+  {
+    id: "bolna",
+    level: "A1",
+    german: "\u092C\u094B\u0932\u0928\u093E",
+    english: "to speak",
+    category: "Verbs",
+    exampleGerman: "\u092E\u0948\u0902 \u0925\u094B\u0921\u093C\u093E \u0939\u093F\u0928\u094D\u0926\u0940 \u092C\u094B\u0932\u0924\u0940 \u0939\u0942\u0901\u0964",
+    exampleEnglish: "I speak a little Hindi."
+  },
+  {
+    id: "dekhna",
+    level: "A1",
+    german: "\u0926\u0947\u0916\u0928\u093E",
+    english: "to see / watch",
+    category: "Verbs",
+    exampleGerman: "\u0939\u092E \u092B\u093C\u093F\u0932\u094D\u092E \u0926\u0947\u0916\u0928\u093E \u091A\u093E\u0939\u0924\u0947 \u0939\u0948\u0902\u0964",
+    exampleEnglish: "We want to watch a film."
+  },
+  {
+    id: "rehna",
+    level: "A1",
+    german: "\u0930\u0939\u0928\u093E",
+    english: "to live / stay",
+    category: "Verbs",
+    exampleGerman: "\u092E\u0948\u0902 \u092C\u0930\u094D\u0932\u093F\u0928 \u092E\u0947\u0902 \u0930\u0939\u0924\u0940 \u0939\u0942\u0901\u0964",
+    exampleEnglish: "I live in Berlin."
+  }
+];
+
 // src/data/revisionCollections.ts
 var germanRevisionCollection = {
   sourceLabel: "Goethe-Zertifikat A1 Wortliste",
@@ -15071,6 +15437,128 @@ var dutchRevisionCollection = {
     }
   ]
 };
+var hindiRevisionCollection = {
+  sourceLabel: "Hindi at the University of Texas at Austin beginner resources",
+  sourceHref: "https://hindi.la.utexas.edu/resources/glossaries-alive/",
+  note: "Themes and example phrases are shaped by the University of Texas Hindi beginner materials, especially Glossaries Alive, Greetings and Conversation Starters, and the open grammar notes.",
+  wordBankLabel: "starter Hindi reference words",
+  themes: [
+    {
+      id: "hindi-intro",
+      title: "Introductions and greetings",
+      summary: "Start with names, hello, where you are from, and simple friendly exchanges.",
+      bullets: ["\u0928\u092E\u0938\u094D\u0924\u0947 and polite replies", "My name is ...", "Where are you from?"],
+      example: "\u0928\u092E\u0938\u094D\u0924\u0947, \u092E\u0947\u0930\u093E \u0928\u093E\u092E \u0905\u0926\u093F\u0924\u093F \u0939\u0948\u0964 \u0906\u092A\u0915\u093E \u0928\u093E\u092E \u0915\u094D\u092F\u093E \u0939\u0948?"
+    },
+    {
+      id: "hindi-home",
+      title: "Home and people",
+      summary: "Describe your home, your room, and the people around you in easy lines.",
+      bullets: ["\u0918\u0930, \u0915\u092E\u0930\u093E, \u092A\u0930\u093F\u0935\u093E\u0930", "friend and family words", "simple descriptions"],
+      example: "\u092E\u0947\u0930\u093E \u0918\u0930 \u091B\u094B\u091F\u093E \u0939\u0948, \u0932\u0947\u0915\u093F\u0928 \u092C\u0939\u0941\u0924 \u0905\u091A\u094D\u091B\u093E \u0939\u0948\u0964"
+    },
+    {
+      id: "hindi-food",
+      title: "Food and drink",
+      summary: "Handle tea, water, meals, and simple requests with confidence.",
+      bullets: ["\u092A\u093E\u0928\u0940, \u091A\u093E\u092F, \u0916\u093E\u0928\u093E", "asking for food politely", "eat and drink verbs"],
+      example: "\u092E\u0941\u091D\u0947 \u092A\u093E\u0928\u0940 \u0914\u0930 \u091A\u093E\u092F \u091A\u093E\u0939\u093F\u090F\u0964"
+    },
+    {
+      id: "hindi-study",
+      title: "Study and language",
+      summary: "Talk about learning, books, and practicing Hindi every day.",
+      bullets: ["school and book words", "read, write, speak", "small study routine phrases"],
+      example: "\u092E\u0948\u0902 \u0939\u0930 \u0926\u093F\u0928 \u0939\u093F\u0928\u094D\u0926\u0940 \u092A\u0922\u093C\u0924\u0940 \u0914\u0930 \u0932\u093F\u0916\u0924\u0940 \u0939\u0942\u0901\u0964"
+    },
+    {
+      id: "hindi-travel",
+      title: "Travel and places",
+      summary: "Move through the city with words for station, market, road, and direction.",
+      bullets: ["\u0938\u094D\u091F\u0947\u0936\u0928, \u092C\u093E\u091C\u093C\u093E\u0930, \u0930\u093E\u0938\u094D\u0924\u093E", "near and far", "go and come verbs"],
+      example: "\u0938\u094D\u091F\u0947\u0936\u0928 \u0915\u0939\u093E\u0901 \u0939\u0948? \u092E\u0948\u0902 \u092C\u093E\u091C\u093C\u093E\u0930 \u091C\u093E \u0930\u0939\u0940 \u0939\u0942\u0901\u0964"
+    },
+    {
+      id: "hindi-time",
+      title: "Time and routine",
+      summary: "Use morning, evening, today, and tomorrow in short daily sentences.",
+      bullets: ["\u0906\u091C, \u0915\u0932, \u0938\u0941\u092C\u0939, \u0936\u093E\u092E", "daily routines", "simple planning talk"],
+      example: "\u0906\u091C \u092E\u0948\u0902 \u0918\u0930 \u092A\u0930 \u0939\u0942\u0901, \u0915\u0932 \u092E\u0948\u0902 \u0938\u094D\u0915\u0942\u0932 \u091C\u093E\u090A\u0901\u0917\u0940\u0964"
+    },
+    {
+      id: "hindi-shopping",
+      title: "Shopping and services",
+      summary: "Buy small things and ask simple practical questions.",
+      bullets: ["money words", "market language", "helpful service phrases"],
+      example: "\u092E\u0947\u0930\u0947 \u092A\u093E\u0938 \u092A\u0948\u0938\u0947 \u0939\u0948\u0902, \u0932\u0947\u0915\u093F\u0928 \u092E\u0941\u091D\u0947 \u092E\u0926\u0926 \u091A\u093E\u0939\u093F\u090F\u0964"
+    },
+    {
+      id: "hindi-weather",
+      title: "Weather and feelings",
+      summary: "Describe simple conditions and everyday feelings in beginner-friendly Hindi.",
+      bullets: ["hot, cold, good, small, big", "basic comfort words", "simple opinions"],
+      example: "\u0906\u091C \u092E\u094C\u0938\u092E \u0905\u091A\u094D\u091B\u093E \u0939\u0948, \u0932\u0947\u0915\u093F\u0928 \u0938\u0941\u092C\u0939 \u0920\u0902\u0921\u0940 \u0939\u0948\u0964"
+    }
+  ],
+  grammar: [
+    {
+      id: "hindi-pronouns",
+      title: "Pronouns and \u0939\u094B\u0928\u093E",
+      summary: "A1 Hindi starts with \u092E\u0948\u0902, \u0906\u092A, \u0924\u0941\u092E, \u0935\u0939 and simple forms of \u0939\u094B\u0928\u093E.",
+      bullets: ["\u092E\u0948\u0902 \u0939\u0942\u0901, \u0906\u092A \u0939\u0948\u0902, \u0935\u0939 \u0939\u0948", "use them for identity sentences", "say complete chunks aloud"],
+      example: "\u092E\u0948\u0902 \u091B\u093E\u0924\u094D\u0930\u093E \u0939\u0942\u0901\u0964 \u0935\u0939 \u092E\u0947\u0930\u093E \u0926\u094B\u0938\u094D\u0924 \u0939\u0948\u0964"
+    },
+    {
+      id: "hindi-gender",
+      title: "Gender, lightly",
+      summary: "Hindi adjectives and verb forms often shift with gender, but beginners can learn this through common patterns.",
+      bullets: ["\u0905\u091A\u094D\u091B\u093E / \u0905\u091A\u094D\u091B\u0940", "\u0930\u0939\u0924\u093E / \u0930\u0939\u0924\u0940", "notice the pattern in examples"],
+      example: "\u092E\u0948\u0902 \u0924\u0948\u092F\u093E\u0930 \u0939\u0942\u0901\u0964 \u0935\u0939 \u0924\u0948\u092F\u093E\u0930 \u0939\u0948\u0964"
+    },
+    {
+      id: "hindi-questions",
+      title: "Question words",
+      summary: "Small question words unlock real conversation very early.",
+      bullets: ["\u0915\u094D\u092F\u093E, \u0915\u0939\u093E\u0901, \u0915\u094C\u0928, \u0915\u092C", "keep the sentence short", "reuse daily questions often"],
+      example: "\u0906\u092A \u0915\u0939\u093E\u0901 \u0938\u0947 \u0939\u0948\u0902? \u0906\u092A\u0915\u093E \u0928\u093E\u092E \u0915\u094D\u092F\u093E \u0939\u0948?"
+    },
+    {
+      id: "hindi-negation",
+      title: "\u0928\u0939\u0940\u0902 for negation",
+      summary: "Hindi negation is simple and powerful. Learn \u0928\u0939\u0940\u0902 as a stable chunk.",
+      bullets: ["put \u0928\u0939\u0940\u0902 before the main idea", "use it in daily answers", "practice yes-no exchanges"],
+      example: "\u092E\u0948\u0902 \u091A\u093E\u092F \u0928\u0939\u0940\u0902 \u092A\u0940\u0924\u0940\u0964"
+    },
+    {
+      id: "hindi-postpositions",
+      title: "Place words and postpositions",
+      summary: "Hindi uses postpositions like \u092E\u0947\u0902 and \u0938\u0947 after nouns. Learn the meaning before the grammar label.",
+      bullets: ["\u092E\u0947\u0902 for in", "\u0938\u0947 for from / with", "\u0924\u0915 for up to"],
+      example: "\u092E\u0948\u0902 \u0918\u0930 \u092E\u0947\u0902 \u0939\u0942\u0901\u0964 \u0935\u0939 \u0926\u093F\u0932\u094D\u0932\u0940 \u0938\u0947 \u0939\u0948\u0964"
+    },
+    {
+      id: "hindi-verbs",
+      title: "Everyday verb roots",
+      summary: "A1 practice works best when you repeat a small set of useful verbs often.",
+      bullets: ["\u091C\u093E\u0928\u093E, \u0906\u0928\u093E, \u0915\u0930\u0928\u093E", "\u092A\u0922\u093C\u0928\u093E, \u0932\u093F\u0916\u0928\u093E, \u092C\u094B\u0932\u0928\u093E", "short routine sentences first"],
+      example: "\u092E\u0948\u0902 \u0939\u093F\u0928\u094D\u0926\u0940 \u092C\u094B\u0932\u0928\u093E \u0914\u0930 \u092A\u0922\u093C\u0928\u093E \u091A\u093E\u0939\u0924\u0940 \u0939\u0942\u0901\u0964"
+    },
+    {
+      id: "hindi-politeness",
+      title: "Polite Hindi",
+      summary: "Choosing \u0906\u092A and respectful phrases makes beginner Hindi more natural and friendly.",
+      bullets: ["use \u0906\u092A in polite contexts", "pair requests with \u091A\u093E\u0939\u093F\u090F", "keep tone soft and clear"],
+      example: "\u0906\u092A\u0915\u093E \u0928\u093E\u092E \u0915\u094D\u092F\u093E \u0939\u0948? \u092E\u0941\u091D\u0947 \u092A\u093E\u0928\u0940 \u091A\u093E\u0939\u093F\u090F\u0964"
+    },
+    {
+      id: "hindi-script",
+      title: "Devanagari, gently",
+      summary: "Read the script as a friend, not a wall. Build recognition through repeated everyday words.",
+      bullets: ["notice repeated letters in common words", "read short greetings often", "pair sound with script"],
+      example: "\u0928\u092E\u0938\u094D\u0924\u0947, \u092A\u093E\u0928\u0940, \u0915\u093F\u0924\u093E\u092C, \u0918\u0930"
+    }
+  ]
+};
 
 // src/utils/storage.ts
 var STORAGE_KEY = "lingogarden-progress";
@@ -15189,13 +15677,14 @@ function saveSentenceAnswer(progress, cardId, text) {
 }
 
 // src/App.tsx
-var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 function App() {
   const [selectedLanguage, setSelectedLanguage] = (0, import_react6.useState)("german");
   const [progress, setProgress] = (0, import_react6.useState)(() => loadProgress() ?? createDefaultProgress());
   const [germanCards, setGermanCards] = (0, import_react6.useState)(a1Vocabulary);
   const [finnishCards, setFinnishCards] = (0, import_react6.useState)(finnishVocabulary);
   const [dutchCards, setDutchCards] = (0, import_react6.useState)(dutchVocabulary);
+  const [hindiCards] = (0, import_react6.useState)(hindiVocabulary);
   const [isGermanDeckLoading, setIsGermanDeckLoading] = (0, import_react6.useState)(true);
   const [isFinnishDeckLoading, setIsFinnishDeckLoading] = (0, import_react6.useState)(true);
   const [isDutchDeckLoading, setIsDutchDeckLoading] = (0, import_react6.useState)(true);
@@ -15217,17 +15706,25 @@ function App() {
       label: "Dutch",
       accentClass: "bg-leaf",
       sentencePlaceholder: "Bijvoorbeeld: Ik leer vandaag Nederlands."
+    },
+    {
+      id: "hindi",
+      label: "Hindi",
+      accentClass: "bg-apricot",
+      sentencePlaceholder: "\u0909\u0926\u093E\u0939\u0930\u0923: \u092E\u0948\u0902 \u0906\u091C \u0939\u093F\u0928\u094D\u0926\u0940 \u0938\u0940\u0916 \u0930\u0939\u0940 \u0939\u0942\u0901\u0964"
     }
   ];
   const cardsByLanguage = {
     german: germanCards,
     finnish: finnishCards,
-    dutch: dutchCards
+    dutch: dutchCards,
+    hindi: hindiCards
   };
   const revisionByLanguage = {
     german: germanRevisionCollection,
     finnish: finnishRevisionCollection,
-    dutch: dutchRevisionCollection
+    dutch: dutchRevisionCollection,
+    hindi: hindiRevisionCollection
   };
   const currentLanguage = languageOptions.find((option) => option.id === selectedLanguage) ?? languageOptions[0];
   const currentCards = cardsByLanguage[selectedLanguage];
@@ -15271,11 +15768,11 @@ function App() {
   const handleSentenceSave = (cardId, text) => {
     setProgress((current) => saveSentenceAnswer(current, cardId, text));
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "min-h-screen overflow-x-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-4 py-4 sm:px-5 sm:py-5 lg:px-7 xl:px-8 xl:py-6", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Header, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("main", { className: "mt-4 grid flex-1 gap-4 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:items-start xl:gap-5", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("aside", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:flex-col", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "min-h-screen overflow-x-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-4 py-4 sm:px-5 sm:py-5 lg:px-7 xl:px-8 xl:py-6", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Header, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("main", { className: "mt-4 grid flex-1 gap-4 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:items-start xl:gap-5", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("aside", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:min-h-[calc(100vh-12.5rem)] xl:flex-col", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
           LanguageBar,
           {
             options: languageOptions,
@@ -15284,7 +15781,7 @@ function App() {
             onSelect: setSelectedLanguage
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
           RevisionLibrary,
           {
             cards: currentCards,
@@ -15293,11 +15790,12 @@ function App() {
           }
         )
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("section", { className: "flex flex-col gap-4", children: [
-        selectedLanguage === "german" && isGermanDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Goethe-based German A1 deck." }),
-        selectedLanguage === "finnish" && isFinnishDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Aalto beginner Finnish deck." }),
-        selectedLanguage === "dutch" && isDutchDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Dutch beginner deck." }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("section", { className: "flex flex-col gap-4 xl:min-h-[calc(100vh-12.5rem)]", children: [
+        selectedLanguage === "german" && isGermanDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Goethe-based German A1 deck." }),
+        selectedLanguage === "finnish" && isFinnishDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Aalto beginner Finnish deck." }),
+        selectedLanguage === "dutch" && isDutchDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Dutch beginner deck." }),
+        selectedLanguage === "hindi" && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Hindi is live as a starter A1 deck, with more words sprouting soon." }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
           PracticeSession,
           {
             cards: currentCards,
@@ -15310,15 +15808,16 @@ function App() {
           }
         )
       ] })
-    ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "mt-4", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(StudyFooter, { languageLabel: currentLanguage.label }) })
   ] }) });
 }
 var App_default = App;
 
 // src/static-entry.tsx
-var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
 (0, import_client.createRoot)(document.getElementById("root")).render(
-  /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_react7.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(App_default, {}) })
+  /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react7.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(App_default, {}) })
 );
 /*! Bundled license information:
 

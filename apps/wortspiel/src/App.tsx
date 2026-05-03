@@ -3,13 +3,16 @@ import { Header } from './components/Header'
 import { LanguageBar } from './components/LanguageBar'
 import { PracticeSession } from './components/PracticeSession'
 import { RevisionLibrary } from './components/RevisionLibrary'
+import { StudyFooter } from './components/StudyFooter'
 import { a1Vocabulary } from './data/a1Vocabulary'
 import { dutchVocabulary } from './data/dutchVocabulary'
 import { finnishVocabulary } from './data/finnishVocabulary'
+import { hindiVocabulary } from './data/hindiVocabulary'
 import {
   dutchRevisionCollection,
   finnishRevisionCollection,
   germanRevisionCollection,
+  hindiRevisionCollection,
 } from './data/revisionCollections'
 import type { LanguageOption, LearningLanguage, ProgressState, VocabularyCard } from './types'
 import {
@@ -33,6 +36,7 @@ function App() {
   const [germanCards, setGermanCards] = useState<VocabularyCard[]>(a1Vocabulary)
   const [finnishCards, setFinnishCards] = useState<VocabularyCard[]>(finnishVocabulary)
   const [dutchCards, setDutchCards] = useState<VocabularyCard[]>(dutchVocabulary)
+  const [hindiCards] = useState<VocabularyCard[]>(hindiVocabulary)
   const [isGermanDeckLoading, setIsGermanDeckLoading] = useState(true)
   const [isFinnishDeckLoading, setIsFinnishDeckLoading] = useState(true)
   const [isDutchDeckLoading, setIsDutchDeckLoading] = useState(true)
@@ -56,18 +60,26 @@ function App() {
       accentClass: 'bg-leaf',
       sentencePlaceholder: 'Bijvoorbeeld: Ik leer vandaag Nederlands.',
     },
+    {
+      id: 'hindi',
+      label: 'Hindi',
+      accentClass: 'bg-apricot',
+      sentencePlaceholder: 'उदाहरण: मैं आज हिन्दी सीख रही हूँ।',
+    },
   ]
 
   const cardsByLanguage: Record<LearningLanguage, VocabularyCard[]> = {
     german: germanCards,
     finnish: finnishCards,
     dutch: dutchCards,
+    hindi: hindiCards,
   }
 
   const revisionByLanguage = {
     german: germanRevisionCollection,
     finnish: finnishRevisionCollection,
     dutch: dutchRevisionCollection,
+    hindi: hindiRevisionCollection,
   } satisfies Record<LearningLanguage, typeof germanRevisionCollection>
 
   const currentLanguage =
@@ -134,7 +146,7 @@ function App() {
         <Header />
 
         <main className="mt-4 grid flex-1 gap-4 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:items-start xl:gap-5">
-          <aside className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:flex-col">
+          <aside className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:min-h-[calc(100vh-12.5rem)] xl:flex-col">
             <LanguageBar
               options={languageOptions}
               selectedLanguage={selectedLanguage}
@@ -149,7 +161,7 @@ function App() {
             />
           </aside>
 
-          <section className="flex flex-col gap-4">
+          <section className="flex flex-col gap-4 xl:min-h-[calc(100vh-12.5rem)]">
             {selectedLanguage === 'german' && isGermanDeckLoading && (
               <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
                 Loading the full Goethe-based German A1 deck.
@@ -168,6 +180,12 @@ function App() {
               </div>
             )}
 
+            {selectedLanguage === 'hindi' && (
+              <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+                Hindi is live as a starter A1 deck, with more words sprouting soon.
+              </div>
+            )}
+
             <PracticeSession
               cards={currentCards}
               progress={progress}
@@ -179,6 +197,10 @@ function App() {
             />
           </section>
         </main>
+
+        <div className="mt-4">
+          <StudyFooter languageLabel={currentLanguage.label} />
+        </div>
       </div>
     </div>
   )
