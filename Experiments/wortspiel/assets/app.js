@@ -13072,9 +13072,10 @@ var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 function LanguageBar({ options, selectedLanguage, onSelect }) {
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("section", { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex flex-wrap items-end justify-between gap-2", children: [
     /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Language" }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { className: "mt-1 font-display text-base font-bold text-ink", children: "Choose what to learn." })
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Learn" }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { className: "mt-1 font-display text-base font-bold text-ink", children: "Pick a language." })
     ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "rounded-full bg-mint/40 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink", children: "A1 only" }),
     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "grid w-full gap-2 sm:grid-cols-3", children: options.map((option) => {
       const active = option.id === selectedLanguage;
       return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
@@ -13091,107 +13092,12 @@ function LanguageBar({ options, selectedLanguage, onSelect }) {
   ] }) });
 }
 
-// src/components/LevelSelector.tsx
-var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
-var levels = [
-  { level: "A1", available: true, subtitle: "Ready now" },
-  { level: "A2", available: false, subtitle: "Coming soon" },
-  { level: "B1", available: false, subtitle: "Coming soon" },
-  { level: "B2", available: false, subtitle: "Coming soon" }
-];
-function LevelSelector({ selectedLevel, onSelect }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "border-t border-line/80 pt-3", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "min-w-0", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Level" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { className: "mt-1 font-display text-base font-bold text-ink", children: "Keep it beginner-simple." })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "shrink-0 rounded-full bg-mint/40 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink", children: "A1 ready" })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mt-2.5 grid gap-1.5 sm:grid-cols-2", children: levels.map(({ level, available, subtitle }) => {
-      const isSelected = selectedLevel === level;
-      return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
-        "button",
-        {
-          type: "button",
-          disabled: !available,
-          onClick: () => available && onSelect(level),
-          className: `min-w-0 rounded-[14px] border px-3 py-2.5 text-left transition ${available ? isSelected ? "border-splash bg-splash text-paper shadow-soft" : "border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble hover:bg-paper" : "cursor-not-allowed border-dashed border-line bg-paper/50 text-notebook opacity-75"}`,
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex items-center justify-between", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "font-display text-base font-bold", children: level }),
-              !available && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "ml-3 shrink-0 rounded-full bg-paper/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-notebook", children: "Locked" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: `mt-1 text-[13px] ${isSelected && available ? "text-paper/80" : "text-notebook"}`, children: subtitle })
-          ]
-        },
-        level
-      );
-    }) })
-  ] });
-}
-
-// src/components/ProgressDashboard.tsx
-var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
-function ProgressDashboard({ progress, deckSize }) {
-  const mastery = Math.round(progress.knownCardIds.length / deckSize * 100);
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("section", { className: "border-t border-line/80 pt-3", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "min-w-0", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Progress" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h2", { className: "mt-1 font-display text-base font-bold text-ink", children: "Tiny wins count." })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "shrink-0 rounded-[18px] bg-bubble px-3 py-2.5 text-ink shadow-soft", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[10px] font-bold uppercase tracking-[0.2em] text-paper/70", children: "Streak" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "font-display text-xl font-bold", children: progress.currentStreak })
-      ] })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "mt-2.5 grid gap-1.5 sm:grid-cols-2", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-[14px] bg-peach/45 px-3 py-2.5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[10px] font-bold uppercase tracking-[0.18em] text-notebook", children: "Reviewed" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "mt-1 font-display text-lg font-bold text-ink", children: progress.cardsReviewed })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-[14px] bg-mint/45 px-3 py-2.5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[10px] font-bold uppercase tracking-[0.18em] text-notebook", children: "Known" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "mt-1 font-display text-lg font-bold text-leaf", children: progress.knewThis })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-[14px] bg-bubble/35 px-3 py-2.5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[10px] font-bold uppercase tracking-[0.18em] text-notebook", children: "Practice" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "mt-1 font-display text-lg font-bold text-blush", children: progress.needPractice })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-[14px] bg-sun/35 px-3 py-2.5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[10px] font-bold uppercase tracking-[0.18em] text-notebook", children: "Sentences" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "mt-1 font-display text-lg font-bold text-ink", children: progress.sentenceAnswersSubmitted })
-      ] })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "mt-2.5 rounded-[16px] border border-line bg-paper p-2.5", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "min-w-0", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[10px] font-bold uppercase tracking-[0.18em] text-notebook", children: "Deck mastery" }),
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "mt-0.5 text-[11px] text-notebook", children: "Based on known cards." })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("p", { className: "shrink-0 font-display text-lg font-bold text-ink", children: [
-          mastery,
-          "%"
-        ] })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "mt-2 h-2 rounded-full bg-cream", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-        "div",
-        {
-          className: "h-2 rounded-full bg-gradient-to-r from-sun via-apricot to-leaf transition-all",
-          style: { width: `${mastery}%` }
-        }
-      ) })
-    ] })
-  ] });
-}
-
 // src/components/PracticeSession.tsx
 var import_react4 = __toESM(require_react(), 1);
 
 // src/components/Flashcard.tsx
 var import_react = __toESM(require_react(), 1);
-var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 function Flashcard({
   card,
   currentIndex,
@@ -13208,22 +13114,22 @@ function Flashcard({
     setShowExample(false);
   }, [card.id]);
   const nounDetails = [card.article, card.german, card.plural ? `plural: ${card.plural}` : null].filter(Boolean).join(" \xB7 ");
-  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("section", { className: "rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { className: "rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook", children: [
         "Card ",
         currentIndex + 1,
         " of ",
         totalCards
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "rounded-full bg-sky/20 px-4 py-2 text-sm font-bold text-ink", children: card.category })
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "rounded-full bg-sky/20 px-4 py-2 text-sm font-bold text-ink", children: card.category })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "mt-3 rounded-[22px] border border-line bg-notebook/5 p-3.5 shadow-soft sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "rounded-[18px] bg-paper/95 bg-rulebook bg-[length:100%_32px] p-5", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.28em] text-notebook", children: "Word" }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h3", { className: "mt-3 font-display text-[2.4rem] font-extrabold leading-[0.96] text-ink sm:text-[2.6rem]", children: card.article ? `${card.article} ${card.german}` : card.german }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-1.5 text-sm text-notebook", children: "Reveal only what you need." }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-4 flex flex-wrap gap-2.5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mt-3 rounded-[22px] border border-line bg-notebook/5 p-3.5 shadow-soft sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "rounded-[18px] bg-paper/95 bg-rulebook bg-[length:100%_32px] p-5", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.28em] text-notebook", children: "Word" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h3", { className: "mt-3 font-display text-[2.4rem] font-extrabold leading-[0.96] text-ink sm:text-[2.6rem]", children: card.article ? `${card.article} ${card.german}` : card.german }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "mt-1.5 text-sm text-notebook", children: "Reveal only what you need." }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "mt-4 flex flex-wrap gap-2.5", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
           "button",
           {
             type: "button",
@@ -13232,7 +13138,7 @@ function Flashcard({
             children: showMeaning ? "Hide meaning" : "Show meaning"
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
           "button",
           {
             type: "button",
@@ -13242,25 +13148,25 @@ function Flashcard({
           }
         )
       ] }),
-      (showMeaning || showExample) && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-4 grid gap-3 rounded-[18px] border border-line bg-cream/70 p-3.5 text-left xl:overflow-auto", children: [
-        showMeaning && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Meaning" }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-2 text-lg font-bold text-ink", children: card.english }),
-          nounDetails && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-2 text-sm text-notebook", children: nounDetails })
+      (showMeaning || showExample) && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "mt-4 grid gap-3 rounded-[18px] border border-line bg-cream/70 p-3.5 text-left xl:overflow-auto", children: [
+        showMeaning && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Meaning" }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "mt-2 text-lg font-bold text-ink", children: card.english }),
+          nounDetails && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "mt-2 text-sm text-notebook", children: nounDetails })
         ] }),
-        showExample && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Example sentence" }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-2 text-base font-bold text-ink", children: card.exampleGerman }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-2 text-sm text-notebook", children: card.exampleEnglish })
+        showExample && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Example sentence" }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "mt-2 text-base font-bold text-ink", children: card.exampleGerman }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "mt-2 text-sm text-notebook", children: card.exampleEnglish })
         ] }),
-        card.grammarNote && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Grammar note" }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-2 text-sm text-notebook", children: card.grammarNote })
+        card.grammarNote && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Grammar note" }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "mt-2 text-sm text-notebook", children: card.grammarNote })
         ] })
       ] })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-4 flex flex-wrap gap-2.5", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "mt-4 flex flex-wrap gap-2.5", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
         "button",
         {
           type: "button",
@@ -13269,7 +13175,7 @@ function Flashcard({
           children: "I knew this"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
         "button",
         {
           type: "button",
@@ -13279,8 +13185,8 @@ function Flashcard({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-4 flex items-center justify-between gap-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "mt-4 flex items-center justify-between gap-4", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
         "button",
         {
           type: "button",
@@ -13289,7 +13195,7 @@ function Flashcard({
           children: "Back"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
         "button",
         {
           type: "button",
@@ -13341,7 +13247,7 @@ function createQuizItems(cards) {
 }
 
 // src/components/QuizMode.tsx
-var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 function QuizMode({ cards, languageLabel }) {
   const [items, setItems] = (0, import_react2.useState)(() => createQuizItems(cards));
   const [currentIndex, setCurrentIndex] = (0, import_react2.useState)(0);
@@ -13385,25 +13291,25 @@ function QuizMode({ cards, languageLabel }) {
   if (!currentItem) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { className: "rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:min-h-0 xl:flex-col", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("section", { className: "rounded-[22px] border border-line bg-paper p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:min-h-0 xl:flex-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook", children: [
         "Question ",
         currentIndex + 1,
         " of ",
         total
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "rounded-full bg-sun/30 px-4 py-2 text-sm font-bold text-ink", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "rounded-full bg-sun/30 px-4 py-2 text-sm font-bold text-ink", children: [
         "Score ",
         score,
         "/",
         Math.max(1, currentIndex + (answeredCorrectly ? 1 : 0))
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "mt-3 rounded-[20px] border border-line bg-cream/60 p-4 xl:min-h-0 xl:flex-1", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: currentItem.type === "meaning" ? "Meaning check" : "Article check" }),
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h3", { className: "mt-2.5 font-display text-[1.8rem] font-bold leading-tight text-ink", children: currentItem.type === "meaning" ? `Choose the English meaning of \u201C${currentItem.prompt}\u201D.` : languageLabel === "German" ? `Which article fits \u201C${currentItem.prompt}\u201D?` : languageLabel === "Dutch" ? `Choose de or het for \u201C${currentItem.prompt}\u201D.` : `Match the word \u201C${currentItem.prompt}\u201D.` }),
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "mt-4 grid gap-2.5 sm:grid-cols-2", children: currentItem.choices.map((choice) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "mt-3 rounded-[20px] border border-line bg-cream/60 p-4 xl:min-h-0 xl:flex-1", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: currentItem.type === "meaning" ? "Meaning check" : "Article check" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h3", { className: "mt-2.5 font-display text-[1.8rem] font-bold leading-tight text-ink", children: currentItem.type === "meaning" ? `Choose the English meaning of \u201C${currentItem.prompt}\u201D.` : languageLabel === "German" ? `Which article fits \u201C${currentItem.prompt}\u201D?` : languageLabel === "Dutch" ? `Choose de or het for \u201C${currentItem.prompt}\u201D.` : `Match the word \u201C${currentItem.prompt}\u201D.` }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "mt-4 grid gap-2.5 sm:grid-cols-2", children: currentItem.choices.map((choice) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
         "button",
         {
           type: "button",
@@ -13413,7 +13319,7 @@ function QuizMode({ cards, languageLabel }) {
         },
         choice
       )) }),
-      feedback && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+      feedback && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
         "div",
         {
           className: `mt-4 rounded-[18px] px-4 py-3 text-sm font-bold ${answeredCorrectly ? "bg-leaf/15 text-leaf" : "bg-blush/10 text-blush"}`,
@@ -13421,7 +13327,7 @@ function QuizMode({ cards, languageLabel }) {
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "mt-4 flex justify-end", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "mt-4 flex justify-end", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
       "button",
       {
         type: "button",
@@ -13435,7 +13341,7 @@ function QuizMode({ cards, languageLabel }) {
 
 // src/components/SentencePractice.tsx
 var import_react3 = __toESM(require_react(), 1);
-var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 function SentencePractice({
   card,
   answer,
@@ -13460,34 +13366,34 @@ function SentencePractice({
     onSave(text.trim());
     setSubmitted(true);
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("section", { className: "rounded-[24px] border border-line bg-paper p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:min-h-0 xl:flex-col", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("section", { className: "rounded-[24px] border border-line bg-paper p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:min-h-0 xl:flex-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "rounded-full bg-cream px-4 py-2 text-sm font-bold text-notebook", children: [
         "Prompt ",
         currentIndex + 1,
         " of ",
         totalCards
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "rounded-full bg-apricot/20 px-4 py-2 text-sm font-bold text-ink", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "rounded-full bg-apricot/20 px-4 py-2 text-sm font-bold text-ink", children: [
         "Use: ",
         card.article ? `${card.article} ${card.german}` : card.german
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-4 rounded-[22px] border border-line bg-cream/60 p-5 xl:min-h-0 xl:flex-1", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-sm font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Write" }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("h3", { className: "mt-2.5 font-display text-[2rem] font-bold leading-tight text-ink", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-4 rounded-[22px] border border-line bg-cream/60 p-5 xl:min-h-0 xl:flex-1", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-sm font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Write" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("h3", { className: "mt-2.5 font-display text-[2rem] font-bold leading-tight text-ink", children: [
         "Write your own sentence using ",
         card.german,
         "."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: [
         "One simple ",
         languageLabel.toLowerCase(),
         " sentence is enough."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("label", { className: "mt-4 block", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "sr-only", children: "Your sentence" }),
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("label", { className: "mt-4 block", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "sr-only", children: "Your sentence" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           "textarea",
           {
             value: text,
@@ -13498,8 +13404,8 @@ function SentencePractice({
           }
         )
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-3 flex flex-wrap items-center gap-2.5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-3 flex flex-wrap items-center gap-2.5", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           "button",
           {
             type: "button",
@@ -13508,17 +13414,17 @@ function SentencePractice({
             children: "Save my sentence"
           }
         ),
-        submitted && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "rounded-full bg-leaf/15 px-4 py-2 text-sm font-bold text-leaf", children: "Nice work. Compare your sentence with the example." })
+        submitted && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "rounded-full bg-leaf/15 px-4 py-2 text-sm font-bold text-leaf", children: "Nice work. Compare your sentence with the example." })
       ] })
     ] }),
-    submitted && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-4 rounded-[20px] border border-line bg-paper p-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-sm font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Example from the deck" }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-3 text-lg font-bold text-ink", children: card.exampleGerman }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-2 text-sm text-notebook", children: card.exampleEnglish }),
-      card.grammarNote && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-3 text-sm text-notebook", children: card.grammarNote })
+    submitted && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-4 rounded-[20px] border border-line bg-paper p-4", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-sm font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Example from the deck" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-3 text-lg font-bold text-ink", children: card.exampleGerman }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-2 text-sm text-notebook", children: card.exampleEnglish }),
+      card.grammarNote && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-3 text-sm text-notebook", children: card.grammarNote })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-4 flex items-center justify-between gap-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-4 flex items-center justify-between gap-4", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
         "button",
         {
           type: "button",
@@ -13527,7 +13433,7 @@ function SentencePractice({
           children: "Back"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
         "button",
         {
           type: "button",
@@ -13541,7 +13447,7 @@ function SentencePractice({
 }
 
 // src/components/PracticeSession.tsx
-var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 var modeLabels = [
   { key: "flashcards", title: "Cards", subtitle: "Reveal and review" },
   { key: "sentence", title: "Write", subtitle: "Make one sentence" },
@@ -13550,7 +13456,7 @@ var modeLabels = [
 function PracticeSession({
   cards,
   progress,
-  selectedLevel,
+  selectedLevel: selectedLevel2,
   selectedLanguage,
   sentencePlaceholder,
   onCardFeedback,
@@ -13564,41 +13470,41 @@ function PracticeSession({
   }, [cards]);
   const goPrevious = () => setCurrentIndex((current) => current === 0 ? cards.length - 1 : current - 1);
   const goNext = () => setCurrentIndex((current) => current === cards.length - 1 ? 0 : current + 1);
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("section", { className: "rounded-[28px] border border-line bg-paper/92 p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:min-h-0 xl:flex-col", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "min-w-0", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Practice" }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("h2", { className: "mt-1.5 font-display text-[1.9rem] font-bold text-ink sm:text-[2.2rem]", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { className: "rounded-[28px] border border-line bg-paper/92 p-4 shadow-card sm:p-5 xl:flex xl:h-full xl:min-h-0 xl:flex-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "min-w-0", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Practice" }),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("h2", { className: "mt-1.5 font-display text-[1.9rem] font-bold text-ink sm:text-[2.2rem]", children: [
           selectedLanguage,
           " ",
-          selectedLevel,
+          selectedLevel2,
           " practice"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-1.5 max-w-2xl text-sm leading-5 text-notebook", children: "Stay with one small task, then move to the next card." })
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "mt-1.5 max-w-2xl text-sm leading-5 text-notebook", children: "Stay with one small task, then move to the next card." })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "shrink-0 rounded-[18px] bg-peach/45 px-3 py-2 text-sm font-bold text-notebook", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "shrink-0 rounded-[18px] bg-peach/45 px-3 py-2 text-sm font-bold text-notebook", children: [
         progress.reviewedCardIds.length,
         " unique cards reviewed"
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "mt-3 grid gap-2 sm:grid-cols-3", children: modeLabels.map((item) => {
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "mt-3 grid gap-2 sm:grid-cols-3", children: modeLabels.map((item) => {
       const active = mode === item.key;
-      return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(
+      return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
         "button",
         {
           type: "button",
           onClick: () => setMode(item.key),
           className: `rounded-[18px] border p-3 text-left transition ${active ? "border-splash bg-splash text-paper shadow-soft" : "border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble"}`,
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "font-bold", children: item.title }),
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: `mt-1.5 text-sm ${active ? "text-paper/75" : "text-notebook"}`, children: item.subtitle })
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "font-bold", children: item.title }),
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: `mt-1.5 text-sm ${active ? "text-paper/75" : "text-notebook"}`, children: item.subtitle })
           ]
         },
         item.key
       );
     }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "mt-4 xl:min-h-0 xl:flex-1", children: [
-      mode === "flashcards" && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "mt-4 xl:min-h-0 xl:flex-1", children: [
+      mode === "flashcards" && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
         Flashcard,
         {
           card: currentCard,
@@ -13610,7 +13516,7 @@ function PracticeSession({
           onPractice: () => onCardFeedback(currentCard.id, "practice")
         }
       ),
-      mode === "sentence" && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+      mode === "sentence" && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
         SentencePractice,
         {
           card: currentCard,
@@ -13624,14 +13530,14 @@ function PracticeSession({
           onSave: (text) => onSentenceSave(currentCard.id, text)
         }
       ),
-      mode === "quiz" && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(QuizMode, { cards, languageLabel: selectedLanguage })
+      mode === "quiz" && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(QuizMode, { cards, languageLabel: selectedLanguage })
     ] })
   ] });
 }
 
 // src/components/RevisionLibrary.tsx
 var import_react5 = __toESM(require_react(), 1);
-var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 var revisionViews = [
   { id: "themes", label: "Themes" },
   { id: "grammar", label: "Concepts" },
@@ -13687,37 +13593,29 @@ function RevisionLibrary({
     setSelectedThemeId(revision.themes[0]?.id ?? "");
     setSelectedGrammarId(revision.grammar[0]?.id ?? "");
   }, [revision]);
-  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("section", { className: "border-t border-line/80 pt-3", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "min-w-0", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Revise" }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Quick reminders" }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "mt-1.5 text-sm leading-5 text-notebook", children: "Use a theme, a concept, or the word bank when memory slips." })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "rounded-[18px] bg-cream/70 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-notebook", children: [
-        wordBank.length,
-        " ",
-        revision.wordBankLabel
-      ] })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "mt-3 flex flex-wrap gap-2", children: revisionViews.map((item) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("section", { className: "border-t border-line/80 pt-3", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "flex flex-wrap items-start justify-between gap-2", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "min-w-0", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Revise" }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { className: "mt-1 font-display text-base font-bold text-ink", children: "Quick help" })
+    ] }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "mt-3 flex flex-wrap gap-2", children: revisionViews.map((item) => {
       const active = item.id === view;
-      return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
         "button",
         {
           type: "button",
           onClick: () => setView(item.id),
-          className: `rounded-full px-3.5 py-2 text-sm font-bold transition ${active ? "bg-splash text-white shadow-soft" : "border border-line bg-cream/60 text-ink hover:-translate-y-0.5 hover:bg-paper"}`,
+          className: `rounded-full px-3 py-1.5 text-sm font-bold transition ${active ? "bg-splash text-white shadow-soft" : "border border-line bg-cream/60 text-ink hover:-translate-y-0.5 hover:bg-paper"}`,
           children: item.label
         },
         item.id
       );
     }) }),
-    view !== "words" && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "mt-4 grid gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("label", { className: "max-w-xl", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? "Choose a theme" : "Choose a concept" }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "relative", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+    view !== "words" && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-3 grid gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("label", { className: "max-w-xl", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? "Choose a theme" : "Choose a concept" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "relative", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
             "select",
             {
               value: selectedConceptId,
@@ -13728,46 +13626,46 @@ function RevisionLibrary({
                   setSelectedGrammarId(event.target.value);
                 }
               },
-              className: "w-full appearance-none rounded-[18px] border border-line bg-cream/85 px-4 py-3 pr-10 text-sm font-bold text-ink shadow-soft outline-none transition focus:border-sun",
-              children: currentConcepts.map((concept) => /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("option", { value: concept.id, children: concept.title }, concept.id))
+              className: "w-full appearance-none rounded-[16px] border border-line bg-cream/85 px-4 py-2.5 pr-10 text-sm font-bold text-ink shadow-soft outline-none transition focus:border-sun",
+              children: currentConcepts.map((concept) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("option", { value: concept.id, children: concept.title }, concept.id))
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "pointer-events-none absolute inset-y-0 right-4 flex items-center text-notebook", children: "v" })
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "pointer-events-none absolute inset-y-0 right-4 flex items-center text-notebook", children: "v" })
         ] })
       ] }),
-      currentConcept && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("article", { className: "rounded-[18px] border border-line bg-cream/55 p-3.5 shadow-soft", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? `${languageLabel} theme` : `${languageLabel} concept` }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h3", { className: "mt-2 font-display text-lg font-bold text-ink", children: currentConcept.title }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "mt-1.5 text-sm leading-5 text-notebook", children: currentConcept.summary }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("ul", { className: "mt-2.5 grid gap-2 text-sm text-ink xl:grid-cols-2", children: currentConcept.bullets.map((bullet) => /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("li", { className: "rounded-[14px] bg-paper/80 px-3 py-2", children: bullet }, bullet)) }),
-        currentConcept.example && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "mt-2.5 rounded-[14px] bg-paper px-3 py-2.5 text-sm font-bold text-ink", children: currentConcept.example })
+      currentConcept && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("article", { className: "rounded-[16px] border border-line bg-cream/55 p-3 shadow-soft", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? `${languageLabel} theme` : `${languageLabel} concept` }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { className: "mt-1.5 font-display text-base font-bold text-ink", children: currentConcept.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-1 text-sm leading-5 text-notebook", children: currentConcept.summary }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("ul", { className: "mt-2 grid gap-1.5 text-sm text-ink", children: currentConcept.bullets.map((bullet) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("li", { className: "rounded-[12px] bg-paper/80 px-2.5 py-2", children: bullet }, bullet)) }),
+        currentConcept.example && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-2 rounded-[12px] bg-paper px-2.5 py-2 text-sm font-bold text-ink", children: currentConcept.example })
       ] })
     ] }),
-    view === "words" && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "mt-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("label", { className: "min-w-0 flex-1", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "sr-only", children: "Search the word bank" }),
-          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+    view === "words" && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-2", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("label", { className: "min-w-0 flex-1", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "sr-only", children: "Search the word bank" }),
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
             "input",
             {
               type: "search",
               value: query,
               onChange: (event) => setQuery(event.target.value),
               placeholder: `Search ${languageLabel.toLowerCase()} or English`,
-              className: "w-full rounded-full border border-line bg-cream/70 px-5 py-3 text-sm text-ink shadow-soft outline-none transition focus:border-sun"
+              className: "w-full rounded-full border border-line bg-cream/70 px-4 py-2.5 text-sm text-ink shadow-soft outline-none transition focus:border-sun"
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "rounded-full bg-bubble/20 px-4 py-2 text-sm font-bold text-ink", children: query.trim() ? `${filteredWordBank.length} matches` : `Showing ${filteredWordBank.length} of ${wordBank.length}` })
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "rounded-full bg-bubble/20 px-3 py-1.5 text-xs font-bold text-ink", children: query.trim() ? `${filteredWordBank.length} matches` : `${wordBank.length} words` })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "mt-4 grid max-h-[14rem] gap-3 overflow-y-auto pr-1 sm:grid-cols-2", children: filteredWordBank.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "mt-3 grid max-h-[13rem] gap-2 overflow-y-auto pr-1", children: filteredWordBank.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(
         "article",
         {
-          className: "rounded-[16px] border border-line bg-cream/55 p-3 shadow-soft",
+          className: "rounded-[14px] border border-line bg-cream/55 p-2.5 shadow-soft",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "font-display text-lg font-bold text-ink", children: entry.label }),
-            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "mt-1.5 text-sm text-notebook", children: entry.translations.join(" \u2022 ") }),
-            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "mt-2.5 text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: entry.category })
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "font-display text-base font-bold text-ink", children: entry.label }),
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-1 text-sm text-notebook", children: entry.translations.join(" \u2022 ") }),
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-2 text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: entry.category })
           ]
         },
         entry.key
@@ -15270,9 +15168,8 @@ function saveSentenceAnswer(progress, cardId, text) {
 }
 
 // src/App.tsx
-var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 function App() {
-  const [selectedLevel, setSelectedLevel] = (0, import_react6.useState)("A1");
   const [selectedLanguage, setSelectedLanguage] = (0, import_react6.useState)("german");
   const [sessionStarted, setSessionStarted] = (0, import_react6.useState)(false);
   const [progress, setProgress] = (0, import_react6.useState)(() => loadProgress() ?? createDefaultProgress());
@@ -15353,11 +15250,11 @@ function App() {
   const handleSentenceSave = (cardId, text) => {
     setProgress((current) => saveSentenceAnswer(current, cardId, text));
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "min-h-screen overflow-x-hidden xl:h-screen xl:overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1480px] flex-col px-3 py-3 sm:px-4 lg:px-5 xl:h-screen", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Header, { onStart: () => setSessionStarted(true), sessionStarted }),
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("main", { className: "mt-3 grid flex-1 gap-3 xl:min-h-0 xl:grid-cols-[300px_minmax(0,1fr)]", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("aside", { className: "rounded-[28px] border border-line bg-paper/92 p-4 shadow-card xl:flex xl:h-full xl:flex-col xl:overflow-y-auto", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "min-h-screen overflow-x-hidden xl:h-screen xl:overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1480px] flex-col px-3 py-3 sm:px-4 lg:px-5 xl:h-screen", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Header, { onStart: () => setSessionStarted(true), sessionStarted }),
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("main", { className: "mt-3 grid flex-1 gap-3 xl:min-h-0 xl:grid-cols-[280px_minmax(0,1fr)]", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("aside", { className: "rounded-[28px] border border-line bg-paper/92 p-4 shadow-card xl:flex xl:h-full xl:flex-col", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
           LanguageBar,
           {
             options: languageOptions,
@@ -15365,9 +15262,7 @@ function App() {
             onSelect: setSelectedLanguage
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(LevelSelector, { selectedLevel, onSelect: setSelectedLevel }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ProgressDashboard, { progress, deckSize: currentCards.length }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
           RevisionLibrary,
           {
             cards: currentCards,
@@ -15376,11 +15271,11 @@ function App() {
           }
         )
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("section", { className: "flex flex-col gap-3 xl:min-h-0 xl:h-full", children: [
-        selectedLanguage === "german" && isGermanDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Goethe-based German A1 deck." }),
-        selectedLanguage === "finnish" && isFinnishDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Aalto beginner Finnish deck." }),
-        selectedLanguage === "dutch" && isDutchDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Dutch beginner deck." }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("section", { className: "flex flex-col gap-3 xl:min-h-0 xl:h-full", children: [
+        selectedLanguage === "german" && isGermanDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Goethe-based German A1 deck." }),
+        selectedLanguage === "finnish" && isFinnishDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Aalto beginner Finnish deck." }),
+        selectedLanguage === "dutch" && isDutchDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Dutch beginner deck." }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
           PracticeSession,
           {
             cards: currentCards,
@@ -15397,11 +15292,12 @@ function App() {
   ] }) });
 }
 var App_default = App;
+var selectedLevel = "A1";
 
 // src/static-entry.tsx
-var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 (0, import_client.createRoot)(document.getElementById("root")).render(
-  /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_react7.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(App_default, {}) })
+  /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_react7.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(App_default, {}) })
 );
 /*! Bundled license information:
 
