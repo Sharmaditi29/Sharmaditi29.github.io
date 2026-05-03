@@ -13043,29 +13043,40 @@ var import_react6 = __toESM(require_react(), 1);
 // src/components/Header.tsx
 var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 function Header() {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", { className: "relative overflow-hidden rounded-[32px] border border-line bg-paper/95 px-6 py-5 shadow-card sm:px-7 sm:py-6 xl:px-8 xl:py-6", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-x-0 top-0 h-20 bg-splash opacity-[0.035]" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-10 -top-8 h-28 w-28 rounded-full bg-bubble/20 blur-3xl" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-3 bottom-0 h-20 w-20 rounded-full bg-sun/18 blur-3xl" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-1/3 top-6 h-14 w-14 rounded-full bg-mint/16 blur-2xl" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative max-w-4xl", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mb-2 text-xs font-extrabold uppercase tracking-[0.28em] text-notebook", children: "LingoGarden" }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "max-w-4xl text-balance font-display text-[2.2rem] font-extrabold leading-[0.96] text-ink sm:text-[2.65rem] xl:text-[2.9rem]", children: "Learn gently, switch languages, keep the desk uncluttered." }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 max-w-3xl text-sm leading-6 text-notebook sm:text-[0.95rem]", children: "Beginner practice for German, Finnish, and Dutch, with quick reminders close by and the main card work front and center." })
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", { className: "relative overflow-hidden rounded-[30px] border border-line bg-paper/95 px-6 py-5 shadow-card sm:px-7 sm:py-5 xl:px-8", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-x-0 top-0 h-16 bg-splash opacity-[0.03]" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-8 -top-8 h-24 w-24 rounded-full bg-bubble/16 blur-3xl" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-3 bottom-0 h-16 w-16 rounded-full bg-sun/16 blur-3xl" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "max-w-3xl min-w-0", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "font-display text-[1.9rem] font-extrabold leading-none text-ink sm:text-[2.2rem]", children: "LingoGarden" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 max-w-3xl text-sm leading-6 text-notebook sm:text-[0.95rem]", children: "Beginner practice for German, Finnish, and Dutch, with quick reminders close by and the main card work front and center." })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex shrink-0 flex-wrap gap-2.5", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-splash px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "German" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-bubble px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Finnish" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-leaf px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Dutch" })
+      ] })
     ] })
   ] });
 }
 
 // src/components/LanguageBar.tsx
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
-function LanguageBar({ options, selectedLanguage, onSelect }) {
+var levelOptions = ["A1", "A2", "B1", "B2", "C1", "C2"];
+function LanguageBar({
+  options,
+  selectedLanguage,
+  selectedLevel,
+  onSelect
+}) {
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("section", { className: "rounded-[24px] bg-cream/40 p-4 shadow-soft sm:p-5", children: [
     /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Learn" }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Pick a language." })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "rounded-full bg-mint/45 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink", children: "A1 only" })
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "rounded-full bg-mint/45 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink", children: "A1 live" })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "mt-4 grid gap-2.5 sm:grid-cols-3", children: options.map((option) => {
       const active = option.id === selectedLanguage;
@@ -13079,7 +13090,26 @@ function LanguageBar({ options, selectedLanguage, onSelect }) {
         },
         option.id
       );
-    }) })
+    }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "mt-4 border-t border-line/70 pt-4", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "flex items-center justify-between gap-3", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.2em] text-notebook", children: "Levels" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "mt-1 text-sm text-notebook", children: "More levels will land here later." })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "mt-3 grid grid-cols-3 gap-2", children: levelOptions.map((level) => {
+        const active = level === selectedLevel;
+        return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+          "button",
+          {
+            type: "button",
+            disabled: !active,
+            className: `rounded-[16px] px-3 py-2.5 text-sm font-bold transition ${active ? "bg-ink text-white shadow-soft" : "border border-dashed border-line bg-paper/70 text-notebook"}`,
+            children: level
+          },
+          level
+        );
+      }) })
+    ] })
   ] });
 }
 
@@ -13461,7 +13491,7 @@ function PracticeSession({
   }, [cards]);
   const goPrevious = () => setCurrentIndex((current) => current === 0 ? cards.length - 1 : current - 1);
   const goNext = () => setCurrentIndex((current) => current === cards.length - 1 ? 0 : current + 1);
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:min-h-0 xl:flex-col", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:flex-col", children: [
     /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "min-w-0", children: [
         /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Practice" }),
@@ -13494,7 +13524,7 @@ function PracticeSession({
         item.key
       );
     }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "mt-5 xl:min-h-0 xl:flex-1", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "mt-5", children: [
       mode === "flashcards" && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
         Flashcard,
         {
@@ -15241,15 +15271,16 @@ function App() {
   const handleSentenceSave = (cardId, text) => {
     setProgress((current) => saveSentenceAnswer(current, cardId, text));
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "min-h-screen overflow-x-hidden xl:h-screen xl:overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-4 py-4 sm:px-5 sm:py-5 lg:px-7 xl:h-screen xl:px-8 xl:py-6", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "min-h-screen overflow-x-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-4 py-4 sm:px-5 sm:py-5 lg:px-7 xl:px-8 xl:py-6", children: [
     /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Header, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("main", { className: "mt-4 grid flex-1 gap-4 xl:min-h-0 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:gap-5", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("aside", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:flex-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("main", { className: "mt-4 grid flex-1 gap-4 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:items-start xl:gap-5", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("aside", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:flex-col", children: [
         /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
           LanguageBar,
           {
             options: languageOptions,
             selectedLanguage,
+            selectedLevel,
             onSelect: setSelectedLanguage
           }
         ),
@@ -15262,7 +15293,7 @@ function App() {
           }
         )
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("section", { className: "flex flex-col gap-4 xl:min-h-0 xl:h-full", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("section", { className: "flex flex-col gap-4", children: [
         selectedLanguage === "german" && isGermanDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Goethe-based German A1 deck." }),
         selectedLanguage === "finnish" && isFinnishDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Aalto beginner Finnish deck." }),
         selectedLanguage === "dutch" && isDutchDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Dutch beginner deck." }),

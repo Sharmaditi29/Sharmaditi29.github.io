@@ -1,4 +1,4 @@
-export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2'
+export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 export type LearningLanguage = 'german' | 'finnish' | 'dutch'
 export type ArticleValue = 'der' | 'die' | 'das' | 'de' | 'het'
 

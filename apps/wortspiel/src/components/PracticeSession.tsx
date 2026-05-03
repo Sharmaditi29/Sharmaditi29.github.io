@@ -43,7 +43,7 @@ export function PracticeSession({
     setCurrentIndex((current) => (current === cards.length - 1 ? 0 : current + 1))
 
   return (
-    <section className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
+    <section className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:flex-col">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
@@ -85,7 +85,7 @@ export function PracticeSession({
         })}
       </div>
 
-      <div className="mt-5 xl:min-h-0 xl:flex-1">
+      <div className="mt-5">
         {mode === 'flashcards' && (
           <Flashcard
             card={currentCard}
