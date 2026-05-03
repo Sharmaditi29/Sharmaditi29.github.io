@@ -1,17 +1,18 @@
-# WortSpiel
+# LingoGarden
 
-WortSpiel is a playful language-learning MVP built with React, TypeScript, Vite, and Tailwind CSS.
+LingoGarden is a playful language-learning MVP built with React, TypeScript, Vite, and Tailwind CSS.
 
 ## Features
 
 - Goethe-based German A1 deck with 813 translated practice cards
 - Aalto-based Finnish beginner deck with 313 public glossary cards
+- NT2 TaalMenu-based Dutch beginner deck with 2089 public reference cards
 - Compact revision area with dropdown-based themes, grammar refreshers, and a searchable word bank
 - Flashcard mode with meaning reveal, example sentences, and review buttons
 - Sentence practice with saved answers in local storage
 - Quiz mode with meaning checks and article challenges
 - Progress dashboard with review stats, sentence count, and daily streak
-- Local language switching between German and Finnish
+- Local language switching between German, Finnish, and Dutch
 
 ## Local setup
 
@@ -37,7 +38,7 @@ The production build is written to `../../static/Experiments/wortspiel/` so the 
 
 ## Local editing with the website
 
-If you want to work on WortSpiel while also viewing the Hugo site locally, run:
+If you want to work on LingoGarden while also viewing the Hugo site locally, run:
 
 ```bash
 cd /Users/aditis/Documents/GitHub/Sharmaditi29.github.io
@@ -46,7 +47,7 @@ cd /Users/aditis/Documents/GitHub/Sharmaditi29.github.io
 
 That helper does two things:
 
-- rebuilds WortSpiel when `src/` and `public/` change
+- rebuilds LingoGarden when `src/` and `public/` change
 - rebuilds the Hugo site and serves the built `public/` folder locally
 
 Then open:
@@ -58,10 +59,12 @@ Then open:
 
 The expanded German deck is generated from a public translated deck based on the Goethe A1 list.
 The expanded Finnish deck is generated from Aalto OpenLearning's public Finnish-English glossary.
+The expanded Dutch deck is generated from NT2 TaalMenu's public A1 vocabulary list.
 
 ```bash
 pnpm run sync:goethe-a1
 pnpm run sync:finnish-a1
+pnpm run sync:dutch-a1
 ```
 
 Sources:
@@ -71,6 +74,9 @@ Sources:
 - Aalto Basic Finnish 1 course materials: `https://openlearning.aalto.fi/course/view.php?id=272&lang=en&section=2`
 - Aalto Finnish-English glossary: `https://openlearning.aalto.fi/mod/glossary/view.php?fullsearch=0&hook=ALL&id=3370&mode=letter&page=-1&sortkey=&sortorder=asc`
 - Aalto Finnish Online Grammar: `https://openlearning.aalto.fi/course/view.php?id=158`
+- University of Groningen Dutch Survival Kit: `https://www.rug.nl/language-centre/language-courses/dutch/survival-kit?lang=en`
+- NT2 TaalMenu Dutch A1 vocabulary page: `https://nt2taalmenu.nl/learn-dutch-a1-vocabulary-word-lists-dutch-english/`
+- NT2 TaalMenu Dutch alphabetical vocabulary PDF: `https://nt2taalmenu.nl/nt2/lijsten/engels_al.pdf`
 
 ## Notes for future versions
 

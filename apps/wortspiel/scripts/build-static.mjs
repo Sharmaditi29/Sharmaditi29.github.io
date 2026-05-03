@@ -1,7 +1,7 @@
 import { cp, mkdir, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { execFileSync } from 'node:child_process'
+import { build } from 'esbuild'
 
 const currentDir = path.dirname(fileURLToPath(import.meta.url))
 const appRoot = path.resolve(currentDir, '..')
@@ -77,10 +77,11 @@ const html = `<!doctype html>
         margin: 0;
         min-width: 320px;
         background:
-          radial-gradient(circle at top left, rgba(255, 116, 181, 0.18), transparent 24%),
-          radial-gradient(circle at top right, rgba(126, 214, 196, 0.18), transparent 22%),
-          radial-gradient(circle at bottom left, rgba(255, 205, 92, 0.14), transparent 20%),
-          linear-gradient(180deg, #fff6fb 0%, #fff4e7 100%);
+          radial-gradient(circle at 12% 12%, rgba(141, 124, 255, 0.2), transparent 22%),
+          radial-gradient(circle at 84% 16%, rgba(255, 93, 143, 0.16), transparent 24%),
+          radial-gradient(circle at 18% 84%, rgba(144, 234, 216, 0.18), transparent 24%),
+          radial-gradient(circle at 80% 78%, rgba(255, 205, 92, 0.16), transparent 21%),
+          linear-gradient(180deg, #fff7fb 0%, #fff7ef 52%, #fdf6ff 100%);
         color: #24324a;
       }
 
@@ -96,9 +97,9 @@ const html = `<!doctype html>
       }
     </style>
     <script>
-      window.__WORTSPIEL_BUILD_ID__ = '${buildId}'
+      window.__LINGOGARDEN_BUILD_ID__ = '${buildId}'
     </script>
-    <title>WortSpiel</title>
+    <title>LingoGarden</title>
   </head>
   <body>
     <div id="root"></div>
@@ -112,22 +113,18 @@ export async function buildStaticSite() {
   await mkdir(assetsRoot, { recursive: true })
   await cp(publicRoot, outputRoot, { recursive: true, force: true })
 
-  execFileSync(
-    path.join(appRoot, 'node_modules', '.bin', 'esbuild'),
-    [
-      'src/static-entry.tsx',
-      '--bundle',
-      '--format=esm',
-      '--target=es2020',
-      '--jsx=automatic',
-      `--outfile=${path.join(assetsRoot, 'app.js')}`,
-      '--define:process.env.NODE_ENV="production"',
-    ],
-    {
-      cwd: appRoot,
-      stdio: 'inherit',
+  await build({
+    absWorkingDir: appRoot,
+    entryPoints: ['src/static-entry.tsx'],
+    bundle: true,
+    format: 'esm',
+    target: ['es2020'],
+    jsx: 'automatic',
+    outfile: path.join(assetsRoot, 'app.js'),
+    define: {
+      'process.env.NODE_ENV': '"production"',
     },
-  )
+  })
 
   await writeFile(path.join(outputRoot, 'index.html'), html, 'utf8')
 }

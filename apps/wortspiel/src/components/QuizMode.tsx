@@ -71,13 +71,15 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
 
       <div className="mt-4 rounded-[22px] border border-line bg-cream/60 p-5">
         <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
-          {currentItem.type === 'meaning' ? 'Meaning check' : 'Article challenge'}
+          {currentItem.type === 'meaning' ? 'Meaning check' : 'Article check'}
         </p>
         <h3 className="mt-3 font-display text-2xl font-bold text-ink">
           {currentItem.type === 'meaning'
             ? `Choose the English meaning of “${currentItem.prompt}”.`
             : languageLabel === 'German'
               ? `Which article fits “${currentItem.prompt}”?`
+              : languageLabel === 'Dutch'
+                ? `Choose de or het for “${currentItem.prompt}”.`
               : `Match the word “${currentItem.prompt}”.`}
         </h3>
 

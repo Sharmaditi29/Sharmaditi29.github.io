@@ -15,9 +15,9 @@ interface PracticeSessionProps {
 }
 
 const modeLabels: Array<{ key: PracticeMode; title: string; subtitle: string }> = [
-  { key: 'flashcards', title: 'Flashcards', subtitle: 'Reveal, review, repeat' },
-  { key: 'sentence', title: 'Sentence practice', subtitle: 'Write your own line' },
-  { key: 'quiz', title: 'Quiz mode', subtitle: 'Meaning and article check' },
+  { key: 'flashcards', title: 'Cards', subtitle: 'Reveal and review' },
+  { key: 'sentence', title: 'Write', subtitle: 'Make one sentence' },
+  { key: 'quiz', title: 'Quiz', subtitle: 'Check meaning fast' },
 ]
 
 export function PracticeSession({
@@ -43,17 +43,17 @@ export function PracticeSession({
     setCurrentIndex((current) => (current === cards.length - 1 ? 0 : current + 1))
 
   return (
-    <section className="rounded-[26px] border border-line bg-paper/90 p-5 shadow-card sm:p-6">
+    <section className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Practice
           </p>
           <h2 className="mt-2 font-display text-2xl font-bold text-ink sm:text-3xl">
-            {selectedLanguage} {selectedLevel}
+            {selectedLanguage} {selectedLevel} practice
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-notebook">
-            Flip cards, write a line, revise one thing, then move on.
+            Stay with one small task, then move to the next card.
           </p>
         </div>
         <div className="shrink-0 rounded-[18px] bg-peach/45 px-3 py-2 text-sm font-bold text-notebook">
@@ -61,7 +61,7 @@ export function PracticeSession({
         </div>
       </div>
 
-      <div className="mt-4 grid gap-3 lg:grid-cols-3">
+      <div className="mt-4 grid gap-2 sm:grid-cols-3">
         {modeLabels.map((item) => {
           const active = mode === item.key
 
@@ -70,14 +70,14 @@ export function PracticeSession({
               key={item.key}
               type="button"
               onClick={() => setMode(item.key)}
-              className={`rounded-[22px] border p-4 text-left transition ${
+              className={`rounded-[20px] border p-3.5 text-left transition ${
                 active
                   ? 'border-splash bg-splash text-paper shadow-soft'
                   : 'border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble'
               }`}
             >
               <p className="font-bold">{item.title}</p>
-              <p className={`mt-2 text-sm ${active ? 'text-paper/75' : 'text-notebook'}`}>
+              <p className={`mt-1.5 text-sm ${active ? 'text-paper/75' : 'text-notebook'}`}>
                 {item.subtitle}
               </p>
             </button>

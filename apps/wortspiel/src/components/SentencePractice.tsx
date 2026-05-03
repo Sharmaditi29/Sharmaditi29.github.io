@@ -56,7 +56,7 @@ export function SentencePractice({
 
       <div className="mt-6 rounded-[28px] border border-line bg-cream/60 p-6">
         <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
-          Sentence practice
+          Write
         </p>
         <h3 className="mt-3 font-display text-3xl font-bold text-ink">
           Write your own sentence using {card.german}.
@@ -109,14 +109,14 @@ export function SentencePractice({
           onClick={onPrevious}
           className="rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
         >
-          Previous word
+          Back
         </button>
         <button
           type="button"
           onClick={onNext}
           className="rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
         >
-          Next word
+          Next
         </button>
       </div>
     </section>

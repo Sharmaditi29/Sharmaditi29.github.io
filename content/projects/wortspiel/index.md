@@ -1,10 +1,10 @@
 ---
-title: "WortSpiel"
+title: "LingoGarden"
 date: 2026-05-01T19:20:00+02:00
 draft: false
 hideLastModified: true
-summary: "A playful A1 German vocabulary app with flashcards, sentence practice, local progress tracking, and quick quizzes for daily use."
-subtitle: "A warm little study app for steady German practice"
+summary: "A playful beginner language app for German, Finnish, and Dutch, with flashcards, revision prompts, local progress tracking, and quick quizzes."
+subtitle: "A warm little study desk for steady daily practice"
 projectType: "Learning app"
 status: "Live"
 featured: true
@@ -18,6 +18,6 @@ stack:
   - "localStorage"
 ---
 
-WortSpiel is a small study companion for daily German vocabulary practice. It starts with an A1 deck, then layers flashcards, sentence prompts, and simple quizzes so review feels active and friendly.
+LingoGarden is a small study companion for daily beginner language practice. It starts with source-backed German, Finnish, and Dutch decks, then layers flashcards, sentence prompts, and simple quizzes so review feels active and friendly.
 
-The app is designed for personal use, but the interface is open and approachable enough for anyone else who wants a lightweight browser-based German practice tool.
+The app is designed for personal use, but the interface is open and approachable enough for anyone else who wants a lightweight browser-based language practice tool.

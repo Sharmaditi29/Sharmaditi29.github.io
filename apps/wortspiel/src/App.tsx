@@ -6,8 +6,13 @@ import { ProgressDashboard } from './components/ProgressDashboard'
 import { PracticeSession } from './components/PracticeSession'
 import { RevisionLibrary } from './components/RevisionLibrary'
 import { a1Vocabulary } from './data/a1Vocabulary'
+import { dutchVocabulary } from './data/dutchVocabulary'
 import { finnishVocabulary } from './data/finnishVocabulary'
-import { finnishRevisionCollection, germanRevisionCollection } from './data/revisionCollections'
+import {
+  dutchRevisionCollection,
+  finnishRevisionCollection,
+  germanRevisionCollection,
+} from './data/revisionCollections'
 import type {
   CefrLevel,
   LanguageOption,
@@ -25,6 +30,7 @@ import {
 
 declare global {
   interface Window {
+    __LINGOGARDEN_BUILD_ID__?: string
     __WORTSPIEL_BUILD_ID__?: string
   }
 }
@@ -36,8 +42,10 @@ function App() {
   const [progress, setProgress] = useState<ProgressState>(() => loadProgress() ?? createDefaultProgress())
   const [germanCards, setGermanCards] = useState<VocabularyCard[]>(a1Vocabulary)
   const [finnishCards, setFinnishCards] = useState<VocabularyCard[]>(finnishVocabulary)
+  const [dutchCards, setDutchCards] = useState<VocabularyCard[]>(dutchVocabulary)
   const [isGermanDeckLoading, setIsGermanDeckLoading] = useState(true)
   const [isFinnishDeckLoading, setIsFinnishDeckLoading] = useState(true)
+  const [isDutchDeckLoading, setIsDutchDeckLoading] = useState(true)
 
   const languageOptions: LanguageOption[] = [
     {
@@ -52,13 +60,30 @@ function App() {
       accentClass: 'bg-bubble',
       sentencePlaceholder: 'Esimerkiksi: Minä opiskelen suomea tänään.',
     },
+    {
+      id: 'dutch',
+      label: 'Dutch',
+      accentClass: 'bg-leaf',
+      sentencePlaceholder: 'Bijvoorbeeld: Ik leer vandaag Nederlands.',
+    },
   ]
+
+  const cardsByLanguage: Record<LearningLanguage, VocabularyCard[]> = {
+    german: germanCards,
+    finnish: finnishCards,
+    dutch: dutchCards,
+  }
+
+  const revisionByLanguage = {
+    german: germanRevisionCollection,
+    finnish: finnishRevisionCollection,
+    dutch: dutchRevisionCollection,
+  } satisfies Record<LearningLanguage, typeof germanRevisionCollection>
 
   const currentLanguage =
     languageOptions.find((option) => option.id === selectedLanguage) ?? languageOptions[0]
-  const currentCards = selectedLanguage === 'german' ? germanCards : finnishCards
-  const currentRevision =
-    selectedLanguage === 'german' ? germanRevisionCollection : finnishRevisionCollection
+  const currentCards = cardsByLanguage[selectedLanguage]
+  const currentRevision = revisionByLanguage[selectedLanguage]
 
   useEffect(() => {
     saveProgress(progress)
@@ -66,7 +91,8 @@ function App() {
 
   useEffect(() => {
     let cancelled = false
-    const buildId = window.__WORTSPIEL_BUILD_ID__ ? `?v=${window.__WORTSPIEL_BUILD_ID__}` : ''
+    const currentBuildId = window.__LINGOGARDEN_BUILD_ID__ ?? window.__WORTSPIEL_BUILD_ID__
+    const buildId = currentBuildId ? `?v=${currentBuildId}` : ''
 
     async function loadDeck(
       resourcePath: string,
@@ -96,6 +122,7 @@ function App() {
 
     void loadDeck('./data/goethe-a1.json', setGermanCards, () => setIsGermanDeckLoading(false))
     void loadDeck('./data/finnish-a1.json', setFinnishCards, () => setIsFinnishDeckLoading(false))
+    void loadDeck('./data/dutch-a1.json', setDutchCards, () => setIsDutchDeckLoading(false))
 
     return () => {
       cancelled = true
@@ -112,11 +139,11 @@ function App() {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <div className="mx-auto flex min-h-screen w-full max-w-[1400px] flex-col px-4 py-4 sm:px-5 lg:px-6">
+      <div className="mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-3 py-3 sm:px-4 lg:px-5">
         <Header onStart={() => setSessionStarted(true)} sessionStarted={sessionStarted} />
 
-        <main className="mt-4 grid flex-1 gap-4 xl:grid-cols-[340px_minmax(0,1fr)]">
-          <aside className="rounded-[26px] border border-line bg-paper/90 p-4 shadow-card xl:pb-4">
+        <main className="mt-3 grid flex-1 gap-3 xl:min-h-[calc(100vh-11rem)] xl:grid-cols-[330px_minmax(0,1fr)]">
+          <aside className="rounded-[30px] border border-line bg-paper/92 p-4 shadow-card xl:sticky xl:top-3 xl:self-start">
             <LanguageBar
               options={languageOptions}
               selectedLanguage={selectedLanguage}
@@ -132,7 +159,7 @@ function App() {
             />
           </aside>
 
-          <section className="flex flex-col gap-4 xl:min-h-0">
+          <section className="flex flex-col gap-3 xl:min-h-0">
             {selectedLanguage === 'german' && isGermanDeckLoading && (
               <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
                 Loading the full Goethe-based German A1 deck.
@@ -142,6 +169,12 @@ function App() {
             {selectedLanguage === 'finnish' && isFinnishDeckLoading && (
               <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
                 Loading the full Aalto beginner Finnish deck.
+              </div>
+            )}
+
+            {selectedLanguage === 'dutch' && isDutchDeckLoading && (
+              <div className="rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+                Loading the full Dutch beginner deck.
               </div>
             )}
 

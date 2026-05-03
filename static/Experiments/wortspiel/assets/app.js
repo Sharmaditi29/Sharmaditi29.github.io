@@ -13043,16 +13043,16 @@ var import_react6 = __toESM(require_react(), 1);
 // src/components/Header.tsx
 var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 function Header({ onStart, sessionStarted }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", { className: "relative overflow-hidden rounded-[32px] border border-line bg-paper/95 px-5 py-6 shadow-card sm:px-7 sm:py-7", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-x-0 top-0 h-24 bg-splash opacity-[0.06]" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-6 -top-8 h-32 w-32 rounded-full bg-bubble/30 blur-3xl" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-0 left-0 h-24 w-24 rounded-full bg-sun/30 blur-3xl" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-1/3 top-6 h-16 w-16 rounded-full bg-mint/30 blur-2xl" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", { className: "relative overflow-hidden rounded-[32px] border border-line bg-paper/95 px-5 py-5 shadow-card sm:px-6 sm:py-5", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-x-0 top-0 h-20 bg-splash opacity-[0.05]" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-8 -top-8 h-28 w-28 rounded-full bg-bubble/25 blur-3xl" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-3 bottom-0 h-20 w-20 rounded-full bg-sun/25 blur-3xl" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-1/4 top-5 h-14 w-14 rounded-full bg-mint/25 blur-2xl" }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between", children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "min-w-0", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mb-2 text-xs font-extrabold uppercase tracking-[0.28em] text-notebook", children: "WortSpiel" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "max-w-2xl text-balance font-display text-4xl font-extrabold leading-[0.98] text-ink sm:text-[3.35rem]", children: "Learn, revise, play." }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 max-w-xl text-sm leading-6 text-notebook sm:text-base", children: "A bright little desk for German and Finnish practice." })
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mb-2 text-xs font-extrabold uppercase tracking-[0.28em] text-notebook", children: "LingoGarden" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "max-w-3xl text-balance font-display text-3xl font-extrabold leading-[0.98] text-ink sm:text-[3.85rem]", children: "One playful desk for German, Finnish, and Dutch." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 max-w-2xl text-sm leading-6 text-notebook sm:text-base", children: "Pick a language, revise one idea, then practice one card at a time." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex shrink-0 items-center gap-3", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
         "button",
@@ -13060,7 +13060,7 @@ function Header({ onStart, sessionStarted }) {
           type: "button",
           onClick: onStart,
           className: "inline-flex items-center rounded-full bg-splash px-5 py-3 text-sm font-extrabold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-blush",
-          children: sessionStarted ? "Keep going" : "Start A1"
+          children: sessionStarted ? "Keep practicing" : "Start practicing"
         }
       ) })
     ] })
@@ -13070,19 +13070,19 @@ function Header({ onStart, sessionStarted }) {
 // src/components/LanguageBar.tsx
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 function LanguageBar({ options, selectedLanguage, onSelect }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("section", { className: "pb-4", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex flex-wrap items-center justify-between gap-3", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("section", { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex flex-wrap items-end justify-between gap-3", children: [
     /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Language" }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { className: "mt-1 font-display text-xl font-bold text-ink", children: "Pick your practice lane." })
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { className: "mt-1 font-display text-xl font-bold text-ink", children: "Choose what to learn." })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "flex flex-wrap gap-2", children: options.map((option) => {
+    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "grid w-full gap-2 sm:grid-cols-3", children: options.map((option) => {
       const active = option.id === selectedLanguage;
       return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
         "button",
         {
           type: "button",
           onClick: () => onSelect(option.id),
-          className: `rounded-full px-4 py-2 text-sm font-bold transition ${active ? `${option.accentClass} text-white shadow-soft` : "border border-line bg-cream/60 text-ink hover:-translate-y-0.5 hover:bg-paper"}`,
+          className: `rounded-[18px] px-4 py-3 text-sm font-bold transition ${active ? `${option.accentClass} text-white shadow-soft` : "border border-line bg-cream/60 text-ink hover:-translate-y-0.5 hover:bg-paper"}`,
           children: option.label
         },
         option.id
@@ -13100,15 +13100,15 @@ var levels = [
   { level: "B2", available: false, subtitle: "Coming soon" }
 ];
 function LevelSelector({ selectedLevel, onSelect }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "border-t border-line/80 py-4", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "border-t border-line/80 pt-4", children: [
     /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-4", children: [
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "min-w-0", children: [
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Level" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { className: "mt-2 text-balance font-display text-xl font-bold text-ink", children: "Keep it beginner-simple." })
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Keep it beginner-simple." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "shrink-0 rounded-full bg-mint/40 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink", children: "A1 ready" })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-2", children: levels.map(({ level, available, subtitle }) => {
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "mt-3 grid gap-2 sm:grid-cols-2", children: levels.map(({ level, available, subtitle }) => {
       const isSelected = selectedLevel === level;
       return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
         "button",
@@ -13116,13 +13116,13 @@ function LevelSelector({ selectedLevel, onSelect }) {
           type: "button",
           disabled: !available,
           onClick: () => available && onSelect(level),
-          className: `min-w-0 rounded-[20px] border p-4 text-left transition ${available ? isSelected ? "border-splash bg-splash text-paper shadow-soft" : "border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble hover:bg-paper" : "cursor-not-allowed border-dashed border-line bg-paper/50 text-notebook opacity-75"}`,
+          className: `min-w-0 rounded-[18px] border p-3.5 text-left transition ${available ? isSelected ? "border-splash bg-splash text-paper shadow-soft" : "border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble hover:bg-paper" : "cursor-not-allowed border-dashed border-line bg-paper/50 text-notebook opacity-75"}`,
           children: [
             /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "flex items-center justify-between", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "font-display text-xl font-bold", children: level }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "font-display text-lg font-bold", children: level }),
               !available && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "ml-3 shrink-0 rounded-full bg-paper/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-notebook", children: "Locked" })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: `mt-3 text-sm ${isSelected && available ? "text-paper/80" : "text-notebook"}`, children: subtitle })
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: `mt-2 text-sm ${isSelected && available ? "text-paper/80" : "text-notebook"}`, children: subtitle })
           ]
         },
         level
@@ -13135,18 +13135,18 @@ function LevelSelector({ selectedLevel, onSelect }) {
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 function ProgressDashboard({ progress, deckSize }) {
   const mastery = Math.round(progress.knownCardIds.length / deckSize * 100);
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("section", { className: "border-t border-line/80 py-4", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("section", { className: "border-t border-line/80 pt-4", children: [
     /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-4", children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "min-w-0", children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Progress" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h2", { className: "mt-2 text-balance font-display text-xl font-bold text-ink", children: "Tiny wins count." })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Tiny wins count." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "shrink-0 rounded-[18px] bg-bubble px-3 py-2.5 text-ink shadow-soft", children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[10px] font-bold uppercase tracking-[0.2em] text-paper/70", children: "Streak" }),
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "font-display text-2xl font-bold", children: progress.currentStreak })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-2", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "mt-3 grid gap-2 sm:grid-cols-2", children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-[18px] bg-peach/45 p-3.5", children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[11px] font-bold uppercase tracking-[0.18em] text-notebook", children: "Reviewed" }),
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "mt-2 font-display text-2xl font-bold text-ink", children: progress.cardsReviewed })
@@ -13164,7 +13164,7 @@ function ProgressDashboard({ progress, deckSize }) {
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "mt-2 font-display text-2xl font-bold text-ink", children: progress.sentenceAnswersSubmitted })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "mt-4 rounded-[20px] border border-line bg-paper p-3.5", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "mt-3 rounded-[20px] border border-line bg-paper p-3.5", children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-4", children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "min-w-0", children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-[11px] font-bold uppercase tracking-[0.18em] text-notebook", children: "Deck mastery" }),
@@ -13219,9 +13219,9 @@ function Flashcard({
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "rounded-full bg-sky/20 px-4 py-2 text-sm font-bold text-ink", children: card.category })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "mt-4 rounded-[24px] border border-line bg-notebook/5 p-4 shadow-soft sm:p-5", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "rounded-[20px] bg-paper/95 bg-rulebook bg-[length:100%_35px] p-6", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.28em] text-notebook", children: "Front of card" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.28em] text-notebook", children: "Word" }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h3", { className: "mt-4 font-display text-3xl font-extrabold text-ink sm:text-[2.75rem]", children: card.article ? `${card.article} ${card.german}` : card.german }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-2 text-sm text-notebook", children: "Tap to reveal what you need." }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "mt-2 text-sm text-notebook", children: "Reveal only what you need." }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "mt-5 flex flex-wrap gap-3", children: [
         /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           "button",
@@ -13286,7 +13286,7 @@ function Flashcard({
           type: "button",
           onClick: onPrevious,
           className: "rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun",
-          children: "Previous"
+          children: "Back"
         }
       ),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
@@ -13317,6 +13317,7 @@ function shuffle(items) {
 function createQuizItems(cards) {
   const meaningCards = shuffle(cards).slice(0, 8);
   const nouns = shuffle(cards.filter((card) => card.article)).slice(0, 6);
+  const articleChoices = [...new Set(cards.map((card) => card.article).filter(Boolean))];
   const meaningItems = meaningCards.map((card) => {
     const distractors = shuffle(
       cards.filter((candidate) => candidate.id !== card.id).map((candidate) => candidate.english)
@@ -13329,13 +13330,13 @@ function createQuizItems(cards) {
       answer: card.english
     };
   });
-  const articleItems = nouns.map((card) => ({
+  const articleItems = articleChoices.length >= 2 ? nouns.map((card) => ({
     id: `${card.id}-article`,
     type: "article",
     prompt: card.german,
-    choices: ["der", "die", "das"],
+    choices: articleChoices,
     answer: card.article
-  }));
+  })) : [];
   return shuffle([...meaningItems, ...articleItems]);
 }
 
@@ -13400,8 +13401,8 @@ function QuizMode({ cards, languageLabel }) {
       ] })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "mt-4 rounded-[22px] border border-line bg-cream/60 p-5", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: currentItem.type === "meaning" ? "Meaning check" : "Article challenge" }),
-      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h3", { className: "mt-3 font-display text-2xl font-bold text-ink", children: currentItem.type === "meaning" ? `Choose the English meaning of \u201C${currentItem.prompt}\u201D.` : languageLabel === "German" ? `Which article fits \u201C${currentItem.prompt}\u201D?` : `Match the word \u201C${currentItem.prompt}\u201D.` }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.18em] text-notebook", children: currentItem.type === "meaning" ? "Meaning check" : "Article check" }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h3", { className: "mt-3 font-display text-2xl font-bold text-ink", children: currentItem.type === "meaning" ? `Choose the English meaning of \u201C${currentItem.prompt}\u201D.` : languageLabel === "German" ? `Which article fits \u201C${currentItem.prompt}\u201D?` : languageLabel === "Dutch" ? `Choose de or het for \u201C${currentItem.prompt}\u201D.` : `Match the word \u201C${currentItem.prompt}\u201D.` }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "mt-5 grid gap-3 sm:grid-cols-2", children: currentItem.choices.map((choice) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
         "button",
         {
@@ -13473,7 +13474,7 @@ function SentencePractice({
       ] })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-6 rounded-[28px] border border-line bg-cream/60 p-6", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-sm font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Sentence practice" }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-sm font-extrabold uppercase tracking-[0.18em] text-notebook", children: "Write" }),
       /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("h3", { className: "mt-3 font-display text-3xl font-bold text-ink", children: [
         "Write your own sentence using ",
         card.german,
@@ -13523,7 +13524,7 @@ function SentencePractice({
           type: "button",
           onClick: onPrevious,
           className: "rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun",
-          children: "Previous word"
+          children: "Back"
         }
       ),
       /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
@@ -13532,7 +13533,7 @@ function SentencePractice({
           type: "button",
           onClick: onNext,
           className: "rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun",
-          children: "Next word"
+          children: "Next"
         }
       )
     ] })
@@ -13542,9 +13543,9 @@ function SentencePractice({
 // src/components/PracticeSession.tsx
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 var modeLabels = [
-  { key: "flashcards", title: "Flashcards", subtitle: "Reveal, review, repeat" },
-  { key: "sentence", title: "Sentence practice", subtitle: "Write your own line" },
-  { key: "quiz", title: "Quiz mode", subtitle: "Meaning and article check" }
+  { key: "flashcards", title: "Cards", subtitle: "Reveal and review" },
+  { key: "sentence", title: "Write", subtitle: "Make one sentence" },
+  { key: "quiz", title: "Quiz", subtitle: "Check meaning fast" }
 ];
 function PracticeSession({
   cards,
@@ -13563,33 +13564,34 @@ function PracticeSession({
   }, [cards]);
   const goPrevious = () => setCurrentIndex((current) => current === 0 ? cards.length - 1 : current - 1);
   const goNext = () => setCurrentIndex((current) => current === cards.length - 1 ? 0 : current + 1);
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("section", { className: "rounded-[26px] border border-line bg-paper/90 p-5 shadow-card sm:p-6", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("section", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6", children: [
     /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-4", children: [
       /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "min-w-0", children: [
         /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Practice" }),
         /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("h2", { className: "mt-2 font-display text-2xl font-bold text-ink sm:text-3xl", children: [
           selectedLanguage,
           " ",
-          selectedLevel
+          selectedLevel,
+          " practice"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 max-w-2xl text-sm leading-6 text-notebook", children: "Flip cards, write a line, revise one thing, then move on." })
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 max-w-2xl text-sm leading-6 text-notebook", children: "Stay with one small task, then move to the next card." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "shrink-0 rounded-[18px] bg-peach/45 px-3 py-2 text-sm font-bold text-notebook", children: [
         progress.reviewedCardIds.length,
         " unique cards reviewed"
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "mt-4 grid gap-3 lg:grid-cols-3", children: modeLabels.map((item) => {
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "mt-4 grid gap-2 sm:grid-cols-3", children: modeLabels.map((item) => {
       const active = mode === item.key;
       return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(
         "button",
         {
           type: "button",
           onClick: () => setMode(item.key),
-          className: `rounded-[22px] border p-4 text-left transition ${active ? "border-splash bg-splash text-paper shadow-soft" : "border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble"}`,
+          className: `rounded-[20px] border p-3.5 text-left transition ${active ? "border-splash bg-splash text-paper shadow-soft" : "border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble"}`,
           children: [
             /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "font-bold", children: item.title }),
-            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: `mt-2 text-sm ${active ? "text-paper/75" : "text-notebook"}`, children: item.subtitle })
+            /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: `mt-1.5 text-sm ${active ? "text-paper/75" : "text-notebook"}`, children: item.subtitle })
           ]
         },
         item.key
@@ -13689,8 +13691,8 @@ function RevisionLibrary({
     /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-4", children: [
       /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "min-w-0", children: [
         /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Revise" }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { className: "mt-2 font-display text-xl font-bold text-ink", children: "Quick reminders" }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "mt-2 max-w-3xl text-sm leading-6 text-notebook", children: "Use a theme, a concept, or the word bank when memory slips." })
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Quick reminders" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Use a theme, a concept, or the word bank when memory slips." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "rounded-[18px] bg-cream/70 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-notebook", children: [
         wordBank.length,
@@ -13698,7 +13700,7 @@ function RevisionLibrary({
         revision.wordBankLabel
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "mt-4 flex flex-wrap gap-2", children: revisionViews.map((item) => {
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "mt-3 flex flex-wrap gap-2", children: revisionViews.map((item) => {
       const active = item.id === view;
       return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
         "button",
@@ -13734,7 +13736,7 @@ function RevisionLibrary({
         ] })
       ] }),
       currentConcept && /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("article", { className: "rounded-[20px] border border-line bg-cream/55 p-4 shadow-soft", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? "Theme" : "Concept" }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? `${languageLabel} theme` : `${languageLabel} concept` }),
         /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: currentConcept.title }),
         /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: currentConcept.summary }),
         /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("ul", { className: "mt-3 grid gap-2 text-sm text-ink", children: currentConcept.bullets.map((bullet) => /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("li", { className: "rounded-[16px] bg-paper/80 px-3 py-2", children: bullet }, bullet)) }),
@@ -14180,6 +14182,278 @@ var a1Vocabulary = [
   }
 ];
 
+// src/data/dutchVocabulary.ts
+var dutchVocabulary = [
+  {
+    id: "nl-appel",
+    level: "A1",
+    german: "appel",
+    english: "apple",
+    article: "de",
+    category: "Food & drink",
+    exampleGerman: "De appel is lekker.",
+    exampleEnglish: "The apple is tasty."
+  },
+  {
+    id: "nl-water",
+    level: "A1",
+    german: "water",
+    english: "water",
+    article: "het",
+    category: "Food & drink",
+    exampleGerman: "Ik drink water in de ochtend.",
+    exampleEnglish: "I drink water in the morning."
+  },
+  {
+    id: "nl-vrouw",
+    level: "A1",
+    german: "vrouw",
+    english: "woman",
+    article: "de",
+    category: "People",
+    exampleGerman: "De vrouw wacht op de bus.",
+    exampleEnglish: "The woman is waiting for the bus."
+  },
+  {
+    id: "nl-man",
+    level: "A1",
+    german: "man",
+    english: "man",
+    article: "de",
+    category: "People",
+    exampleGerman: "De man leest een boek.",
+    exampleEnglish: "The man is reading a book."
+  },
+  {
+    id: "nl-kind",
+    level: "A1",
+    german: "kind",
+    english: "child",
+    article: "het",
+    category: "People",
+    exampleGerman: "Het kind speelt buiten.",
+    exampleEnglish: "The child is playing outside."
+  },
+  {
+    id: "nl-huis",
+    level: "A1",
+    german: "huis",
+    english: "house",
+    article: "het",
+    category: "Home",
+    exampleGerman: "Het huis is klein maar gezellig.",
+    exampleEnglish: "The house is small but cozy."
+  },
+  {
+    id: "nl-kamer",
+    level: "A1",
+    german: "kamer",
+    english: "room",
+    article: "de",
+    category: "Home",
+    exampleGerman: "De kamer heeft veel licht.",
+    exampleEnglish: "The room has a lot of light."
+  },
+  {
+    id: "nl-familie",
+    level: "A1",
+    german: "familie",
+    english: "family",
+    article: "de",
+    category: "People",
+    exampleGerman: "Mijn familie woont in de stad.",
+    exampleEnglish: "My family lives in the city."
+  },
+  {
+    id: "nl-brood",
+    level: "A1",
+    german: "brood",
+    english: "bread",
+    article: "het",
+    category: "Food & drink",
+    exampleGerman: "Ik koop brood bij de bakker.",
+    exampleEnglish: "I buy bread at the bakery."
+  },
+  {
+    id: "nl-school",
+    level: "A1",
+    german: "school",
+    english: "school",
+    article: "de",
+    category: "Work & study",
+    exampleGerman: "De school begint om acht uur.",
+    exampleEnglish: "School starts at eight o\u2019clock."
+  },
+  {
+    id: "nl-vriend",
+    level: "A1",
+    german: "vriend",
+    english: "friend",
+    article: "de",
+    category: "People",
+    exampleGerman: "Mijn vriend komt morgen langs.",
+    exampleEnglish: "My friend is coming by tomorrow."
+  },
+  {
+    id: "nl-werk",
+    level: "A1",
+    german: "werk",
+    english: "work",
+    article: "het",
+    category: "Work & study",
+    exampleGerman: "Mijn werk begint vroeg.",
+    exampleEnglish: "My work starts early."
+  },
+  {
+    id: "nl-trein",
+    level: "A1",
+    german: "trein",
+    english: "train",
+    article: "de",
+    category: "Travel",
+    exampleGerman: "De trein is op tijd.",
+    exampleEnglish: "The train is on time."
+  },
+  {
+    id: "nl-boek",
+    level: "A1",
+    german: "boek",
+    english: "book",
+    article: "het",
+    category: "Work & study",
+    exampleGerman: "Het boek ligt op tafel.",
+    exampleEnglish: "The book is on the table."
+  },
+  {
+    id: "nl-koffie",
+    level: "A1",
+    german: "koffie",
+    english: "coffee",
+    article: "de",
+    category: "Food & drink",
+    exampleGerman: "Ik drink koffie in het cafe.",
+    exampleEnglish: "I drink coffee in the cafe."
+  },
+  {
+    id: "nl-stad",
+    level: "A1",
+    german: "stad",
+    english: "city",
+    article: "de",
+    category: "Places",
+    exampleGerman: "De stad is vandaag druk.",
+    exampleEnglish: "The city is busy today."
+  },
+  {
+    id: "nl-eten",
+    level: "A1",
+    german: "eten",
+    english: "to eat",
+    category: "Verbs",
+    exampleGerman: "Wij eten brood en kaas.",
+    exampleEnglish: "We eat bread and cheese."
+  },
+  {
+    id: "nl-drinken",
+    level: "A1",
+    german: "drinken",
+    english: "to drink",
+    category: "Verbs",
+    exampleGerman: "Zij drinken water.",
+    exampleEnglish: "They drink water."
+  },
+  {
+    id: "nl-gaan",
+    level: "A1",
+    german: "gaan",
+    english: "to go",
+    category: "Verbs",
+    exampleGerman: "Ik ga vandaag naar school.",
+    exampleEnglish: "I am going to school today."
+  },
+  {
+    id: "nl-komen",
+    level: "A1",
+    german: "komen",
+    english: "to come",
+    category: "Verbs",
+    exampleGerman: "Kom je morgen terug?",
+    exampleEnglish: "Are you coming back tomorrow?"
+  },
+  {
+    id: "nl-zijn",
+    level: "A1",
+    german: "zijn",
+    english: "to be",
+    category: "Verbs",
+    exampleGerman: "Wij zijn thuis.",
+    exampleEnglish: "We are at home."
+  },
+  {
+    id: "nl-hebben",
+    level: "A1",
+    german: "hebben",
+    english: "to have",
+    category: "Verbs",
+    exampleGerman: "Ik heb een afspraak.",
+    exampleEnglish: "I have an appointment."
+  },
+  {
+    id: "nl-vandaag",
+    level: "A1",
+    german: "vandaag",
+    english: "today",
+    category: "Time",
+    exampleGerman: "Vandaag leer ik Nederlands.",
+    exampleEnglish: "Today I am learning Dutch."
+  },
+  {
+    id: "nl-morgen",
+    level: "A1",
+    german: "morgen",
+    english: "tomorrow",
+    category: "Time",
+    exampleGerman: "Morgen werk ik thuis.",
+    exampleEnglish: "Tomorrow I work from home."
+  },
+  {
+    id: "nl-hallo",
+    level: "A1",
+    german: "hallo",
+    english: "hello",
+    category: "Greetings",
+    exampleGerman: "Hallo, hoe gaat het?",
+    exampleEnglish: "Hello, how are you?"
+  },
+  {
+    id: "nl-dag",
+    level: "A1",
+    german: "dag",
+    english: "bye",
+    category: "Greetings",
+    exampleGerman: "Dag, tot morgen.",
+    exampleEnglish: "Bye, see you tomorrow."
+  },
+  {
+    id: "nl-alsjeblieft",
+    level: "A1",
+    german: "alsjeblieft",
+    english: "please / here you go",
+    category: "Greetings",
+    exampleGerman: "Een koffie, alsjeblieft.",
+    exampleEnglish: "A coffee, please."
+  },
+  {
+    id: "nl-dank-je",
+    level: "A1",
+    german: "dank je",
+    english: "thank you",
+    category: "Greetings",
+    exampleGerman: "Dank je voor je hulp.",
+    exampleEnglish: "Thank you for your help."
+  }
+];
+
 // src/data/finnishVocabulary.ts
 var finnishVocabulary = [
   {
@@ -14431,7 +14705,7 @@ var finnishVocabulary = [
 var germanRevisionCollection = {
   sourceLabel: "Goethe-Zertifikat A1 Wortliste",
   sourceHref: "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
-  note: "Themes come from the official Goethe A1 word list. Grammar notes are compact study prompts for quick revision inside WortSpiel.",
+  note: "Themes come from the official Goethe A1 word list. Grammar notes are compact study prompts for quick revision inside LingoGarden.",
   wordBankLabel: "Goethe-based A1 reference words",
   themes: [
     {
@@ -14742,9 +15016,146 @@ var finnishRevisionCollection = {
     }
   ]
 };
+var dutchRevisionCollection = {
+  sourceLabel: "University of Groningen + NT2 TaalMenu beginner Dutch resources",
+  sourceHref: "https://www.rug.nl/language-centre/language-courses/dutch/survival-kit?lang=en",
+  note: "Themes are shaped by the University of Groningen Dutch Survival Kit and Introduction to Dutch beginner course. The word bank comes from NT2 TaalMenu\u2019s A1 vocabulary lists.",
+  wordBankLabel: "beginner Dutch reference words",
+  themes: [
+    {
+      id: "dutch-intro",
+      title: "Introductions and greetings",
+      summary: "Start with hello, names, where you are from, and short social exchanges.",
+      bullets: ["Hallo, goedemorgen, dag", "Ik ben ..., hoe heet je?", "Waar kom je vandaan?"],
+      example: "Hallo, ik ben Aditi en ik kom uit India."
+    },
+    {
+      id: "dutch-home",
+      title: "Home and everyday places",
+      summary: "Talk about where you live and the basic places around you.",
+      bullets: ["huis, kamer, straat, buurt", "station, winkel, school", "inside, outside, nearby"],
+      example: "Ik woon in een klein huis dichtbij het station."
+    },
+    {
+      id: "dutch-time",
+      title: "Time and routine",
+      summary: "Dutch beginners need time words right away for plans and daily habits.",
+      bullets: ["today, tomorrow, yesterday", "days, months, birthdays", "morning, afternoon, evening"],
+      example: "Morgen ga ik naar school en vanavond blijf ik thuis."
+    },
+    {
+      id: "dutch-travel",
+      title: "Travel and directions",
+      summary: "Move around with simple transport and route language.",
+      bullets: ["bus, trein, halte, kaartje", "left, right, straight ahead", "arrive, get off, wait"],
+      example: "Waar is de bushalte? Ik neem de trein naar Groningen."
+    },
+    {
+      id: "dutch-food",
+      title: "Food and drink",
+      summary: "Order, shop, and talk about simple meals.",
+      bullets: ["brood, koffie, water, fruit", "bakker, supermarkt, restaurant", "eten, drinken, bestellen"],
+      example: "Ik bestel koffie en brood in het cafe."
+    },
+    {
+      id: "dutch-shopping",
+      title: "Shopping and services",
+      summary: "Handle buying, paying, and getting help.",
+      bullets: ["aanbieding, prijs, betalen", "bank, apotheek, adres", "receipt and simple service talk"],
+      example: "Is deze jas in de aanbieding en kan ik met kaart betalen?"
+    },
+    {
+      id: "dutch-work",
+      title: "Work and study",
+      summary: "Use basic Dutch for school, work, and simple routines.",
+      bullets: ["werk, school, boek, cursus", "job titles and workplaces", "simple task and schedule talk"],
+      example: "Ik werk overdag en ik leer Nederlands in de avond."
+    },
+    {
+      id: "dutch-weather",
+      title: "Weather and seasons",
+      summary: "Dutch small talk loves weather, and A1 practice does too.",
+      bullets: ["sun, rain, cloud, wind", "spring, summer, autumn, winter", "warm, cold, cloudy"],
+      example: "Vandaag is het bewolkt, maar morgen is het warm."
+    },
+    {
+      id: "dutch-family",
+      title: "Family and people",
+      summary: "Describe yourself, your family, and the people around you.",
+      bullets: ["man, vrouw, kind, vriend", "boy, girl, grandmother", "age, birthday, personal details"],
+      example: "Mijn vriend woont met zijn familie in de stad."
+    },
+    {
+      id: "dutch-forms",
+      title: "Forms and identity details",
+      summary: "Handle names, addresses, and practical details with calm short phrases.",
+      bullets: ["name, surname, address", "phone and contact details", "simple questions in services"],
+      example: "Mijn adres staat op het formulier."
+    }
+  ],
+  grammar: [
+    {
+      id: "dutch-articles",
+      title: "de and het",
+      summary: "Learn nouns with their article from the start. Dutch beginners need the pattern, not perfection.",
+      bullets: ["Memorize de or het with the word", "Use article plus noun together", "Notice common de nouns in daily vocabulary"],
+      example: "de bus, de vrouw, het huis, het kind"
+    },
+    {
+      id: "dutch-word-order",
+      title: "Simple word order",
+      summary: "Keep Dutch sentences short and steady: subject, verb, then the rest.",
+      bullets: ["Start with clear simple clauses", "The verb stays early", "Time words can come first"],
+      example: "Vandaag leer ik Nederlands."
+    },
+    {
+      id: "dutch-verbs",
+      title: "Present tense basics",
+      summary: "A1 Dutch lives mostly in the present tense, especially with everyday verbs.",
+      bullets: ["ik ben, jij bent, hij is", "ik heb, jij hebt, hij heeft", "repeat common verbs often"],
+      example: "Ik heb een boek en ik ben thuis."
+    },
+    {
+      id: "dutch-questions",
+      title: "Questions",
+      summary: "Short questions open almost every beginner conversation.",
+      bullets: ["wie, wat, waar, wanneer, hoe", "put the verb early in yes-no questions", "reuse practical question frames"],
+      example: "Waar woon je? Heb je tijd?"
+    },
+    {
+      id: "dutch-negation",
+      title: "niet and geen",
+      summary: "Use niet and geen to make simple, useful negatives.",
+      bullets: ["geen with nouns", "niet with verbs and adjectives", "listen for short daily patterns"],
+      example: "Ik heb geen fiets. Ik kom vandaag niet."
+    },
+    {
+      id: "dutch-modal",
+      title: "Modal verbs",
+      summary: "can, want, and must give beginners many more real-life sentences.",
+      bullets: ["kunnen, willen, moeten", "keep practice sentences short", "put the second verb at the end"],
+      example: "Ik wil vandaag Nederlands spreken."
+    },
+    {
+      id: "dutch-time-phrases",
+      title: "Time phrases",
+      summary: "Schedule talk appears everywhere in beginner Dutch.",
+      bullets: ["vandaag, morgen, gisteren", "days and months as memorized chunks", "pair time words with routine verbs"],
+      example: "Morgen werk ik en vanavond leer ik thuis."
+    },
+    {
+      id: "dutch-forms",
+      title: "Polite everyday chunks",
+      summary: "Some Dutch phrases work best as whole pieces you can reuse without overthinking.",
+      bullets: ["alsjeblieft and dank je", "mag ik ...?", "sorry and excuseer"],
+      example: "Mag ik een koffie, alsjeblieft?"
+    }
+  ]
+};
 
 // src/utils/storage.ts
-var STORAGE_KEY = "wortspiel-progress";
+var STORAGE_KEY = "lingogarden-progress";
+var LEGACY_STORAGE_KEY = "wortspiel-progress";
 function createDailyActivity() {
   return {
     reviewedCardIds: [],
@@ -14801,7 +15212,7 @@ function loadProgress() {
     return createDefaultProgress();
   }
   try {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
+    const stored = window.localStorage.getItem(STORAGE_KEY) ?? window.localStorage.getItem(LEGACY_STORAGE_KEY);
     if (!stored) {
       return createDefaultProgress();
     }
@@ -14824,6 +15235,7 @@ function saveProgress(progress) {
     return;
   }
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  window.localStorage.removeItem(LEGACY_STORAGE_KEY);
 }
 function recordCardFeedback(progress, cardId, outcome) {
   const { next, today } = ensureActiveDay(progress);
@@ -14866,8 +15278,10 @@ function App() {
   const [progress, setProgress] = (0, import_react6.useState)(() => loadProgress() ?? createDefaultProgress());
   const [germanCards, setGermanCards] = (0, import_react6.useState)(a1Vocabulary);
   const [finnishCards, setFinnishCards] = (0, import_react6.useState)(finnishVocabulary);
+  const [dutchCards, setDutchCards] = (0, import_react6.useState)(dutchVocabulary);
   const [isGermanDeckLoading, setIsGermanDeckLoading] = (0, import_react6.useState)(true);
   const [isFinnishDeckLoading, setIsFinnishDeckLoading] = (0, import_react6.useState)(true);
+  const [isDutchDeckLoading, setIsDutchDeckLoading] = (0, import_react6.useState)(true);
   const languageOptions = [
     {
       id: "german",
@@ -14880,17 +15294,34 @@ function App() {
       label: "Finnish",
       accentClass: "bg-bubble",
       sentencePlaceholder: "Esimerkiksi: Min\xE4 opiskelen suomea t\xE4n\xE4\xE4n."
+    },
+    {
+      id: "dutch",
+      label: "Dutch",
+      accentClass: "bg-leaf",
+      sentencePlaceholder: "Bijvoorbeeld: Ik leer vandaag Nederlands."
     }
   ];
+  const cardsByLanguage = {
+    german: germanCards,
+    finnish: finnishCards,
+    dutch: dutchCards
+  };
+  const revisionByLanguage = {
+    german: germanRevisionCollection,
+    finnish: finnishRevisionCollection,
+    dutch: dutchRevisionCollection
+  };
   const currentLanguage = languageOptions.find((option) => option.id === selectedLanguage) ?? languageOptions[0];
-  const currentCards = selectedLanguage === "german" ? germanCards : finnishCards;
-  const currentRevision = selectedLanguage === "german" ? germanRevisionCollection : finnishRevisionCollection;
+  const currentCards = cardsByLanguage[selectedLanguage];
+  const currentRevision = revisionByLanguage[selectedLanguage];
   (0, import_react6.useEffect)(() => {
     saveProgress(progress);
   }, [progress]);
   (0, import_react6.useEffect)(() => {
     let cancelled = false;
-    const buildId = window.__WORTSPIEL_BUILD_ID__ ? `?v=${window.__WORTSPIEL_BUILD_ID__}` : "";
+    const currentBuildId = window.__LINGOGARDEN_BUILD_ID__ ?? window.__WORTSPIEL_BUILD_ID__;
+    const buildId = currentBuildId ? `?v=${currentBuildId}` : "";
     async function loadDeck(resourcePath, onSuccess, onDone) {
       try {
         const response = await fetch(`${resourcePath}${buildId}`, { cache: "no-store" });
@@ -14911,6 +15342,7 @@ function App() {
     }
     void loadDeck("./data/goethe-a1.json", setGermanCards, () => setIsGermanDeckLoading(false));
     void loadDeck("./data/finnish-a1.json", setFinnishCards, () => setIsFinnishDeckLoading(false));
+    void loadDeck("./data/dutch-a1.json", setDutchCards, () => setIsDutchDeckLoading(false));
     return () => {
       cancelled = true;
     };
@@ -14921,10 +15353,10 @@ function App() {
   const handleSentenceSave = (cardId, text) => {
     setProgress((current) => saveSentenceAnswer(current, cardId, text));
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "min-h-screen overflow-x-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1400px] flex-col px-4 py-4 sm:px-5 lg:px-6", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "min-h-screen overflow-x-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-3 py-3 sm:px-4 lg:px-5", children: [
     /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Header, { onStart: () => setSessionStarted(true), sessionStarted }),
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("main", { className: "mt-4 grid flex-1 gap-4 xl:grid-cols-[340px_minmax(0,1fr)]", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("aside", { className: "rounded-[26px] border border-line bg-paper/90 p-4 shadow-card xl:pb-4", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("main", { className: "mt-3 grid flex-1 gap-3 xl:min-h-[calc(100vh-11rem)] xl:grid-cols-[330px_minmax(0,1fr)]", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("aside", { className: "rounded-[30px] border border-line bg-paper/92 p-4 shadow-card xl:sticky xl:top-3 xl:self-start", children: [
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
           LanguageBar,
           {
@@ -14944,9 +15376,10 @@ function App() {
           }
         )
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("section", { className: "flex flex-col gap-4 xl:min-h-0", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("section", { className: "flex flex-col gap-3 xl:min-h-0", children: [
         selectedLanguage === "german" && isGermanDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Goethe-based German A1 deck." }),
         selectedLanguage === "finnish" && isFinnishDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Aalto beginner Finnish deck." }),
+        selectedLanguage === "dutch" && isDutchDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "rounded-[18px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Dutch beginner deck." }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
           PracticeSession,
           {

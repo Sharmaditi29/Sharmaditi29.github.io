@@ -98,10 +98,8 @@ export function RevisionLibrary({
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Revise
           </p>
-          <h2 className="mt-2 font-display text-xl font-bold text-ink">
-            Quick reminders
-          </h2>
-          <p className="mt-2 max-w-3xl text-sm leading-6 text-notebook">
+          <h2 className="mt-1 font-display text-lg font-bold text-ink">Quick reminders</h2>
+          <p className="mt-2 text-sm leading-6 text-notebook">
             Use a theme, a concept, or the word bank when memory slips.
           </p>
         </div>
@@ -111,7 +109,7 @@ export function RevisionLibrary({
         </div>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-3 flex flex-wrap gap-2">
         {revisionViews.map((item) => {
           const active = item.id === view
 
@@ -165,7 +163,7 @@ export function RevisionLibrary({
           {currentConcept && (
             <article className="rounded-[20px] border border-line bg-cream/55 p-4 shadow-soft">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
-                {view === 'themes' ? 'Theme' : 'Concept'}
+                {view === 'themes' ? `${languageLabel} theme` : `${languageLabel} concept`}
               </p>
               <h3 className="mt-2 font-display text-xl font-bold text-ink">
                 {currentConcept.title}

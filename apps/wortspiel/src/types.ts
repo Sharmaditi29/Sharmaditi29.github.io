@@ -1,12 +1,13 @@
 export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2'
-export type LearningLanguage = 'german' | 'finnish'
+export type LearningLanguage = 'german' | 'finnish' | 'dutch'
+export type ArticleValue = 'der' | 'die' | 'das' | 'de' | 'het'
 
 export interface VocabularyCard {
   id: string
   level: CefrLevel
   german: string
   english: string
-  article?: 'der' | 'die' | 'das'
+  article?: ArticleValue
   plural?: string
   category: string
   exampleGerman: string
@@ -77,8 +78,8 @@ export interface ArticleQuizItem {
   id: string
   type: 'article'
   prompt: string
-  choices: ReadonlyArray<'der' | 'die' | 'das'>
-  answer: 'der' | 'die' | 'das'
+  choices: ReadonlyArray<string>
+  answer: string
 }
 
 export type QuizItem = MeaningQuizItem | ArticleQuizItem

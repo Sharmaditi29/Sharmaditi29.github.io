@@ -148,7 +148,7 @@ function buildExamples(term, english, category) {
 
 function buildGrammarNote(term, english) {
   if (english.startsWith('to ')) {
-    return 'Aalto glossary marks many verbs with a type number in brackets. WortSpiel removes the number in the card title but keeps the verb as an infinitive.'
+    return 'Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive.'
   }
 
   if (/[!?]$/.test(term)) {

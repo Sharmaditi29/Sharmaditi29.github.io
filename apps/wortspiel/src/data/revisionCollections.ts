@@ -4,7 +4,7 @@ export const germanRevisionCollection: RevisionCollection = {
   sourceLabel: 'Goethe-Zertifikat A1 Wortliste',
   sourceHref: 'https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf',
   note:
-    'Themes come from the official Goethe A1 word list. Grammar notes are compact study prompts for quick revision inside WortSpiel.',
+    'Themes come from the official Goethe A1 word list. Grammar notes are compact study prompts for quick revision inside LingoGarden.',
   wordBankLabel: 'Goethe-based A1 reference words',
   themes: [
     {
@@ -315,6 +315,144 @@ export const finnishRevisionCollection: RevisionCollection = {
       summary: 'Vowel harmony and pronunciation patterns make endings easier to spot.',
       bullets: ['Notice front and back vowels', 'Use pronunciation to support spelling', 'Listen for repeated endings'],
       example: 'yksi, työ, syödä, kylmä',
+    },
+  ],
+}
+
+export const dutchRevisionCollection: RevisionCollection = {
+  sourceLabel: 'University of Groningen + NT2 TaalMenu beginner Dutch resources',
+  sourceHref: 'https://www.rug.nl/language-centre/language-courses/dutch/survival-kit?lang=en',
+  note:
+    'Themes are shaped by the University of Groningen Dutch Survival Kit and Introduction to Dutch beginner course. The word bank comes from NT2 TaalMenu’s A1 vocabulary lists.',
+  wordBankLabel: 'beginner Dutch reference words',
+  themes: [
+    {
+      id: 'dutch-intro',
+      title: 'Introductions and greetings',
+      summary: 'Start with hello, names, where you are from, and short social exchanges.',
+      bullets: ['Hallo, goedemorgen, dag', 'Ik ben ..., hoe heet je?', 'Waar kom je vandaan?'],
+      example: 'Hallo, ik ben Aditi en ik kom uit India.',
+    },
+    {
+      id: 'dutch-home',
+      title: 'Home and everyday places',
+      summary: 'Talk about where you live and the basic places around you.',
+      bullets: ['huis, kamer, straat, buurt', 'station, winkel, school', 'inside, outside, nearby'],
+      example: 'Ik woon in een klein huis dichtbij het station.',
+    },
+    {
+      id: 'dutch-time',
+      title: 'Time and routine',
+      summary: 'Dutch beginners need time words right away for plans and daily habits.',
+      bullets: ['today, tomorrow, yesterday', 'days, months, birthdays', 'morning, afternoon, evening'],
+      example: 'Morgen ga ik naar school en vanavond blijf ik thuis.',
+    },
+    {
+      id: 'dutch-travel',
+      title: 'Travel and directions',
+      summary: 'Move around with simple transport and route language.',
+      bullets: ['bus, trein, halte, kaartje', 'left, right, straight ahead', 'arrive, get off, wait'],
+      example: 'Waar is de bushalte? Ik neem de trein naar Groningen.',
+    },
+    {
+      id: 'dutch-food',
+      title: 'Food and drink',
+      summary: 'Order, shop, and talk about simple meals.',
+      bullets: ['brood, koffie, water, fruit', 'bakker, supermarkt, restaurant', 'eten, drinken, bestellen'],
+      example: 'Ik bestel koffie en brood in het cafe.',
+    },
+    {
+      id: 'dutch-shopping',
+      title: 'Shopping and services',
+      summary: 'Handle buying, paying, and getting help.',
+      bullets: ['aanbieding, prijs, betalen', 'bank, apotheek, adres', 'receipt and simple service talk'],
+      example: 'Is deze jas in de aanbieding en kan ik met kaart betalen?',
+    },
+    {
+      id: 'dutch-work',
+      title: 'Work and study',
+      summary: 'Use basic Dutch for school, work, and simple routines.',
+      bullets: ['werk, school, boek, cursus', 'job titles and workplaces', 'simple task and schedule talk'],
+      example: 'Ik werk overdag en ik leer Nederlands in de avond.',
+    },
+    {
+      id: 'dutch-weather',
+      title: 'Weather and seasons',
+      summary: 'Dutch small talk loves weather, and A1 practice does too.',
+      bullets: ['sun, rain, cloud, wind', 'spring, summer, autumn, winter', 'warm, cold, cloudy'],
+      example: 'Vandaag is het bewolkt, maar morgen is het warm.',
+    },
+    {
+      id: 'dutch-family',
+      title: 'Family and people',
+      summary: 'Describe yourself, your family, and the people around you.',
+      bullets: ['man, vrouw, kind, vriend', 'boy, girl, grandmother', 'age, birthday, personal details'],
+      example: 'Mijn vriend woont met zijn familie in de stad.',
+    },
+    {
+      id: 'dutch-forms',
+      title: 'Forms and identity details',
+      summary: 'Handle names, addresses, and practical details with calm short phrases.',
+      bullets: ['name, surname, address', 'phone and contact details', 'simple questions in services'],
+      example: 'Mijn adres staat op het formulier.',
+    },
+  ],
+  grammar: [
+    {
+      id: 'dutch-articles',
+      title: 'de and het',
+      summary: 'Learn nouns with their article from the start. Dutch beginners need the pattern, not perfection.',
+      bullets: ['Memorize de or het with the word', 'Use article plus noun together', 'Notice common de nouns in daily vocabulary'],
+      example: 'de bus, de vrouw, het huis, het kind',
+    },
+    {
+      id: 'dutch-word-order',
+      title: 'Simple word order',
+      summary: 'Keep Dutch sentences short and steady: subject, verb, then the rest.',
+      bullets: ['Start with clear simple clauses', 'The verb stays early', 'Time words can come first'],
+      example: 'Vandaag leer ik Nederlands.',
+    },
+    {
+      id: 'dutch-verbs',
+      title: 'Present tense basics',
+      summary: 'A1 Dutch lives mostly in the present tense, especially with everyday verbs.',
+      bullets: ['ik ben, jij bent, hij is', 'ik heb, jij hebt, hij heeft', 'repeat common verbs often'],
+      example: 'Ik heb een boek en ik ben thuis.',
+    },
+    {
+      id: 'dutch-questions',
+      title: 'Questions',
+      summary: 'Short questions open almost every beginner conversation.',
+      bullets: ['wie, wat, waar, wanneer, hoe', 'put the verb early in yes-no questions', 'reuse practical question frames'],
+      example: 'Waar woon je? Heb je tijd?',
+    },
+    {
+      id: 'dutch-negation',
+      title: 'niet and geen',
+      summary: 'Use niet and geen to make simple, useful negatives.',
+      bullets: ['geen with nouns', 'niet with verbs and adjectives', 'listen for short daily patterns'],
+      example: 'Ik heb geen fiets. Ik kom vandaag niet.',
+    },
+    {
+      id: 'dutch-modal',
+      title: 'Modal verbs',
+      summary: 'can, want, and must give beginners many more real-life sentences.',
+      bullets: ['kunnen, willen, moeten', 'keep practice sentences short', 'put the second verb at the end'],
+      example: 'Ik wil vandaag Nederlands spreken.',
+    },
+    {
+      id: 'dutch-time-phrases',
+      title: 'Time phrases',
+      summary: 'Schedule talk appears everywhere in beginner Dutch.',
+      bullets: ['vandaag, morgen, gisteren', 'days and months as memorized chunks', 'pair time words with routine verbs'],
+      example: 'Morgen werk ik en vanavond leer ik thuis.',
+    },
+    {
+      id: 'dutch-forms',
+      title: 'Polite everyday chunks',
+      summary: 'Some Dutch phrases work best as whole pieces you can reuse without overthinking.',
+      bullets: ['alsjeblieft and dank je', 'mag ik ...?', 'sorry and excuseer'],
+      example: 'Mag ik een koffie, alsjeblieft?',
     },
   ],
 }

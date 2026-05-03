@@ -47,12 +47,12 @@ export function Flashcard({
         {/* TODO: Add audio pronunciation playback for each card. */}
         <div className="rounded-[20px] bg-paper/95 bg-rulebook bg-[length:100%_35px] p-6">
           <p className="text-xs font-extrabold uppercase tracking-[0.28em] text-notebook">
-            Front of card
+            Word
           </p>
           <h3 className="mt-4 font-display text-3xl font-extrabold text-ink sm:text-[2.75rem]">
             {card.article ? `${card.article} ${card.german}` : card.german}
           </h3>
-          <p className="mt-2 text-sm text-notebook">Tap to reveal what you need.</p>
+          <p className="mt-2 text-sm text-notebook">Reveal only what you need.</p>
 
           <div className="mt-5 flex flex-wrap gap-3">
             <button
@@ -129,7 +129,7 @@ export function Flashcard({
           onClick={onPrevious}
           className="rounded-full border border-line bg-paper px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-sun"
         >
-          Previous
+          Back
         </button>
         <button
           type="button"

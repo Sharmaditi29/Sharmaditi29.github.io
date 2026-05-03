@@ -1,6 +1,7 @@
 import type { DailyActivity, ProgressState } from '../types'
 
-const STORAGE_KEY = 'wortspiel-progress'
+const STORAGE_KEY = 'lingogarden-progress'
+const LEGACY_STORAGE_KEY = 'wortspiel-progress'
 
 function createDailyActivity(): DailyActivity {
   return {
@@ -70,7 +71,8 @@ export function loadProgress() {
   }
 
   try {
-    const stored = window.localStorage.getItem(STORAGE_KEY)
+    const stored =
+      window.localStorage.getItem(STORAGE_KEY) ?? window.localStorage.getItem(LEGACY_STORAGE_KEY)
 
     if (!stored) {
       return createDefaultProgress()
@@ -97,6 +99,7 @@ export function saveProgress(progress: ProgressState) {
   }
 
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(progress))
+  window.localStorage.removeItem(LEGACY_STORAGE_KEY)
 }
 
 export function recordCardFeedback(

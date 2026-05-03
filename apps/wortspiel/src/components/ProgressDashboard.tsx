@@ -9,15 +9,13 @@ export function ProgressDashboard({ progress, deckSize }: ProgressDashboardProps
   const mastery = Math.round((progress.knownCardIds.length / deckSize) * 100)
 
   return (
-    <section className="border-t border-line/80 py-4">
+    <section className="border-t border-line/80 pt-4">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Progress
           </p>
-          <h2 className="mt-2 text-balance font-display text-xl font-bold text-ink">
-            Tiny wins count.
-          </h2>
+          <h2 className="mt-1 font-display text-lg font-bold text-ink">Tiny wins count.</h2>
         </div>
         <div className="shrink-0 rounded-[18px] bg-bubble px-3 py-2.5 text-ink shadow-soft">
           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-paper/70">Streak</p>
@@ -25,7 +23,7 @@ export function ProgressDashboard({ progress, deckSize }: ProgressDashboardProps
         </div>
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-2">
+      <div className="mt-3 grid gap-2 sm:grid-cols-2">
         <div className="rounded-[18px] bg-peach/45 p-3.5">
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-notebook">Reviewed</p>
           <p className="mt-2 font-display text-2xl font-bold text-ink">{progress.cardsReviewed}</p>
@@ -46,7 +44,7 @@ export function ProgressDashboard({ progress, deckSize }: ProgressDashboardProps
         </div>
       </div>
 
-      <div className="mt-4 rounded-[20px] border border-line bg-paper p-3.5">
+      <div className="mt-3 rounded-[20px] border border-line bg-paper p-3.5">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-notebook">Deck mastery</p>
