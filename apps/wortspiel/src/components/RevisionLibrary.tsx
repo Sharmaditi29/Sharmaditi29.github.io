@@ -1,10 +1,9 @@
-import { useMemo, useState } from 'react'
-import type { LearningLanguage, RevisionCollection, VocabularyCard } from '../types'
+import { useEffect, useMemo, useState } from 'react'
+import type { RevisionCollection, VocabularyCard } from '../types'
 
 interface RevisionLibraryProps {
   cards: VocabularyCard[]
   revision: RevisionCollection
-  selectedLanguage: LearningLanguage
   languageLabel: string
 }
 
@@ -30,11 +29,12 @@ function getDisplayLabel(card: VocabularyCard) {
 export function RevisionLibrary({
   cards,
   revision,
-  selectedLanguage,
   languageLabel,
 }: RevisionLibraryProps) {
   const [view, setView] = useState<RevisionView>('themes')
   const [query, setQuery] = useState('')
+  const [selectedThemeId, setSelectedThemeId] = useState(revision.themes[0]?.id ?? '')
+  const [selectedGrammarId, setSelectedGrammarId] = useState(revision.grammar[0]?.id ?? '')
 
   const wordBank = useMemo<WordBankEntry[]>(() => {
     const entries = new Map<string, WordBankEntry>()
@@ -82,6 +82,14 @@ export function RevisionLibrary({
   }, [query, wordBank])
 
   const currentConcepts = view === 'themes' ? revision.themes : revision.grammar
+  const selectedConceptId = view === 'themes' ? selectedThemeId : selectedGrammarId
+  const currentConcept =
+    currentConcepts.find((concept) => concept.id === selectedConceptId) ?? currentConcepts[0]
+
+  useEffect(() => {
+    setSelectedThemeId(revision.themes[0]?.id ?? '')
+    setSelectedGrammarId(revision.grammar[0]?.id ?? '')
+  }, [revision])
 
   return (
     <section className="rounded-[30px] border border-line bg-paper/90 p-6 shadow-card sm:p-8">
@@ -100,9 +108,7 @@ export function RevisionLibrary({
         </div>
 
         <div className="rounded-[24px] bg-cream/70 px-4 py-3 text-sm font-bold text-notebook">
-          {selectedLanguage === 'german'
-            ? `${wordBank.length} Goethe-based A1 reference words`
-            : `${wordBank.length} ${languageLabel} starter words`}
+          {wordBank.length} {revision.wordBankLabel}
         </div>
       </div>
 
@@ -128,31 +134,53 @@ export function RevisionLibrary({
       </div>
 
       {view !== 'words' && (
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {currentConcepts.map((concept) => (
-            <article
-              key={concept.id}
-              className="rounded-[24px] border border-line bg-cream/55 p-5 shadow-soft"
+        <div className="mt-6 grid gap-4">
+          <label className="max-w-xl">
+            <span className="mb-2 block text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
+              {view === 'themes' ? 'Choose a theme' : 'Choose a concept'}
+            </span>
+            <select
+              value={selectedConceptId}
+              onChange={(event) => {
+                if (view === 'themes') {
+                  setSelectedThemeId(event.target.value)
+                } else {
+                  setSelectedGrammarId(event.target.value)
+                }
+              }}
+              className="w-full rounded-[22px] border border-line bg-cream/70 px-4 py-3 text-sm font-bold text-ink shadow-soft outline-none transition focus:border-sun"
             >
+              {currentConcepts.map((concept) => (
+                <option key={concept.id} value={concept.id}>
+                  {concept.title}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          {currentConcept && (
+            <article className="rounded-[24px] border border-line bg-cream/55 p-5 shadow-soft">
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
                 {view === 'themes' ? 'Theme' : 'Concept'}
               </p>
-              <h3 className="mt-2 font-display text-2xl font-bold text-ink">{concept.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-notebook">{concept.summary}</p>
+              <h3 className="mt-2 font-display text-2xl font-bold text-ink">
+                {currentConcept.title}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-notebook">{currentConcept.summary}</p>
               <ul className="mt-4 grid gap-2 text-sm text-ink">
-                {concept.bullets.map((bullet) => (
+                {currentConcept.bullets.map((bullet) => (
                   <li key={bullet} className="rounded-[18px] bg-paper/80 px-3 py-2">
                     {bullet}
                   </li>
                 ))}
               </ul>
-              {concept.example && (
+              {currentConcept.example && (
                 <p className="mt-4 rounded-[18px] bg-paper px-3 py-3 text-sm font-bold text-ink">
-                  {concept.example}
+                  {currentConcept.example}
                 </p>
               )}
             </article>
-          ))}
+          )}
         </div>
       )}
 

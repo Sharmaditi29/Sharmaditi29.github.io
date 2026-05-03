@@ -8,6 +8,7 @@
     "build": "node ./scripts/build-static.mjs",
     "watch": "node ./scripts/watch-static.mjs",
     "sync:goethe-a1": "node ./scripts/generate-goethe-a1.mjs",
+    "sync:finnish-a1": "node ./scripts/generate-finnish-aalto.mjs",
     "lint": "eslint src --ext .ts,.tsx",
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "preview": "vite preview"

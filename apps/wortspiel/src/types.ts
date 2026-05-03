@@ -28,6 +28,7 @@ export interface RevisionCollection {
   sourceLabel: string
   sourceHref?: string
   note: string
+  wordBankLabel: string
 }
 
 export interface SentenceAnswer {

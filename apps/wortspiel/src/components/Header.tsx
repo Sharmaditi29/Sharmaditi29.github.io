@@ -34,7 +34,7 @@ export function Header({ onStart, sessionStarted }: HeaderProps) {
             {sessionStarted ? 'Keep going' : 'Start A1'}
           </button>
           <span className="rounded-full bg-mint/40 px-4 py-2 text-sm font-bold text-ink">
-            German plus Finnish starter
+            German and Finnish beginner decks
           </span>
         </div>
       </div>

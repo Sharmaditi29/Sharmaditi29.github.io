@@ -29,7 +29,9 @@ function App() {
   const [sessionStarted, setSessionStarted] = useState(false)
   const [progress, setProgress] = useState<ProgressState>(() => loadProgress() ?? createDefaultProgress())
   const [germanCards, setGermanCards] = useState<VocabularyCard[]>(a1Vocabulary)
+  const [finnishCards, setFinnishCards] = useState<VocabularyCard[]>(finnishVocabulary)
   const [isGermanDeckLoading, setIsGermanDeckLoading] = useState(true)
+  const [isFinnishDeckLoading, setIsFinnishDeckLoading] = useState(true)
 
   const languageOptions: LanguageOption[] = [
     {
@@ -48,7 +50,7 @@ function App() {
 
   const currentLanguage =
     languageOptions.find((option) => option.id === selectedLanguage) ?? languageOptions[0]
-  const currentCards = selectedLanguage === 'german' ? germanCards : finnishVocabulary
+  const currentCards = selectedLanguage === 'german' ? germanCards : finnishCards
   const currentRevision =
     selectedLanguage === 'german' ? germanRevisionCollection : finnishRevisionCollection
 
@@ -59,29 +61,34 @@ function App() {
   useEffect(() => {
     let cancelled = false
 
-    async function loadGermanDeck() {
+    async function loadDeck(
+      resourcePath: string,
+      onSuccess: (cards: VocabularyCard[]) => void,
+      onDone: () => void,
+    ) {
       try {
-        const response = await fetch('./data/goethe-a1.json')
+        const response = await fetch(resourcePath)
 
         if (!response.ok) {
-          throw new Error(`Failed to load Goethe A1 deck: ${response.status}`)
+          throw new Error(`Failed to load deck ${resourcePath}: ${response.status}`)
         }
 
         const nextCards = (await response.json()) as VocabularyCard[]
 
         if (!cancelled && nextCards.length > 0) {
-          setGermanCards(nextCards)
+          onSuccess(nextCards)
         }
       } catch (error) {
-        console.warn('Using starter German deck fallback.', error)
+        console.warn(`Using fallback deck for ${resourcePath}.`, error)
       } finally {
         if (!cancelled) {
-          setIsGermanDeckLoading(false)
+          onDone()
         }
       }
     }
 
-    void loadGermanDeck()
+    void loadDeck('./data/goethe-a1.json', setGermanCards, () => setIsGermanDeckLoading(false))
+    void loadDeck('./data/finnish-a1.json', setFinnishCards, () => setIsFinnishDeckLoading(false))
 
     return () => {
       cancelled = true
@@ -130,10 +137,16 @@ function App() {
             </div>
           )}
 
+          {selectedLanguage === 'finnish' && isFinnishDeckLoading && (
+            <div className="rounded-[24px] border border-line bg-paper/90 px-5 py-4 text-sm font-bold text-notebook shadow-soft">
+              Loading the full Aalto beginner Finnish deck. The starter deck stays available while
+              it arrives.
+            </div>
+          )}
+
           <RevisionLibrary
             cards={currentCards}
             revision={currentRevision}
-            selectedLanguage={selectedLanguage}
             languageLabel={currentLanguage.label}
           />
         </main>
