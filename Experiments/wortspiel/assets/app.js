@@ -13699,7 +13699,7 @@ function RevisionLibrary({
 // src/components/StudyFooter.tsx
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 function StudyFooter({ languageLabel }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("section", { className: "rounded-[28px] border border-line bg-paper/92 p-4 shadow-card sm:p-5", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "grid gap-3 lg:grid-cols-[1.1fr_0.9fr_1fr]", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("section", { className: "rounded-[28px] border border-line bg-paper/92 p-4 shadow-card sm:p-5", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "grid gap-3 lg:grid-cols-[1.2fr_0.8fr]", children: [
     /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-cream/55 p-4", children: [
       /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Learn in loops" }),
       /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "Small wins keep sticking." }),
@@ -13709,15 +13709,17 @@ function StudyFooter({ languageLabel }) {
         " card, write one line, then check yourself in the quiz. The point is rhythm, not rushing."
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-paper p-4 shadow-soft", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Growing next" }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "A2 to C2 are on the way." }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Each next level will unlock longer sentences, richer vocabulary clusters, and stronger review trails." })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-bubble/10 p-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Daily help" }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "Use revise before you freeze." }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Themes refresh your context, concepts steady the grammar, and the word bank helps when the right word slips away." })
+    /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "grid gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-paper p-4 shadow-soft", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Growing next" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "A2 to C2 are on the way." }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Each next level will unlock longer sentences, richer vocabulary clusters, and stronger review trails." })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-bubble/10 p-4", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Daily help" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "Use revise before you freeze." }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Themes refresh your context, concepts steady the grammar, and the word bank helps when the right word slips away." })
+      ] })
     ] })
   ] }) });
 }
@@ -15768,10 +15770,10 @@ function App() {
   const handleSentenceSave = (cardId, text) => {
     setProgress((current) => saveSentenceAnswer(current, cardId, text));
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "min-h-screen overflow-x-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "mx-auto flex min-h-screen w-full max-w-[1500px] flex-col px-4 py-4 sm:px-5 sm:py-5 lg:px-7 xl:px-8 xl:py-6", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "min-h-screen overflow-x-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "mx-auto w-full max-w-[1500px] px-4 py-4 sm:px-5 sm:py-5 lg:px-7 xl:px-8 xl:py-6", children: [
     /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Header, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("main", { className: "mt-4 grid flex-1 gap-4 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:items-start xl:gap-5", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("aside", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:min-h-[calc(100vh-12.5rem)] xl:flex-col", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("main", { className: "mt-4 grid gap-4 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:items-start xl:gap-5", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("aside", { className: "rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:flex-col", children: [
         /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
           LanguageBar,
           {
@@ -15790,7 +15792,7 @@ function App() {
           }
         )
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("section", { className: "flex flex-col gap-4 xl:min-h-[calc(100vh-12.5rem)]", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("section", { className: "flex flex-col gap-4", children: [
         selectedLanguage === "german" && isGermanDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Goethe-based German A1 deck." }),
         selectedLanguage === "finnish" && isFinnishDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Aalto beginner Finnish deck." }),
         selectedLanguage === "dutch" && isDutchDeckLoading && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft", children: "Loading the full Dutch beginner deck." }),
@@ -15806,10 +15808,10 @@ function App() {
             onCardFeedback: handleCardFeedback,
             onSentenceSave: handleSentenceSave
           }
-        )
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(StudyFooter, { languageLabel: currentLanguage.label })
       ] })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "mt-4", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(StudyFooter, { languageLabel: currentLanguage.label }) })
+    ] })
   ] }) });
 }
 var App_default = App;
