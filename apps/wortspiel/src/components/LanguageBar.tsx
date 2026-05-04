@@ -20,13 +20,16 @@ export function LanguageBar({
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
-            Learn
+            Start here
           </p>
-          <h2 className="mt-1 font-display text-lg font-bold text-ink">Pick a language.</h2>
+          <h2 className="mt-1 font-display text-lg font-bold text-ink">Choose one language.</h2>
+          <p className="mt-1 text-sm leading-5 text-notebook">
+            Stay with one language for a short practice round.
+          </p>
         </div>
 
         <span className="rounded-full bg-mint/45 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink">
-          A1 live
+          A1 ready
         </span>
       </div>
 
@@ -57,7 +60,7 @@ export function LanguageBar({
             <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-notebook">
               Levels
             </p>
-            <p className="mt-1 text-sm text-notebook">A2 to C2 are sprouting soon.</p>
+            <p className="mt-1 text-sm text-notebook">More levels are coming soon.</p>
           </div>
         </div>
 

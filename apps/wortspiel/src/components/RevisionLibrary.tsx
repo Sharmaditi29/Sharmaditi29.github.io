@@ -17,8 +17,8 @@ interface WordBankEntry {
 }
 
 const revisionViews: Array<{ id: RevisionView; label: string }> = [
-  { id: 'themes', label: 'Themes' },
-  { id: 'grammar', label: 'Concepts' },
+  { id: 'themes', label: 'Topics' },
+  { id: 'grammar', label: 'Grammar' },
   { id: 'words', label: 'Word bank' },
 ]
 
@@ -96,9 +96,12 @@ export function RevisionLibrary({
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
-            Revise
+            Review
           </p>
-          <h2 className="mt-1 font-display text-lg font-bold text-ink">Quick help</h2>
+          <h2 className="mt-1 font-display text-lg font-bold text-ink">Need a refresher?</h2>
+          <p className="mt-1 text-sm leading-5 text-notebook">
+            Use topics, grammar, or the word bank when you get stuck.
+          </p>
         </div>
       </div>
 
@@ -127,7 +130,7 @@ export function RevisionLibrary({
         <div className="mt-4 flex flex-1 flex-col gap-3">
           <label className="max-w-xl">
             <span className="mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
-              {view === 'themes' ? 'Choose a theme' : 'Choose a concept'}
+              {view === 'themes' ? 'Choose a topic' : 'Choose a grammar point'}
             </span>
             <div className="relative">
               <select
@@ -156,7 +159,7 @@ export function RevisionLibrary({
           {currentConcept && (
             <article className="flex flex-1 flex-col rounded-[18px] border border-line bg-paper/78 p-4 shadow-soft">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
-                {view === 'themes' ? `${languageLabel} theme` : `${languageLabel} concept`}
+                {view === 'themes' ? `${languageLabel} topic` : `${languageLabel} grammar note`}
               </p>
               <h3 className="mt-1.5 font-display text-base font-bold text-ink">
                 {currentConcept.title}

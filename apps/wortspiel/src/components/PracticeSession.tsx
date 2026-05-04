@@ -15,9 +15,9 @@ interface PracticeSessionProps {
 }
 
 const modeLabels: Array<{ key: PracticeMode; title: string; subtitle: string }> = [
-  { key: 'flashcards', title: 'Cards', subtitle: 'Reveal and review' },
-  { key: 'sentence', title: 'Write', subtitle: 'Make one sentence' },
-  { key: 'quiz', title: 'Quiz', subtitle: 'Check meaning fast' },
+  { key: 'flashcards', title: 'Flashcards', subtitle: 'Start here' },
+  { key: 'sentence', title: 'Writing', subtitle: 'Make your own sentence' },
+  { key: 'quiz', title: 'Quiz', subtitle: 'Check yourself' },
 ]
 
 export function PracticeSession({
@@ -53,11 +53,11 @@ export function PracticeSession({
             {selectedLanguage} {selectedLevel} practice
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-notebook">
-            Stay with one small task, then move to the next card.
+            Start with flashcards, then try writing or the quiz when you feel ready.
           </p>
         </div>
         <div className="shrink-0 rounded-[18px] bg-peach/45 px-3 py-2 text-sm font-bold text-notebook">
-          {progress.reviewedCardIds.length} unique cards reviewed
+          {progress.reviewedCardIds.length} cards seen
         </div>
       </div>
 
