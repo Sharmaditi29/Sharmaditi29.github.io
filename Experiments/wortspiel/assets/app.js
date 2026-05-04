@@ -13066,10 +13066,11 @@ function LanguageBar({
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("section", { className: "rounded-[24px] bg-cream/40 p-4 shadow-soft sm:p-5", children: [
     /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex flex-wrap items-start justify-between gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Learn" }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Pick a language." })
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Start here" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Choose one language." }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "mt-1 text-sm leading-5 text-notebook", children: "Stay with one language for a short practice round." })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "rounded-full bg-mint/45 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink", children: "A1 live" })
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "rounded-full bg-mint/45 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink", children: "A1 ready" })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "mt-4 grid grid-cols-2 gap-2.5", children: options.map((option) => {
       const active = option.id === selectedLanguage;
@@ -13087,7 +13088,7 @@ function LanguageBar({
     /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "mt-4 border-t border-line/70 pt-4", children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "flex items-center justify-between gap-3", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.2em] text-notebook", children: "Levels" }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "mt-1 text-sm text-notebook", children: "A2 to C2 are sprouting soon." })
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "mt-1 text-sm text-notebook", children: "More levels are coming soon." })
       ] }) }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "mt-3 grid grid-cols-3 gap-2", children: levelOptions.map((level) => {
         const active = level === selectedLevel;
@@ -13463,9 +13464,9 @@ function SentencePractice({
 // src/components/PracticeSession.tsx
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 var modeLabels = [
-  { key: "flashcards", title: "Cards", subtitle: "Reveal and review" },
-  { key: "sentence", title: "Write", subtitle: "Make one sentence" },
-  { key: "quiz", title: "Quiz", subtitle: "Check meaning fast" }
+  { key: "flashcards", title: "Flashcards", subtitle: "Start here" },
+  { key: "sentence", title: "Writing", subtitle: "Make your own sentence" },
+  { key: "quiz", title: "Quiz", subtitle: "Check yourself" }
 ];
 function PracticeSession({
   cards,
@@ -13494,11 +13495,11 @@ function PracticeSession({
           selectedLevel,
           " practice"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "mt-2 max-w-2xl text-sm leading-6 text-notebook", children: "Stay with one small task, then move to the next card." })
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "mt-2 max-w-2xl text-sm leading-6 text-notebook", children: "Start with flashcards, then try writing or the quiz when you feel ready." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "shrink-0 rounded-[18px] bg-peach/45 px-3 py-2 text-sm font-bold text-notebook", children: [
         progress.reviewedCardIds.length,
-        " unique cards reviewed"
+        " cards seen"
       ] })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "mt-4 grid gap-2.5 sm:grid-cols-3", children: modeLabels.map((item) => {
@@ -13553,8 +13554,8 @@ function PracticeSession({
 var import_react5 = __toESM(require_react(), 1);
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 var revisionViews = [
-  { id: "themes", label: "Themes" },
-  { id: "grammar", label: "Concepts" },
+  { id: "themes", label: "Topics" },
+  { id: "grammar", label: "Grammar" },
   { id: "words", label: "Word bank" }
 ];
 function getDisplayLabel(card) {
@@ -13609,8 +13610,9 @@ function RevisionLibrary({
   }, [revision]);
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("section", { className: "mt-4 flex flex-1 flex-col rounded-[24px] bg-cream/36 p-4 shadow-soft sm:p-5", children: [
     /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "flex flex-wrap items-start justify-between gap-2", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "min-w-0", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Revise" }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Quick help" })
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.24em] text-notebook", children: "Review" }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { className: "mt-1 font-display text-lg font-bold text-ink", children: "Need a refresher?" }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-1 text-sm leading-5 text-notebook", children: "Use topics, grammar, or the word bank when you get stuck." })
     ] }) }),
     /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { className: "mt-4 grid grid-cols-3 gap-2", children: revisionViews.map((item) => {
       const active = item.id === view;
@@ -13627,7 +13629,7 @@ function RevisionLibrary({
     }) }),
     view !== "words" && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "mt-4 flex flex-1 flex-col gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("label", { className: "max-w-xl", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? "Choose a theme" : "Choose a concept" }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? "Choose a topic" : "Choose a grammar point" }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "relative", children: [
           /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
             "select",
@@ -13648,7 +13650,7 @@ function RevisionLibrary({
         ] })
       ] }),
       currentConcept && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("article", { className: "flex flex-1 flex-col rounded-[18px] border border-line bg-paper/78 p-4 shadow-soft", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? `${languageLabel} theme` : `${languageLabel} concept` }),
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook", children: view === "themes" ? `${languageLabel} topic` : `${languageLabel} grammar note` }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h3", { className: "mt-1.5 font-display text-base font-bold text-ink", children: currentConcept.title }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "mt-1 text-sm leading-5 text-notebook", children: currentConcept.summary }),
         /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("ul", { className: "mt-3 flex flex-wrap gap-2 text-sm text-ink", children: currentConcept.bullets.map((bullet) => /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("li", { className: "rounded-full bg-cream/60 px-3 py-2", children: bullet }, bullet)) }),
@@ -13693,7 +13695,7 @@ var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 function StudyFooter({ languageLabel }) {
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("section", { className: "rounded-[28px] border border-line bg-paper/92 p-4 shadow-card sm:p-5", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "grid gap-3 lg:grid-cols-[1.2fr_0.8fr]", children: [
     /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-cream/55 p-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Learn in loops" }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Simple routine" }),
       /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "Small wins keep sticking." }),
       /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: [
         "Start with one ",
@@ -13703,12 +13705,12 @@ function StudyFooter({ languageLabel }) {
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "grid gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-paper p-4 shadow-soft", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Growing next" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Next levels" }),
         /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "A2 to C2 are on the way." }),
         /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Each next level will unlock longer sentences, richer vocabulary clusters, and stronger review trails." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("article", { className: "rounded-[22px] bg-bubble/10 p-4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "Daily help" }),
+        /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-xs font-extrabold uppercase tracking-[0.22em] text-notebook", children: "When stuck" }),
         /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "mt-2 font-display text-xl font-bold text-ink", children: "Use revise before you freeze." }),
         /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "mt-2 text-sm leading-6 text-notebook", children: "Themes refresh your context, concepts steady the grammar, and the word bank helps when the right word slips away." })
       ] })
