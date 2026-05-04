@@ -13047,17 +13047,9 @@ function Header() {
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-x-0 top-0 h-16 bg-splash opacity-[0.03]" }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-8 -top-8 h-24 w-24 rounded-full bg-bubble/16 blur-3xl" }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-3 bottom-0 h-16 w-16 rounded-full bg-sun/16 blur-3xl" }),
-    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "max-w-3xl min-w-0", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "font-display text-[1.9rem] font-extrabold leading-none text-ink sm:text-[2.2rem]", children: "LingoGarden" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 max-w-3xl text-sm leading-6 text-notebook sm:text-[0.95rem]", children: "Beginner practice for German, Finnish, Dutch, and Hindi, with quick reminders close by and the main card work front and center." })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex shrink-0 flex-wrap gap-2.5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-splash px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "German" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-bubble px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Finnish" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-leaf px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Dutch" }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "rounded-full bg-apricot px-3.5 py-2 text-sm font-bold text-white shadow-soft", children: "Hindi" })
-      ] })
+    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative max-w-3xl min-w-0", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { className: "font-display text-[1.9rem] font-extrabold leading-none text-ink sm:text-[2.2rem]", children: "LingoGarden" }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 max-w-3xl text-sm leading-6 text-notebook sm:text-[0.95rem]", children: "Beginner practice for German, Finnish, Dutch, and Hindi, with quick reminders close by and the main card work front and center." })
     ] })
   ] });
 }
