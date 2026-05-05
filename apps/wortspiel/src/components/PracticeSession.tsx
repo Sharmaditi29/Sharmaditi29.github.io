@@ -43,7 +43,7 @@ export function PracticeSession({
     setCurrentIndex((current) => (current === cards.length - 1 ? 0 : current + 1))
 
   return (
-    <section className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:h-full xl:flex-col">
+    <section className="rounded-[28px] border border-line/90 bg-paper/92 p-5 sm:p-6 xl:flex xl:h-full xl:flex-col">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
@@ -56,7 +56,7 @@ export function PracticeSession({
             Start with flashcards, then try writing or the quiz when you feel ready.
           </p>
         </div>
-        <div className="shrink-0 rounded-[18px] bg-peach/45 px-3 py-2 text-sm font-bold text-notebook">
+        <div className="shrink-0 rounded-[18px] border border-line/80 px-3 py-2 text-sm font-bold text-notebook">
           {progress.reviewedCardIds.length} cards seen
         </div>
       </div>
@@ -72,8 +72,8 @@ export function PracticeSession({
               onClick={() => setMode(item.key)}
               className={`rounded-[18px] border p-3 text-left transition ${
                 active
-                  ? 'border-splash bg-splash text-paper shadow-soft'
-                  : 'border-line bg-cream/55 text-ink hover:-translate-y-0.5 hover:border-bubble'
+                  ? 'border-splash bg-splash text-paper'
+                  : 'border-line/80 bg-transparent text-ink hover:border-notebook/50'
               }`}
             >
               <p className="font-bold">{item.title}</p>

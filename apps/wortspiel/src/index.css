@@ -21,11 +21,8 @@
     margin: 0;
     min-width: 320px;
     background:
-      radial-gradient(circle at 10% 10%, rgba(141, 124, 255, 0.16), transparent 28%),
-      radial-gradient(circle at 88% 14%, rgba(255, 93, 143, 0.12), transparent 28%),
-      radial-gradient(circle at 14% 86%, rgba(144, 234, 216, 0.16), transparent 28%),
-      radial-gradient(circle at 84% 82%, rgba(255, 205, 92, 0.12), transparent 26%),
-      linear-gradient(180deg, #fff7fb 0%, #fff7ef 52%, #fdf6ff 100%);
+      radial-gradient(circle at 84% 14%, rgba(141, 124, 255, 0.08), transparent 24%),
+      linear-gradient(180deg, #fff8fb 0%, #fff9f5 100%);
     color: #24324a;
   }
 

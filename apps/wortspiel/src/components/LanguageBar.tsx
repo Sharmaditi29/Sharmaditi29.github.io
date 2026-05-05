@@ -16,7 +16,7 @@ export function LanguageBar({
   onSelect,
 }: LanguageBarProps) {
   return (
-    <section className="rounded-[24px] bg-cream/40 p-4 shadow-soft sm:p-5">
+    <section className="pb-5">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
@@ -28,7 +28,7 @@ export function LanguageBar({
           </p>
         </div>
 
-        <span className="rounded-full bg-mint/45 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-ink">
+        <span className="rounded-full border border-line/80 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-notebook">
           A1 ready
         </span>
       </div>
@@ -39,17 +39,17 @@ export function LanguageBar({
 
           return (
             <button
-              key={option.id}
-              type="button"
-              onClick={() => onSelect(option.id)}
-              className={`rounded-[18px] px-4 py-3 text-sm font-bold transition ${
-                active
-                  ? `${option.accentClass} text-white shadow-soft`
-                  : 'border border-line bg-paper/80 text-ink hover:-translate-y-0.5 hover:bg-paper'
-              }`}
-            >
-              {option.label}
-            </button>
+                key={option.id}
+                type="button"
+                onClick={() => onSelect(option.id)}
+                className={`rounded-[18px] px-4 py-3 text-sm font-bold transition ${
+                  active
+                    ? `${option.accentClass} text-white`
+                    : 'border border-line/80 bg-transparent text-ink hover:border-notebook/50'
+                }`}
+              >
+                {option.label}
+              </button>
           )
         })}
       </div>
@@ -75,8 +75,8 @@ export function LanguageBar({
                 disabled={!active}
                 className={`rounded-[16px] px-3 py-2.5 text-sm font-bold transition ${
                   active
-                    ? 'bg-ink text-white shadow-soft'
-                    : 'border border-dashed border-line bg-paper/70 text-notebook'
+                    ? 'bg-ink text-white'
+                    : 'border border-dashed border-line/80 bg-transparent text-notebook'
                 }`}
               >
                 {level}

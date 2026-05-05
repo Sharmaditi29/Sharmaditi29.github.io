@@ -146,7 +146,7 @@ function App() {
         <Header />
 
         <main className="mt-4 grid gap-4 xl:grid-cols-[minmax(330px,360px)_minmax(0,1fr)] xl:items-start xl:gap-5">
-          <aside className="rounded-[30px] border border-line bg-paper/92 p-5 shadow-card sm:p-6 xl:flex xl:flex-col">
+          <aside className="rounded-[28px] border border-line/90 bg-paper/92 p-5 sm:p-6 xl:flex xl:flex-col">
             <LanguageBar
               options={languageOptions}
               selectedLanguage={selectedLanguage}
@@ -163,25 +163,25 @@ function App() {
 
           <section className="flex flex-col gap-4">
             {selectedLanguage === 'german' && isGermanDeckLoading && (
-              <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+              <div className="rounded-[18px] border border-line/80 bg-paper/88 px-4 py-3 text-sm font-bold text-notebook">
                 Loading the full Goethe-based German A1 deck.
               </div>
             )}
 
             {selectedLanguage === 'finnish' && isFinnishDeckLoading && (
-              <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+              <div className="rounded-[18px] border border-line/80 bg-paper/88 px-4 py-3 text-sm font-bold text-notebook">
                 Loading the full Aalto beginner Finnish deck.
               </div>
             )}
 
             {selectedLanguage === 'dutch' && isDutchDeckLoading && (
-              <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+              <div className="rounded-[18px] border border-line/80 bg-paper/88 px-4 py-3 text-sm font-bold text-notebook">
                 Loading the full Dutch beginner deck.
               </div>
             )}
 
             {selectedLanguage === 'hindi' && (
-              <div className="rounded-[20px] border border-line bg-paper/90 px-4 py-3 text-sm font-bold text-notebook shadow-soft">
+              <div className="rounded-[18px] border border-line/80 bg-paper/88 px-4 py-3 text-sm font-bold text-notebook">
                 Hindi is live as a starter A1 deck, with more words sprouting soon.
               </div>
             )}
