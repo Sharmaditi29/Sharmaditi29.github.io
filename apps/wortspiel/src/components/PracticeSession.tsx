@@ -43,7 +43,7 @@ export function PracticeSession({
     setCurrentIndex((current) => (current === cards.length - 1 ? 0 : current + 1))
 
   return (
-    <section className="rounded-[28px] border border-line/90 bg-paper/92 p-5 sm:p-6 xl:flex xl:h-full xl:flex-col">
+    <section className="rounded-[28px] bg-paper/70 p-5 sm:p-6 xl:flex xl:h-full xl:flex-col">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
@@ -56,7 +56,7 @@ export function PracticeSession({
             Start with flashcards, then try writing or the quiz when you feel ready.
           </p>
         </div>
-        <div className="shrink-0 rounded-[18px] border border-line/80 px-3 py-2 text-sm font-bold text-notebook">
+        <div className="shrink-0 rounded-[18px] bg-paper/80 px-3 py-2 text-sm font-bold text-notebook">
           {progress.reviewedCardIds.length} cards seen
         </div>
       </div>
@@ -70,10 +70,10 @@ export function PracticeSession({
               key={item.key}
               type="button"
               onClick={() => setMode(item.key)}
-              className={`rounded-[18px] border p-3 text-left transition ${
+              className={`rounded-[18px] p-3 text-left transition ${
                 active
-                  ? 'border-splash bg-splash text-paper'
-                  : 'border-line/80 bg-transparent text-ink hover:border-notebook/50'
+                  ? 'bg-splash text-paper'
+                  : 'bg-paper/80 text-ink hover:bg-paper/94'
               }`}
             >
               <p className="font-bold">{item.title}</p>

@@ -44,17 +44,17 @@ export function SentencePractice({
   }
 
   return (
-    <section className="rounded-[24px] border border-line/80 p-5 sm:p-6 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
+    <section className="rounded-[24px] p-3 sm:p-4 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <span className="rounded-full border border-line/80 px-4 py-2 text-sm font-bold text-notebook">
+        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-notebook">
           Prompt {currentIndex + 1} of {totalCards}
         </span>
-        <span className="rounded-full border border-line/80 px-4 py-2 text-sm font-bold text-ink">
+        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-ink">
           Use: {card.article ? `${card.article} ${card.german}` : card.german}
         </span>
       </div>
 
-      <div className="mt-4 rounded-[22px] border border-line/70 p-5 xl:min-h-0 xl:flex-1">
+      <div className="mt-4 rounded-[22px] bg-paper/82 p-5 xl:min-h-0 xl:flex-1">
         <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
           Write
         </p>
@@ -72,7 +72,7 @@ export function SentencePractice({
             onChange={(event) => setText(event.target.value)}
             rows={4}
             placeholder={sentencePlaceholder}
-            className="w-full rounded-[22px] border border-line/80 bg-transparent px-4 py-4 text-base text-ink outline-none transition focus:border-sun"
+            className="w-full rounded-[22px] border border-line/45 bg-paper px-4 py-4 text-base text-ink outline-none transition focus:border-sun"
           />
         </label>
 
@@ -93,7 +93,7 @@ export function SentencePractice({
       </div>
 
       {submitted && (
-        <div className="mt-4 rounded-[20px] border border-line/80 p-4">
+        <div className="mt-4 rounded-[20px] bg-paper p-4">
           <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
             Example from the deck
           </p>
@@ -107,14 +107,14 @@ export function SentencePractice({
         <button
           type="button"
           onClick={onPrevious}
-          className="rounded-full border border-line/80 px-4 py-2.5 text-sm font-bold text-ink transition hover:border-sun"
+          className="rounded-full bg-paper/82 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-paper"
         >
           Back
         </button>
         <button
           type="button"
           onClick={onNext}
-          className="rounded-full border border-line/80 px-4 py-2.5 text-sm font-bold text-ink transition hover:border-sun"
+          className="rounded-full bg-paper/82 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-paper"
         >
           Next
         </button>

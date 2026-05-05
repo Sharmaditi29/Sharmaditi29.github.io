@@ -59,17 +59,17 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
   }
 
   return (
-    <section className="rounded-[22px] border border-line/80 p-4 sm:p-5 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
+    <section className="rounded-[22px] p-2 sm:p-3 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <span className="rounded-full border border-line/80 px-4 py-2 text-sm font-bold text-notebook">
+        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-notebook">
           Question {currentIndex + 1} of {total}
         </span>
-        <span className="rounded-full border border-line/80 px-4 py-2 text-sm font-bold text-ink">
+        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-ink">
           Score {score}/{Math.max(1, currentIndex + (answeredCorrectly ? 1 : 0))}
         </span>
       </div>
 
-      <div className="mt-3 rounded-[20px] border border-line/70 p-4 xl:min-h-0 xl:flex-1">
+      <div className="mt-3 rounded-[20px] bg-paper/82 p-4 xl:min-h-0 xl:flex-1">
         <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
           {currentItem.type === 'meaning' ? 'Meaning check' : 'Article check'}
         </p>
@@ -89,7 +89,7 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
               key={choice}
               type="button"
               onClick={() => handleChoice(choice)}
-              className="rounded-[18px] border border-line/80 px-4 py-3 text-left text-base font-bold text-ink transition hover:border-sun"
+              className="rounded-[18px] bg-paper px-4 py-3 text-left text-base font-bold text-ink transition hover:bg-paper/90"
             >
               {choice}
             </button>

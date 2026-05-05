@@ -4,9 +4,9 @@ interface StudyFooterProps {
 
 export function StudyFooter({ languageLabel }: StudyFooterProps) {
   return (
-    <section className="rounded-[28px] border border-line/90 p-4 sm:p-5">
+    <section className="rounded-[28px] p-2 sm:p-3">
       <div className="grid gap-3 lg:grid-cols-[1.2fr_0.8fr]">
-        <article className="rounded-[22px] p-4">
+        <article className="rounded-[22px] bg-paper/62 p-4">
           <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-notebook">
             Simple routine
           </p>
@@ -18,7 +18,7 @@ export function StudyFooter({ languageLabel }: StudyFooterProps) {
         </article>
 
         <div className="grid gap-3">
-          <article className="rounded-[22px] border border-line/70 p-4">
+          <article className="rounded-[22px] bg-paper/70 p-4">
             <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-notebook">
               Next levels
             </p>
@@ -29,7 +29,7 @@ export function StudyFooter({ languageLabel }: StudyFooterProps) {
             </p>
           </article>
 
-          <article className="rounded-[22px] border border-line/70 p-4">
+          <article className="rounded-[22px] bg-paper/70 p-4">
             <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-notebook">
               When stuck
             </p>

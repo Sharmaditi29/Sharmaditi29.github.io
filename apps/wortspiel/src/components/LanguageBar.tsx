@@ -28,7 +28,7 @@ export function LanguageBar({
           </p>
         </div>
 
-        <span className="rounded-full border border-line/80 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-notebook">
+        <span className="rounded-full bg-paper/78 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-notebook">
           A1 ready
         </span>
       </div>
@@ -45,7 +45,7 @@ export function LanguageBar({
                 className={`rounded-[18px] px-4 py-3 text-sm font-bold transition ${
                   active
                     ? `${option.accentClass} text-white`
-                    : 'border border-line/80 bg-transparent text-ink hover:border-notebook/50'
+                    : 'bg-paper/78 text-ink hover:bg-paper/92'
                 }`}
               >
                 {option.label}
@@ -54,7 +54,7 @@ export function LanguageBar({
         })}
       </div>
 
-      <div className="mt-4 border-t border-line/70 pt-4">
+      <div className="mt-4 pt-4">
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-notebook">
@@ -76,7 +76,7 @@ export function LanguageBar({
                 className={`rounded-[16px] px-3 py-2.5 text-sm font-bold transition ${
                   active
                     ? 'bg-ink text-white'
-                    : 'border border-dashed border-line/80 bg-transparent text-notebook'
+                    : 'bg-paper/72 text-notebook'
                 }`}
               >
                 {level}

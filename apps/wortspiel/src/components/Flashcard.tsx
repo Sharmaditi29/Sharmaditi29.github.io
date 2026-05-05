@@ -33,17 +33,17 @@ export function Flashcard({
     .join(' · ')
 
   return (
-    <section className="rounded-[22px] border border-line/80 p-4 sm:p-5 xl:flex xl:h-full xl:flex-col">
+    <section className="rounded-[22px] p-2 sm:p-3 xl:flex xl:h-full xl:flex-col">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <span className="rounded-full border border-line/80 px-4 py-2 text-sm font-bold text-notebook">
+        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-notebook">
           Card {currentIndex + 1} of {totalCards}
         </span>
-        <span className="rounded-full border border-line/80 px-4 py-2 text-sm font-bold text-ink">
+        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-ink">
           {card.category}
         </span>
       </div>
 
-      <div className="mt-3 rounded-[20px] border border-line/70 p-4 xl:flex-1">
+      <div className="mt-3 rounded-[20px] bg-paper/82 p-4 xl:flex-1">
         {/* TODO: Add audio pronunciation playback for each card. */}
         <div className="xl:h-full">
           <p className="text-xs font-extrabold uppercase tracking-[0.28em] text-notebook">
@@ -58,21 +58,21 @@ export function Flashcard({
             <button
               type="button"
               onClick={() => setShowMeaning((current) => !current)}
-              className="rounded-full border border-line/80 px-4 py-2.5 text-sm font-bold text-ink transition hover:border-sun"
+              className="rounded-full bg-paper px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-paper/90"
             >
               {showMeaning ? 'Hide meaning' : 'Show meaning'}
             </button>
             <button
               type="button"
               onClick={() => setShowExample((current) => !current)}
-              className="rounded-full border border-line/80 px-4 py-2.5 text-sm font-bold text-ink transition hover:border-sun"
+              className="rounded-full bg-paper px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-paper/90"
             >
               {showExample ? 'Hide example' : 'Show example sentence'}
             </button>
           </div>
 
           {(showMeaning || showExample) && (
-            <div className="mt-4 grid gap-3 rounded-[18px] border border-line/80 p-3.5 text-left xl:overflow-auto">
+            <div className="mt-4 grid gap-3 rounded-[18px] bg-paper p-3.5 text-left xl:overflow-auto">
               {showMeaning && (
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
@@ -127,14 +127,14 @@ export function Flashcard({
         <button
           type="button"
           onClick={onPrevious}
-          className="rounded-full border border-line/80 px-4 py-2.5 text-sm font-bold text-ink transition hover:border-sun"
+          className="rounded-full bg-paper/82 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-paper"
         >
           Back
         </button>
         <button
           type="button"
           onClick={onNext}
-          className="rounded-full border border-line/80 px-4 py-2.5 text-sm font-bold text-ink transition hover:border-sun"
+          className="rounded-full bg-paper/82 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-paper"
         >
           Next
         </button>

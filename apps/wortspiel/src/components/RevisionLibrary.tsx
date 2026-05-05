@@ -92,7 +92,7 @@ export function RevisionLibrary({
   }, [revision])
 
   return (
-    <section className="mt-4 flex flex-1 flex-col border-t border-line/70 pt-5">
+    <section className="mt-4 flex flex-1 flex-col pt-5">
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
@@ -117,7 +117,7 @@ export function RevisionLibrary({
               className={`rounded-full px-3 py-2 text-sm font-bold transition ${
                 active
                   ? 'bg-splash text-white'
-                  : 'border border-line/80 bg-transparent text-ink hover:border-notebook/50'
+                  : 'bg-paper/78 text-ink hover:bg-paper/92'
               }`}
             >
               {item.label}
@@ -142,7 +142,7 @@ export function RevisionLibrary({
                     setSelectedGrammarId(event.target.value)
                   }
                 }}
-                className="w-full appearance-none rounded-[16px] border border-line/80 bg-transparent px-4 py-2.5 pr-10 text-sm font-bold text-ink outline-none transition focus:border-sun"
+                className="w-full appearance-none rounded-[16px] border border-line/45 bg-paper/82 px-4 py-2.5 pr-10 text-sm font-bold text-ink outline-none transition focus:border-sun"
               >
                 {currentConcepts.map((concept) => (
                   <option key={concept.id} value={concept.id}>
@@ -157,7 +157,7 @@ export function RevisionLibrary({
           </label>
 
           {currentConcept && (
-            <article className="flex flex-1 flex-col rounded-[18px] border border-line/80 p-4">
+            <article className="flex flex-1 flex-col rounded-[18px] bg-paper/74 p-4">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
                 {view === 'themes' ? `${languageLabel} topic` : `${languageLabel} grammar note`}
               </p>
@@ -167,13 +167,13 @@ export function RevisionLibrary({
               <p className="mt-1 text-sm leading-5 text-notebook">{currentConcept.summary}</p>
               <ul className="mt-3 flex flex-wrap gap-2 text-sm text-ink">
                 {currentConcept.bullets.map((bullet) => (
-                  <li key={bullet} className="rounded-full border border-line/70 px-3 py-2">
+                  <li key={bullet} className="rounded-full bg-paper/86 px-3 py-2">
                     {bullet}
                   </li>
                 ))}
               </ul>
               {currentConcept.example && (
-                <p className="mt-3 rounded-[14px] border border-line/70 px-3 py-3 text-sm font-bold leading-6 text-ink">
+                <p className="mt-3 rounded-[14px] bg-paper/88 px-3 py-3 text-sm font-bold leading-6 text-ink">
                   {currentConcept.example}
                 </p>
               )}
@@ -192,10 +192,10 @@ export function RevisionLibrary({
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={`Search ${languageLabel.toLowerCase()} or English`}
-                className="w-full rounded-full border border-line/80 bg-transparent px-4 py-2.5 text-sm text-ink outline-none transition focus:border-sun"
+                className="w-full rounded-full border border-line/45 bg-paper/82 px-4 py-2.5 text-sm text-ink outline-none transition focus:border-sun"
               />
             </label>
-            <div className="rounded-full border border-line/80 px-3 py-1.5 text-xs font-bold text-ink">
+            <div className="rounded-full bg-paper/82 px-3 py-1.5 text-xs font-bold text-ink">
               {query.trim()
                 ? `${filteredWordBank.length} matches`
                 : `${wordBank.length} words`}
@@ -206,7 +206,7 @@ export function RevisionLibrary({
             {filteredWordBank.map((entry) => (
               <article
                 key={entry.key}
-                className="rounded-[14px] border border-line/80 p-2.5"
+                className="rounded-[14px] bg-paper/72 p-2.5"
               >
                 <p className="font-display text-base font-bold text-ink">{entry.label}</p>
                 <p className="mt-1 text-sm text-notebook">{entry.translations.join(' • ')}</p>

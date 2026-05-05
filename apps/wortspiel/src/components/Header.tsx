@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <header className="rounded-[28px] border border-line/90 bg-paper/94 px-6 py-5 sm:px-7 sm:py-5 xl:px-8">
+    <header className="px-2 py-2 sm:px-3 xl:px-4">
       <div className="relative max-w-3xl min-w-0">
         <h1 className="font-display text-[1.9rem] font-extrabold leading-none text-ink sm:text-[2.2rem]">
           LingoGarden
