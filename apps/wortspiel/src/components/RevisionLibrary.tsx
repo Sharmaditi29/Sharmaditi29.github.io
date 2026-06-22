@@ -5,6 +5,10 @@ interface RevisionLibraryProps {
   cards: VocabularyCard[]
   revision: RevisionCollection
   languageLabel: string
+  allowedViews?: RevisionView[]
+  initialView?: RevisionView
+  title?: string
+  description?: string
 }
 
 type RevisionView = 'themes' | 'grammar' | 'words'
@@ -30,11 +34,16 @@ export function RevisionLibrary({
   cards,
   revision,
   languageLabel,
+  allowedViews = revisionViews.map((item) => item.id),
+  initialView = allowedViews[0] ?? 'themes',
+  title = 'Need a refresher?',
+  description = 'Use topics, grammar, or the word bank when you get stuck.',
 }: RevisionLibraryProps) {
-  const [view, setView] = useState<RevisionView>('themes')
+  const [view, setView] = useState<RevisionView>(initialView)
   const [query, setQuery] = useState('')
   const [selectedThemeId, setSelectedThemeId] = useState(revision.themes[0]?.id ?? '')
   const [selectedGrammarId, setSelectedGrammarId] = useState(revision.grammar[0]?.id ?? '')
+  const visibleViews = revisionViews.filter((item) => allowedViews.includes(item.id))
 
   const wordBank = useMemo<WordBankEntry[]>(() => {
     const entries = new Map<string, WordBankEntry>()
@@ -91,22 +100,26 @@ export function RevisionLibrary({
     setSelectedGrammarId(revision.grammar[0]?.id ?? '')
   }, [revision])
 
+  useEffect(() => {
+    if (!allowedViews.includes(view)) {
+      setView(initialView)
+    }
+  }, [allowedViews, initialView, view])
+
   return (
-    <section className="mt-4 flex flex-1 flex-col pt-5">
+    <section className="flex flex-1 flex-col">
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
           <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
             Review
           </p>
-          <h2 className="mt-1 font-display text-lg font-bold text-ink">Need a refresher?</h2>
-          <p className="mt-1 text-sm leading-5 text-notebook">
-            Use topics, grammar, or the word bank when you get stuck.
-          </p>
+          <h2 className="mt-1 font-display text-lg font-bold text-ink">{title}</h2>
+          <p className="mt-1 text-sm leading-5 text-notebook">{description}</p>
         </div>
       </div>
 
-      <div className="mt-4 grid grid-cols-3 gap-2">
-        {revisionViews.map((item) => {
+      <div className={`mt-4 grid gap-2 ${visibleViews.length > 1 ? 'grid-cols-3' : 'grid-cols-1'}`}>
+        {visibleViews.map((item) => {
           const active = item.id === view
 
           return (
