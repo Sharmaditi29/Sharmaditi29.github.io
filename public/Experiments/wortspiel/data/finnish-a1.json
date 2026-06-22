@@ -1,0 +1,2869 @@
+[
+  {
+    "id": "aalto-arkkitehti-architect",
+    "level": "A1",
+    "german": "arkkitehti",
+    "english": "architect",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on arkkitehti.",
+    "exampleEnglish": "This is architect."
+  },
+  {
+    "id": "aalto-arkkitehtuuri-architecture",
+    "level": "A1",
+    "german": "arkkitehtuuri",
+    "english": "architecture",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on arkkitehtuuri.",
+    "exampleEnglish": "This is architecture."
+  },
+  {
+    "id": "aalto-asiakas-a-customer",
+    "level": "A1",
+    "german": "asiakas",
+    "english": "a customer",
+    "category": "People",
+    "exampleGerman": "Tämä on asiakas.",
+    "exampleEnglish": "This is a customer."
+  },
+  {
+    "id": "aalto-asti-until",
+    "level": "A1",
+    "german": "asti",
+    "english": "until",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa asti.",
+    "exampleEnglish": "Today we practise the word until."
+  },
+  {
+    "id": "aalto-asua-to-live",
+    "level": "A1",
+    "german": "asua",
+    "english": "to live",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin asua.",
+    "exampleEnglish": "I can live.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-asuntola-a-dorm",
+    "level": "A1",
+    "german": "asuntola",
+    "english": "a dorm",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on asuntola.",
+    "exampleEnglish": "This place is a dorm."
+  },
+  {
+    "id": "aalto-ateena-athens",
+    "level": "A1",
+    "german": "Ateena",
+    "english": "Athens",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Ateena.",
+    "exampleEnglish": "This place is Athens."
+  },
+  {
+    "id": "aalto-aurinko-sun",
+    "level": "A1",
+    "german": "aurinko",
+    "english": "sun",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on aurinko.",
+    "exampleEnglish": "Today the word is sun."
+  },
+  {
+    "id": "aalto-aurinkoinen-sunny",
+    "level": "A1",
+    "german": "aurinkoinen",
+    "english": "sunny",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on aurinkoinen.",
+    "exampleEnglish": "Today the word is sunny."
+  },
+  {
+    "id": "aalto-auto-a-car",
+    "level": "A1",
+    "german": "auto",
+    "english": "a car",
+    "category": "Travel",
+    "exampleGerman": "Tämä on auto.",
+    "exampleEnglish": "This is a car."
+  },
+  {
+    "id": "aalto-avoinna-auki-open",
+    "level": "A1",
+    "german": "avoinna, auki",
+    "english": "open",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on avoinna, auki.",
+    "exampleEnglish": "This is open."
+  },
+  {
+    "id": "aalto-baari-a-bar",
+    "level": "A1",
+    "german": "baari",
+    "english": "a bar",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on baari.",
+    "exampleEnglish": "This is a bar."
+  },
+  {
+    "id": "aalto-banaani-a-banana",
+    "level": "A1",
+    "german": "banaani",
+    "english": "a banana",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on banaani.",
+    "exampleEnglish": "This is a banana."
+  },
+  {
+    "id": "aalto-berliini-berlin",
+    "level": "A1",
+    "german": "Berliini",
+    "english": "Berlin",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Berliini.",
+    "exampleEnglish": "This place is Berlin."
+  },
+  {
+    "id": "aalto-bioinformaatioteknologia-bioinformation-technology",
+    "level": "A1",
+    "german": "bioinformaatioteknologia",
+    "english": "bioinformation technology",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on bioinformaatioteknologia.",
+    "exampleEnglish": "This is bioinformation technology."
+  },
+  {
+    "id": "aalto-bonuskortti-a-loyalty-card",
+    "level": "A1",
+    "german": "bonuskortti",
+    "english": "a loyalty card",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on bonuskortti.",
+    "exampleEnglish": "This is a loyalty card."
+  },
+  {
+    "id": "aalto-brasilia-brazil",
+    "level": "A1",
+    "german": "Brasilia",
+    "english": "Brazil",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Brasilia.",
+    "exampleEnglish": "This place is Brazil."
+  },
+  {
+    "id": "aalto-bussi-a-bus",
+    "level": "A1",
+    "german": "bussi",
+    "english": "a bus",
+    "category": "Travel",
+    "exampleGerman": "Tämä on bussi.",
+    "exampleEnglish": "This is a bus."
+  },
+  {
+    "id": "aalto-ei-no",
+    "level": "A1",
+    "german": "ei",
+    "english": "no",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on ei.",
+    "exampleEnglish": "This is no."
+  },
+  {
+    "id": "aalto-ei-erikoista-nothing-special-nothing-much",
+    "level": "A1",
+    "german": "Ei erikoista.",
+    "english": "Nothing special. Nothing much.",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Ei erikoista..",
+    "exampleEnglish": "This place is Nothing special. Nothing much.."
+  },
+  {
+    "id": "aalto-ei-se-mitaan-never-mind",
+    "level": "A1",
+    "german": "Ei se mitään.",
+    "english": "Never mind.",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Ei se mitään..",
+    "exampleEnglish": "This place is Never mind.."
+  },
+  {
+    "id": "aalto-eilen-yesterday",
+    "level": "A1",
+    "german": "eilen",
+    "english": "yesterday",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa eilen.",
+    "exampleEnglish": "Today we practise the word yesterday."
+  },
+  {
+    "id": "aalto-elokuu-august",
+    "level": "A1",
+    "german": "elokuu",
+    "english": "August",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa elokuu.",
+    "exampleEnglish": "Today we practise the word August."
+  },
+  {
+    "id": "aalto-englanti-kieli-english-language",
+    "level": "A1",
+    "german": "englanti (kieli)",
+    "english": "English (language)",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on englanti (kieli).",
+    "exampleEnglish": "This is English (language)."
+  },
+  {
+    "id": "aalto-englantilainen-english-person",
+    "level": "A1",
+    "german": "englantilainen",
+    "english": "English (person)",
+    "category": "People",
+    "exampleGerman": "Tämä on englantilainen.",
+    "exampleEnglish": "This is English (person)."
+  },
+  {
+    "id": "aalto-enta-sinulle-and-you",
+    "level": "A1",
+    "german": "Entä sinulle?",
+    "english": "And you?",
+    "category": "Places",
+    "exampleGerman": "Entä sinulle?",
+    "exampleEnglish": "And you?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-espanja-spain",
+    "level": "A1",
+    "german": "Espanja",
+    "english": "Spain",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Espanja.",
+    "exampleEnglish": "This place is Spain."
+  },
+  {
+    "id": "aalto-espanja-kieli-spanish-language",
+    "level": "A1",
+    "german": "espanja (kieli)",
+    "english": "Spanish (language)",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on espanja (kieli).",
+    "exampleEnglish": "This is Spanish (language)."
+  },
+  {
+    "id": "aalto-espanjalainen-spanish-person",
+    "level": "A1",
+    "german": "espanjalainen",
+    "english": "Spanish (person)",
+    "category": "People",
+    "exampleGerman": "Tämä on espanjalainen.",
+    "exampleEnglish": "This is Spanish (person)."
+  },
+  {
+    "id": "aalto-etela-korea-south-korea",
+    "level": "A1",
+    "german": "Etelä-Korea",
+    "english": "South Korea",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Etelä-Korea.",
+    "exampleEnglish": "This place is South Korea."
+  },
+  {
+    "id": "aalto-etunimi-first-name",
+    "level": "A1",
+    "german": "etunimi",
+    "english": "first name",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on etunimi.",
+    "exampleEnglish": "This is first name."
+  },
+  {
+    "id": "aalto-eurooppa-europe",
+    "level": "A1",
+    "german": "Eurooppa",
+    "english": "Europe",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Eurooppa.",
+    "exampleEnglish": "This place is Europe."
+  },
+  {
+    "id": "aalto-farmaseutti-pharmacist",
+    "level": "A1",
+    "german": "farmaseutti",
+    "english": "pharmacist",
+    "category": "People",
+    "exampleGerman": "Tämä on farmaseutti.",
+    "exampleEnglish": "This is pharmacist."
+  },
+  {
+    "id": "aalto-hakemus-form",
+    "level": "A1",
+    "german": "hakemus",
+    "english": "form",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on hakemus.",
+    "exampleEnglish": "This is form."
+  },
+  {
+    "id": "aalto-haluatko-kahvia-do-you-want-some-coffee",
+    "level": "A1",
+    "german": "Haluatko kahvia?",
+    "english": "Do you want some coffee?",
+    "category": "Food & drink",
+    "exampleGerman": "Haluatko kahvia?",
+    "exampleEnglish": "Do you want some coffee?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-haluta-to-want",
+    "level": "A1",
+    "german": "haluta",
+    "english": "to want",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin haluta.",
+    "exampleEnglish": "I can want.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-hauska-tutustua-hauska-tavata-nice-to-meet-you",
+    "level": "A1",
+    "german": "Hauska tutustua! Hauska tavata!",
+    "english": "Nice to meet you!",
+    "category": "Greetings",
+    "exampleGerman": "Hauska tutustua! Hauska tavata!",
+    "exampleEnglish": "Nice to meet you!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-he-they",
+    "level": "A1",
+    "german": "he",
+    "english": "they",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on he.",
+    "exampleEnglish": "This is they."
+  },
+  {
+    "id": "aalto-hei-hello-hi",
+    "level": "A1",
+    "german": "Hei!",
+    "english": "Hello! Hi!",
+    "category": "Greetings",
+    "exampleGerman": "Hei!",
+    "exampleEnglish": "Hello! Hi!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-heidan-their-theirs",
+    "level": "A1",
+    "german": "heidän",
+    "english": "their, theirs",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on heidän.",
+    "exampleEnglish": "This is their, theirs."
+  },
+  {
+    "id": "aalto-heinakuu-july",
+    "level": "A1",
+    "german": "heinäkuu",
+    "english": "July",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa heinäkuu.",
+    "exampleEnglish": "Today we practise the word July."
+  },
+  {
+    "id": "aalto-helmikuu-february",
+    "level": "A1",
+    "german": "helmikuu",
+    "english": "February",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa helmikuu.",
+    "exampleEnglish": "Today we practise the word February."
+  },
+  {
+    "id": "aalto-henkilotunnus-social-security-number",
+    "level": "A1",
+    "german": "henkilötunnus",
+    "english": "social security number",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on henkilötunnus.",
+    "exampleEnglish": "This is social security number."
+  },
+  {
+    "id": "aalto-hollantilainen-dutch-person",
+    "level": "A1",
+    "german": "hollantilainen",
+    "english": "Dutch (person)",
+    "category": "People",
+    "exampleGerman": "Tämä on hollantilainen.",
+    "exampleEnglish": "This is Dutch (person)."
+  },
+  {
+    "id": "aalto-huhtikuu-april",
+    "level": "A1",
+    "german": "huhtikuu",
+    "english": "April",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa huhtikuu.",
+    "exampleEnglish": "Today we practise the word April."
+  },
+  {
+    "id": "aalto-huomenna-tomorrow",
+    "level": "A1",
+    "german": "huomenna",
+    "english": "tomorrow",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa huomenna.",
+    "exampleEnglish": "Today we practise the word tomorrow."
+  },
+  {
+    "id": "aalto-huomenta-morning",
+    "level": "A1",
+    "german": "Huomenta!",
+    "english": "Morning!",
+    "category": "Time",
+    "exampleGerman": "Huomenta!",
+    "exampleEnglish": "Morning!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-hylly-shelf",
+    "level": "A1",
+    "german": "hylly",
+    "english": "shelf",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on hylly.",
+    "exampleEnglish": "This is shelf."
+  },
+  {
+    "id": "aalto-hyva-good",
+    "level": "A1",
+    "german": "hyvä",
+    "english": "good",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on hyvä.",
+    "exampleEnglish": "This is good."
+  },
+  {
+    "id": "aalto-hyvaa-huomenta-good-morning",
+    "level": "A1",
+    "german": "Hyvää huomenta!",
+    "english": "Good Morning!",
+    "category": "Greetings",
+    "exampleGerman": "Hyvää huomenta!",
+    "exampleEnglish": "Good Morning!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-hyvaa-iltaa-good-evening",
+    "level": "A1",
+    "german": "Hyvää iltaa!",
+    "english": "Good Evening!",
+    "category": "Greetings",
+    "exampleGerman": "Hyvää iltaa!",
+    "exampleEnglish": "Good Evening!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-hyvaa-paivaa-hello-good-day",
+    "level": "A1",
+    "german": "Hyvää päivää!",
+    "english": "Hello! Good Day!",
+    "category": "Greetings",
+    "exampleGerman": "Hyvää päivää!",
+    "exampleEnglish": "Hello! Good Day!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-han-she-he",
+    "level": "A1",
+    "german": "hän",
+    "english": "she, he",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on hän.",
+    "exampleEnglish": "This is she, he."
+  },
+  {
+    "id": "aalto-hanen-her-hers-his",
+    "level": "A1",
+    "german": "hänen",
+    "english": "her, hers, his",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on hänen.",
+    "exampleEnglish": "This is her, hers, his."
+  },
+  {
+    "id": "aalto-idoli-idol",
+    "level": "A1",
+    "german": "idoli",
+    "english": "idol",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on idoli.",
+    "exampleEnglish": "This is idol."
+  },
+  {
+    "id": "aalto-ihan-hyvin-quite-good",
+    "level": "A1",
+    "german": "Ihan hyvin.",
+    "english": "Quite good.",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Ihan hyvin..",
+    "exampleEnglish": "This place is Quite good.."
+  },
+  {
+    "id": "aalto-ihan-hyvaa-kiitos-quite-good-thank-you",
+    "level": "A1",
+    "german": "Ihan hyvää, kiitos.",
+    "english": "Quite good, thank you.",
+    "category": "Greetings",
+    "exampleGerman": "Tämä on Ihan hyvää, kiitos..",
+    "exampleEnglish": "This is Quite good, thank you.."
+  },
+  {
+    "id": "aalto-illallinen-a-dinner",
+    "level": "A1",
+    "german": "illallinen",
+    "english": "a dinner",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on illallinen.",
+    "exampleEnglish": "This is a dinner."
+  },
+  {
+    "id": "aalto-ilta-evening",
+    "level": "A1",
+    "german": "ilta",
+    "english": "evening",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa ilta.",
+    "exampleEnglish": "Today we practise the word evening."
+  },
+  {
+    "id": "aalto-iltaa-evening",
+    "level": "A1",
+    "german": "Iltaa!",
+    "english": "Evening!",
+    "category": "Time",
+    "exampleGerman": "Iltaa!",
+    "exampleEnglish": "Evening!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-intia-india",
+    "level": "A1",
+    "german": "Intia",
+    "english": "India",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Intia.",
+    "exampleEnglish": "This place is India."
+  },
+  {
+    "id": "aalto-irlanti-ireland",
+    "level": "A1",
+    "german": "Irlanti",
+    "english": "Ireland",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Irlanti.",
+    "exampleEnglish": "This place is Ireland."
+  },
+  {
+    "id": "aalto-islanti-iceland",
+    "level": "A1",
+    "german": "Islanti",
+    "english": "Iceland",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Islanti.",
+    "exampleEnglish": "This place is Iceland."
+  },
+  {
+    "id": "aalto-iso-big",
+    "level": "A1",
+    "german": "iso",
+    "english": "big",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on iso.",
+    "exampleEnglish": "This is big."
+  },
+  {
+    "id": "aalto-iso-britannia-great-britain",
+    "level": "A1",
+    "german": "Iso-Britannia",
+    "english": "Great Britain",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Iso-Britannia.",
+    "exampleEnglish": "This place is Great Britain."
+  },
+  {
+    "id": "aalto-italia-italy",
+    "level": "A1",
+    "german": "Italia",
+    "english": "Italy",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Italia.",
+    "exampleEnglish": "This place is Italy."
+  },
+  {
+    "id": "aalto-italialainen-italian-person",
+    "level": "A1",
+    "german": "italialainen",
+    "english": "Italian (person)",
+    "category": "People",
+    "exampleGerman": "Tämä on italialainen.",
+    "exampleEnglish": "This is Italian (person)."
+  },
+  {
+    "id": "aalto-itavalta-austria",
+    "level": "A1",
+    "german": "Itävalta",
+    "english": "Austria",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Itävalta.",
+    "exampleEnglish": "This place is Austria."
+  },
+  {
+    "id": "aalto-japani-japan",
+    "level": "A1",
+    "german": "Japani",
+    "english": "Japan",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Japani.",
+    "exampleEnglish": "This place is Japan."
+  },
+  {
+    "id": "aalto-joo-yes",
+    "level": "A1",
+    "german": "Joo",
+    "english": "Yes",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Joo.",
+    "exampleEnglish": "This place is Yes."
+  },
+  {
+    "id": "aalto-joulukuu-december",
+    "level": "A1",
+    "german": "joulukuu",
+    "english": "December",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa joulukuu.",
+    "exampleEnglish": "Today we practise the word December."
+  },
+  {
+    "id": "aalto-juna-a-train",
+    "level": "A1",
+    "german": "juna",
+    "english": "a train",
+    "category": "Travel",
+    "exampleGerman": "Juna on ajoissa.",
+    "exampleEnglish": "The train is on time."
+  },
+  {
+    "id": "aalto-juoda-to-drink",
+    "level": "A1",
+    "german": "juoda",
+    "english": "to drink",
+    "category": "Verbs",
+    "exampleGerman": "Juomme vettä kotona.",
+    "exampleEnglish": "We drink water at home.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-juusto-cheese",
+    "level": "A1",
+    "german": "juusto",
+    "english": "cheese",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on juusto.",
+    "exampleEnglish": "This is cheese."
+  },
+  {
+    "id": "aalto-jaatelo-ice-cream",
+    "level": "A1",
+    "german": "jäätelö",
+    "english": "ice cream",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on jäätelö.",
+    "exampleEnglish": "This is ice cream."
+  },
+  {
+    "id": "aalto-kaali-a-cabbage-a-cole",
+    "level": "A1",
+    "german": "kaali",
+    "english": "a cabbage, a cole",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kaali.",
+    "exampleEnglish": "This is a cabbage, a cole."
+  },
+  {
+    "id": "aalto-kahvi-coffee",
+    "level": "A1",
+    "german": "kahvi",
+    "english": "coffee",
+    "category": "Food & drink",
+    "exampleGerman": "Juon kahvia iltapäivällä.",
+    "exampleEnglish": "I drink coffee in the afternoon."
+  },
+  {
+    "id": "aalto-kahvila-a-cafe",
+    "level": "A1",
+    "german": "kahvila",
+    "english": "a café",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kahvila.",
+    "exampleEnglish": "This is a café."
+  },
+  {
+    "id": "aalto-kakku-a-cake",
+    "level": "A1",
+    "german": "kakku",
+    "english": "a cake",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kakku.",
+    "exampleEnglish": "This is a cake."
+  },
+  {
+    "id": "aalto-kala-fish",
+    "level": "A1",
+    "german": "kala",
+    "english": "fish",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kala.",
+    "exampleEnglish": "This is fish."
+  },
+  {
+    "id": "aalto-kalatiski-a-fish-counter",
+    "level": "A1",
+    "german": "kalatiski",
+    "english": "a fish counter",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kalatiski.",
+    "exampleEnglish": "This is a fish counter."
+  },
+  {
+    "id": "aalto-kana-chicken",
+    "level": "A1",
+    "german": "kana",
+    "english": "chicken",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kana.",
+    "exampleEnglish": "This is chicken."
+  },
+  {
+    "id": "aalto-kanada-canada",
+    "level": "A1",
+    "german": "Kanada",
+    "english": "Canada",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Kanada.",
+    "exampleEnglish": "This place is Canada."
+  },
+  {
+    "id": "aalto-kandiopinnot-bachelor-s-degree-program",
+    "level": "A1",
+    "german": "kandiopinnot",
+    "english": "bachelor’s degree program",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kandiopinnot.",
+    "exampleEnglish": "This is bachelor’s degree program."
+  },
+  {
+    "id": "aalto-kanssa-with",
+    "level": "A1",
+    "german": "kanssa",
+    "english": "with",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kanssa.",
+    "exampleEnglish": "This is with."
+  },
+  {
+    "id": "aalto-karkki-a-candy",
+    "level": "A1",
+    "german": "karkki",
+    "english": "a candy",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on karkki.",
+    "exampleEnglish": "This is a candy."
+  },
+  {
+    "id": "aalto-kassanhoitaja-cashier",
+    "level": "A1",
+    "german": "kassanhoitaja",
+    "english": "cashier",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kassanhoitaja.",
+    "exampleEnglish": "This is cashier."
+  },
+  {
+    "id": "aalto-kastike-gravy",
+    "level": "A1",
+    "german": "kastike",
+    "english": "gravy",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kastike.",
+    "exampleEnglish": "This is gravy."
+  },
+  {
+    "id": "aalto-katu-a-street",
+    "level": "A1",
+    "german": "katu",
+    "english": "a street",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on katu.",
+    "exampleEnglish": "This is a street."
+  },
+  {
+    "id": "aalto-kauppa-a-shop",
+    "level": "A1",
+    "german": "kauppa",
+    "english": "a shop",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kauppa.",
+    "exampleEnglish": "This is a shop."
+  },
+  {
+    "id": "aalto-kauppatiede-economics",
+    "level": "A1",
+    "german": "kauppatiede",
+    "english": "economics",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kauppatiede.",
+    "exampleEnglish": "This is economics."
+  },
+  {
+    "id": "aalto-kaupunki-city",
+    "level": "A1",
+    "german": "kaupunki",
+    "english": "city",
+    "category": "Places",
+    "exampleGerman": "Helsinki on kaunis kaupunki.",
+    "exampleEnglish": "Helsinki is a beautiful city."
+  },
+  {
+    "id": "aalto-keksi-a-biscuit",
+    "level": "A1",
+    "german": "keksi",
+    "english": "a biscuit",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on keksi.",
+    "exampleEnglish": "This is a biscuit."
+  },
+  {
+    "id": "aalto-kello-a-clock",
+    "level": "A1",
+    "german": "kello",
+    "english": "a clock",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kello.",
+    "exampleEnglish": "This is a clock."
+  },
+  {
+    "id": "aalto-kemia-chemistry",
+    "level": "A1",
+    "german": "kemia",
+    "english": "chemistry",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kemia.",
+    "exampleEnglish": "This is chemistry."
+  },
+  {
+    "id": "aalto-keskiviikko-wednesday",
+    "level": "A1",
+    "german": "keskiviikko",
+    "english": "Wednesday",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa keskiviikko.",
+    "exampleEnglish": "Today we practise the word Wednesday."
+  },
+  {
+    "id": "aalto-keskusta-city-center",
+    "level": "A1",
+    "german": "keskusta",
+    "english": "(city) center",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on keskusta.",
+    "exampleEnglish": "This place is (city) center."
+  },
+  {
+    "id": "aalto-kesa-summer",
+    "level": "A1",
+    "german": "kesä",
+    "english": "summer",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on kesä.",
+    "exampleEnglish": "Today the word is summer."
+  },
+  {
+    "id": "aalto-kesakuu-june",
+    "level": "A1",
+    "german": "kesäkuu",
+    "english": "June",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa kesäkuu.",
+    "exampleEnglish": "Today we practise the word June."
+  },
+  {
+    "id": "aalto-kevat-spring",
+    "level": "A1",
+    "german": "kevät",
+    "english": "spring",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on kevät.",
+    "exampleEnglish": "Today the word is spring."
+  },
+  {
+    "id": "aalto-kieli-a-language",
+    "level": "A1",
+    "german": "kieli",
+    "english": "a language",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on kieli.",
+    "exampleEnglish": "This is a language."
+  },
+  {
+    "id": "aalto-kiina-china",
+    "level": "A1",
+    "german": "Kiina",
+    "english": "China",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Kiina.",
+    "exampleEnglish": "This place is China."
+  },
+  {
+    "id": "aalto-kiina-kieli-chinese-language",
+    "level": "A1",
+    "german": "kiina (kieli)",
+    "english": "Chinese (language)",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on kiina (kieli).",
+    "exampleEnglish": "This is Chinese (language)."
+  },
+  {
+    "id": "aalto-kiitos-thank-you",
+    "level": "A1",
+    "german": "Kiitos!",
+    "english": "Thank you!",
+    "category": "Greetings",
+    "exampleGerman": "Kiitos!",
+    "exampleEnglish": "Thank you!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-kiitti-thanks-colloquial",
+    "level": "A1",
+    "german": "kiitti",
+    "english": "thanks (colloquial)",
+    "category": "Greetings",
+    "exampleGerman": "Tämä on kiitti.",
+    "exampleEnglish": "This is thanks (colloquial)."
+  },
+  {
+    "id": "aalto-kiitti-thanks",
+    "level": "A1",
+    "german": "Kiitti!",
+    "english": "Thanks!",
+    "category": "Greetings",
+    "exampleGerman": "Kiitti!",
+    "exampleEnglish": "Thanks!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-kioski-a-kiosk",
+    "level": "A1",
+    "german": "kioski",
+    "english": "a kiosk",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on kioski.",
+    "exampleEnglish": "This place is a kiosk."
+  },
+  {
+    "id": "aalto-kirja-a-book",
+    "level": "A1",
+    "german": "kirja",
+    "english": "a book",
+    "category": "Study",
+    "exampleGerman": "Kirja on pöydällä.",
+    "exampleEnglish": "The book is on the table."
+  },
+  {
+    "id": "aalto-kirjasto-a-library",
+    "level": "A1",
+    "german": "kirjasto",
+    "english": "a library",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on kirjasto.",
+    "exampleEnglish": "This place is a library."
+  },
+  {
+    "id": "aalto-kirjastokortti-library-card",
+    "level": "A1",
+    "german": "kirjastokortti",
+    "english": "library card",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on kirjastokortti.",
+    "exampleEnglish": "This place is library card."
+  },
+  {
+    "id": "aalto-kirkko-a-church",
+    "level": "A1",
+    "german": "kirkko",
+    "english": "a church",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on kirkko.",
+    "exampleEnglish": "This place is a church."
+  },
+  {
+    "id": "aalto-kiva-nice",
+    "level": "A1",
+    "german": "kiva",
+    "english": "nice",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kiva.",
+    "exampleEnglish": "This is nice."
+  },
+  {
+    "id": "aalto-konsertti-a-concert",
+    "level": "A1",
+    "german": "konsertti",
+    "english": "a concert",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on konsertti.",
+    "exampleEnglish": "This is a concert."
+  },
+  {
+    "id": "aalto-kortti-a-card",
+    "level": "A1",
+    "german": "kortti",
+    "english": "a card",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kortti.",
+    "exampleEnglish": "This is a card."
+  },
+  {
+    "id": "aalto-koti-a-home",
+    "level": "A1",
+    "german": "koti",
+    "english": "a home",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on koti.",
+    "exampleEnglish": "This place is a home."
+  },
+  {
+    "id": "aalto-kotoisin-a-native-of",
+    "level": "A1",
+    "german": "kotoisin",
+    "english": "a native of",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kotoisin.",
+    "exampleEnglish": "This is a native of."
+  },
+  {
+    "id": "aalto-koulu-a-school",
+    "level": "A1",
+    "german": "koulu",
+    "english": "a school",
+    "category": "Study",
+    "exampleGerman": "Koulu alkaa kahdeksalta.",
+    "exampleEnglish": "School starts at eight."
+  },
+  {
+    "id": "aalto-kreikka-greece",
+    "level": "A1",
+    "german": "Kreikka",
+    "english": "Greece",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Kreikka.",
+    "exampleEnglish": "This place is Greece."
+  },
+  {
+    "id": "aalto-kuitti-a-receipt",
+    "level": "A1",
+    "german": "kuitti",
+    "english": "a receipt",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kuitti.",
+    "exampleEnglish": "This is a receipt."
+  },
+  {
+    "id": "aalto-kuka-who",
+    "level": "A1",
+    "german": "Kuka?",
+    "english": "Who?",
+    "category": "Places",
+    "exampleGerman": "Kuka?",
+    "exampleEnglish": "Who?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-kuppi-a-cup",
+    "level": "A1",
+    "german": "kuppi",
+    "english": "a cup",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kuppi.",
+    "exampleEnglish": "This is a cup."
+  },
+  {
+    "id": "aalto-kurkku-a-cucumber-pickle",
+    "level": "A1",
+    "german": "kurkku",
+    "english": "a cucumber, pickle",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on kurkku.",
+    "exampleEnglish": "This is a cucumber, pickle."
+  },
+  {
+    "id": "aalto-kurssi-a-course",
+    "level": "A1",
+    "german": "kurssi",
+    "english": "a course",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on kurssi.",
+    "exampleEnglish": "This is a course."
+  },
+  {
+    "id": "aalto-kuuma-hot",
+    "level": "A1",
+    "german": "kuuma",
+    "english": "hot",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on kuuma.",
+    "exampleEnglish": "Today the word is hot."
+  },
+  {
+    "id": "aalto-kylla-yes",
+    "level": "A1",
+    "german": "kyllä",
+    "english": "yes",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on kyllä.",
+    "exampleEnglish": "This is yes."
+  },
+  {
+    "id": "aalto-kylma-cold",
+    "level": "A1",
+    "german": "kylmä",
+    "english": "cold",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on kylmä.",
+    "exampleEnglish": "Today the word is cold."
+  },
+  {
+    "id": "aalto-kaantaja-translator",
+    "level": "A1",
+    "german": "kääntäjä",
+    "english": "translator",
+    "category": "People",
+    "exampleGerman": "Tämä on kääntäjä.",
+    "exampleEnglish": "This is translator."
+  },
+  {
+    "id": "aalto-koopenhamina-copenhagen",
+    "level": "A1",
+    "german": "Kööpenhamina",
+    "english": "Copenhagen",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Kööpenhamina.",
+    "exampleEnglish": "This place is Copenhagen."
+  },
+  {
+    "id": "aalto-laituri-a-platform",
+    "level": "A1",
+    "german": "laituri",
+    "english": "a platform",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on laituri.",
+    "exampleEnglish": "This place is a platform."
+  },
+  {
+    "id": "aalto-lasi-a-glass",
+    "level": "A1",
+    "german": "lasi",
+    "english": "a glass",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on lasi.",
+    "exampleEnglish": "This is a glass."
+  },
+  {
+    "id": "aalto-lattia-a-floor",
+    "level": "A1",
+    "german": "lattia",
+    "english": "a floor",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on lattia.",
+    "exampleEnglish": "This is a floor."
+  },
+  {
+    "id": "aalto-lauantai-saturday",
+    "level": "A1",
+    "german": "lauantai",
+    "english": "Saturday",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa lauantai.",
+    "exampleEnglish": "Today we practise the word Saturday."
+  },
+  {
+    "id": "aalto-leffa-a-movie",
+    "level": "A1",
+    "german": "leffa",
+    "english": "a movie",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on leffa.",
+    "exampleEnglish": "This is a movie."
+  },
+  {
+    "id": "aalto-leipa-bread",
+    "level": "A1",
+    "german": "leipä",
+    "english": "bread",
+    "category": "Food & drink",
+    "exampleGerman": "Syön leipää aamiaisella.",
+    "exampleEnglish": "I eat bread at breakfast."
+  },
+  {
+    "id": "aalto-leipatiski-a-bakery-counter",
+    "level": "A1",
+    "german": "leipätiski",
+    "english": "a bakery counter",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on leipätiski.",
+    "exampleEnglish": "This is a bakery counter."
+  },
+  {
+    "id": "aalto-liha-meat",
+    "level": "A1",
+    "german": "liha",
+    "english": "meat",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on liha.",
+    "exampleEnglish": "This is meat."
+  },
+  {
+    "id": "aalto-lihatiski-a-meat-counter",
+    "level": "A1",
+    "german": "lihatiski",
+    "english": "a meat counter",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on lihatiski.",
+    "exampleEnglish": "This is a meat counter."
+  },
+  {
+    "id": "aalto-limu-soft-drink",
+    "level": "A1",
+    "german": "limu",
+    "english": "soft drink",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on limu.",
+    "exampleEnglish": "This is soft drink."
+  },
+  {
+    "id": "aalto-lokakuu-october",
+    "level": "A1",
+    "german": "lokakuu",
+    "english": "October",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa lokakuu.",
+    "exampleEnglish": "Today we practise the word October."
+  },
+  {
+    "id": "aalto-lontoo-london",
+    "level": "A1",
+    "german": "Lontoo",
+    "english": "London",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Lontoo.",
+    "exampleEnglish": "This place is London."
+  },
+  {
+    "id": "aalto-lounais-espanja-southwest-spain",
+    "level": "A1",
+    "german": "Lounais-Espanja",
+    "english": "southwest Spain",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Lounais-Espanja.",
+    "exampleEnglish": "This place is southwest Spain."
+  },
+  {
+    "id": "aalto-lounas-lunch",
+    "level": "A1",
+    "german": "lounas",
+    "english": "lunch",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on lounas.",
+    "exampleEnglish": "This is lunch."
+  },
+  {
+    "id": "aalto-lumi-snow",
+    "level": "A1",
+    "german": "lumi",
+    "english": "snow",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on lumi.",
+    "exampleEnglish": "Today the word is snow."
+  },
+  {
+    "id": "aalto-lahettaa-to-send",
+    "level": "A1",
+    "german": "lähettää",
+    "english": "to send",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin lähettää.",
+    "exampleEnglish": "I can send.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-laakari-a-doctor",
+    "level": "A1",
+    "german": "lääkäri",
+    "english": "a doctor",
+    "category": "People",
+    "exampleGerman": "Tämä on lääkäri.",
+    "exampleEnglish": "This is a doctor."
+  },
+  {
+    "id": "aalto-maaliskuu-march",
+    "level": "A1",
+    "german": "maaliskuu",
+    "english": "March",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa maaliskuu.",
+    "exampleEnglish": "Today we practise the word March."
+  },
+  {
+    "id": "aalto-maanantai-monday",
+    "level": "A1",
+    "german": "maanantai",
+    "english": "Monday",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa maanantai.",
+    "exampleEnglish": "Today we practise the word Monday."
+  },
+  {
+    "id": "aalto-maisteriopinnot-master-s-degree-program",
+    "level": "A1",
+    "german": "maisteriopinnot",
+    "english": "master’s degree program",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on maisteriopinnot.",
+    "exampleEnglish": "This is master’s degree program."
+  },
+  {
+    "id": "aalto-maito-milk",
+    "level": "A1",
+    "german": "maito",
+    "english": "milk",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on maito.",
+    "exampleEnglish": "This is milk."
+  },
+  {
+    "id": "aalto-maksaa-to-cost-to-pay",
+    "level": "A1",
+    "german": "maksaa",
+    "english": "to cost, to pay",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin maksaa.",
+    "exampleEnglish": "I can cost, to pay.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-markkinointi-marketing",
+    "level": "A1",
+    "german": "markkinointi",
+    "english": "marketing",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on markkinointi.",
+    "exampleEnglish": "This is marketing."
+  },
+  {
+    "id": "aalto-marraskuu-november",
+    "level": "A1",
+    "german": "marraskuu",
+    "english": "November",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa marraskuu.",
+    "exampleEnglish": "Today we practise the word November."
+  },
+  {
+    "id": "aalto-matematiikka-mathematics",
+    "level": "A1",
+    "german": "matematiikka",
+    "english": "mathematics",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on matematiikka.",
+    "exampleEnglish": "This is mathematics."
+  },
+  {
+    "id": "aalto-me-we",
+    "level": "A1",
+    "german": "me",
+    "english": "we",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on me.",
+    "exampleEnglish": "This is we."
+  },
+  {
+    "id": "aalto-mehu-juice",
+    "level": "A1",
+    "german": "mehu",
+    "english": "juice",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on mehu.",
+    "exampleEnglish": "This is juice."
+  },
+  {
+    "id": "aalto-meidan-our-ours",
+    "level": "A1",
+    "german": "meidän",
+    "english": "our, ours",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on meidän.",
+    "exampleEnglish": "This is our, ours."
+  },
+  {
+    "id": "aalto-meksiko-mexico",
+    "level": "A1",
+    "german": "Meksiko",
+    "english": "Mexico",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Meksiko.",
+    "exampleEnglish": "This place is Mexico."
+  },
+  {
+    "id": "aalto-menna-to-go",
+    "level": "A1",
+    "german": "mennä",
+    "english": "to go",
+    "category": "Verbs",
+    "exampleGerman": "Menen nyt kouluun.",
+    "exampleEnglish": "I am going to school now.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-mihin-where-to",
+    "level": "A1",
+    "german": "Mihin?",
+    "english": "Where (to)?",
+    "category": "Places",
+    "exampleGerman": "Mihin?",
+    "exampleEnglish": "Where (to)?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-mika-what",
+    "level": "A1",
+    "german": "Mikä?",
+    "english": "What?",
+    "category": "Places",
+    "exampleGerman": "Mikä?",
+    "exampleEnglish": "What?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-minka-maalainen-what-nationality",
+    "level": "A1",
+    "german": "Minkä maalainen?",
+    "english": "What nationality?",
+    "category": "Places",
+    "exampleGerman": "Minkä maalainen?",
+    "exampleEnglish": "What nationality?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-minun-my-mine",
+    "level": "A1",
+    "german": "minun",
+    "english": "my, mine",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on minun.",
+    "exampleEnglish": "This is my, mine."
+  },
+  {
+    "id": "aalto-mina-i",
+    "level": "A1",
+    "german": "minä",
+    "english": "I",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on minä.",
+    "exampleEnglish": "This is I."
+  },
+  {
+    "id": "aalto-mina-olen-i-am",
+    "level": "A1",
+    "german": "Minä olen.",
+    "english": "I am.",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Minä olen..",
+    "exampleEnglish": "This place is I am.."
+  },
+  {
+    "id": "aalto-missa-where",
+    "level": "A1",
+    "german": "Missä?",
+    "english": "Where?",
+    "category": "Places",
+    "exampleGerman": "Missä?",
+    "exampleEnglish": "Where?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-mista-from-where",
+    "level": "A1",
+    "german": "Mistä?",
+    "english": "From where?",
+    "category": "Places",
+    "exampleGerman": "Mistä?",
+    "exampleEnglish": "From where?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-miten-menee-how-is-it-going",
+    "level": "A1",
+    "german": "Miten menee?",
+    "english": "How is it going?",
+    "category": "Places",
+    "exampleGerman": "Miten menee?",
+    "exampleEnglish": "How is it going?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-mita-kuuluu-how-are-you",
+    "level": "A1",
+    "german": "Mitä kuuluu?",
+    "english": "How are you?",
+    "category": "Places",
+    "exampleGerman": "Mitä kuuluu?",
+    "exampleEnglish": "How are you?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-mita-what",
+    "level": "A1",
+    "german": "Mitä?",
+    "english": "What?",
+    "category": "Places",
+    "exampleGerman": "Mitä?",
+    "exampleEnglish": "What?",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-moi-moi-hei-hei-bye-bye",
+    "level": "A1",
+    "german": "Moi moi! Hei hei!",
+    "english": "Bye bye!",
+    "category": "Places",
+    "exampleGerman": "Moi moi! Hei hei!",
+    "exampleEnglish": "Bye bye!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-moi-hi",
+    "level": "A1",
+    "german": "Moi!",
+    "english": "Hi!",
+    "category": "Places",
+    "exampleGerman": "Moi!",
+    "exampleEnglish": "Hi!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-monikko-plural",
+    "level": "A1",
+    "german": "monikko",
+    "english": "plural",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on monikko.",
+    "exampleEnglish": "This is plural."
+  },
+  {
+    "id": "aalto-moskova-moscow",
+    "level": "A1",
+    "german": "Moskova",
+    "english": "Moscow",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Moskova.",
+    "exampleEnglish": "This place is Moscow."
+  },
+  {
+    "id": "aalto-muna-an-egg",
+    "level": "A1",
+    "german": "muna",
+    "english": "an egg",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on muna.",
+    "exampleEnglish": "This is an egg."
+  },
+  {
+    "id": "aalto-muokata-to-edit",
+    "level": "A1",
+    "german": "muokata",
+    "english": "to edit",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin muokata.",
+    "exampleEnglish": "I can edit.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-museo-a-museum",
+    "level": "A1",
+    "german": "museo",
+    "english": "a museum",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on museo.",
+    "exampleEnglish": "This is a museum."
+  },
+  {
+    "id": "aalto-myos-also-too",
+    "level": "A1",
+    "german": "myös",
+    "english": "also, too",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on myös.",
+    "exampleEnglish": "This is also, too."
+  },
+  {
+    "id": "aalto-naimisissa-married",
+    "level": "A1",
+    "german": "naimisissa",
+    "english": "married",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on naimisissa.",
+    "exampleEnglish": "This is married."
+  },
+  {
+    "id": "aalto-nimi-a-name",
+    "level": "A1",
+    "german": "nimi",
+    "english": "a name",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on nimi.",
+    "exampleEnglish": "This is a name."
+  },
+  {
+    "id": "aalto-norja-norway",
+    "level": "A1",
+    "german": "Norja",
+    "english": "Norway",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Norja.",
+    "exampleEnglish": "This place is Norway."
+  },
+  {
+    "id": "aalto-norjalainen-norwegian-person",
+    "level": "A1",
+    "german": "norjalainen",
+    "english": "Norwegian (person)",
+    "category": "People",
+    "exampleGerman": "Tämä on norjalainen.",
+    "exampleEnglish": "This is Norwegian (person)."
+  },
+  {
+    "id": "aalto-numero-a-number",
+    "level": "A1",
+    "german": "numero",
+    "english": "a number",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on numero.",
+    "exampleEnglish": "This is a number."
+  },
+  {
+    "id": "aalto-nahdaan-maanantaina-see-you-on-monday",
+    "level": "A1",
+    "german": "Nähdään maanantaina!",
+    "english": "See you on Monday!",
+    "category": "Time",
+    "exampleGerman": "Nähdään maanantaina!",
+    "exampleEnglish": "See you on Monday!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-nahdaan-see-you",
+    "level": "A1",
+    "german": "Nähdään!",
+    "english": "See you!",
+    "category": "Places",
+    "exampleGerman": "Nähdään!",
+    "exampleEnglish": "See you!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-nama-these",
+    "level": "A1",
+    "german": "nämä",
+    "english": "these",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on nämä.",
+    "exampleEnglish": "This is these."
+  },
+  {
+    "id": "aalto-ole-hyva-here-you-are",
+    "level": "A1",
+    "german": "Ole hyvä!",
+    "english": "Here you are!",
+    "category": "Places",
+    "exampleGerman": "Ole hyvä!",
+    "exampleEnglish": "Here you are!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-olla-to-be",
+    "level": "A1",
+    "german": "olla",
+    "english": "to be",
+    "category": "Verbs",
+    "exampleGerman": "Olen väsynyt tänään.",
+    "exampleEnglish": "I am tired today.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-olla-tyossa-to-work",
+    "level": "A1",
+    "german": "olla (työssä)",
+    "english": "to work",
+    "category": "Work & study",
+    "exampleGerman": "Minä voin olla (työssä).",
+    "exampleEnglish": "I can work.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-olut-beer",
+    "level": "A1",
+    "german": "olut",
+    "english": "beer",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on olut.",
+    "exampleEnglish": "This is beer."
+  },
+  {
+    "id": "aalto-omena-an-apple",
+    "level": "A1",
+    "german": "omena",
+    "english": "an apple",
+    "category": "Food",
+    "exampleGerman": "Omena on makea.",
+    "exampleEnglish": "The apple is sweet."
+  },
+  {
+    "id": "aalto-opettaja-a-teacher",
+    "level": "A1",
+    "german": "opettaja",
+    "english": "a teacher",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on opettaja.",
+    "exampleEnglish": "This is a teacher."
+  },
+  {
+    "id": "aalto-opiskelija-a-student",
+    "level": "A1",
+    "german": "opiskelija",
+    "english": "a student",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on opiskelija.",
+    "exampleEnglish": "This is a student."
+  },
+  {
+    "id": "aalto-opiskella-to-study",
+    "level": "A1",
+    "german": "opiskella",
+    "english": "to study",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin opiskella.",
+    "exampleEnglish": "I can study.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-osoite-address",
+    "level": "A1",
+    "german": "osoite",
+    "english": "address",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on osoite.",
+    "exampleEnglish": "This is address."
+  },
+  {
+    "id": "aalto-ostos-shopping",
+    "level": "A1",
+    "german": "ostos",
+    "english": "shopping",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on ostos.",
+    "exampleEnglish": "This is shopping."
+  },
+  {
+    "id": "aalto-ostoskeskus-a-shopping-center",
+    "level": "A1",
+    "german": "ostoskeskus",
+    "english": "a shopping center",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on ostoskeskus.",
+    "exampleEnglish": "This place is a shopping center."
+  },
+  {
+    "id": "aalto-ottaa-to-take",
+    "level": "A1",
+    "german": "ottaa",
+    "english": "to take",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin ottaa.",
+    "exampleEnglish": "I can take.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-paistaa-to-shine",
+    "level": "A1",
+    "german": "paistaa",
+    "english": "to shine",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin paistaa.",
+    "exampleEnglish": "I can shine.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-paljon-a-lot",
+    "level": "A1",
+    "german": "paljon",
+    "english": "a lot",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on paljon.",
+    "exampleEnglish": "This is a lot."
+  },
+  {
+    "id": "aalto-pankki-a-bank",
+    "level": "A1",
+    "german": "pankki",
+    "english": "a bank",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on pankki.",
+    "exampleEnglish": "This place is a bank."
+  },
+  {
+    "id": "aalto-panna-to-put",
+    "level": "A1",
+    "german": "panna",
+    "english": "to put",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin panna.",
+    "exampleEnglish": "I can put.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-paprika-a-bellpepper",
+    "level": "A1",
+    "german": "paprika",
+    "english": "a bellpepper",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on paprika.",
+    "exampleEnglish": "This is a bellpepper."
+  },
+  {
+    "id": "aalto-pariisi-paris",
+    "level": "A1",
+    "german": "Pariisi",
+    "english": "Paris",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Pariisi.",
+    "exampleEnglish": "This place is Paris."
+  },
+  {
+    "id": "aalto-passi-a-passport",
+    "level": "A1",
+    "german": "passi",
+    "english": "a passport",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on passi.",
+    "exampleEnglish": "This is a passport."
+  },
+  {
+    "id": "aalto-peking-beijing",
+    "level": "A1",
+    "german": "Peking",
+    "english": "Beijing",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Peking.",
+    "exampleEnglish": "This place is Beijing."
+  },
+  {
+    "id": "aalto-perjantai-friday",
+    "level": "A1",
+    "german": "perjantai",
+    "english": "Friday",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa perjantai.",
+    "exampleEnglish": "Today we practise the word Friday."
+  },
+  {
+    "id": "aalto-peruna-a-potato",
+    "level": "A1",
+    "german": "peruna",
+    "english": "a potato",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on peruna.",
+    "exampleEnglish": "This is a potato."
+  },
+  {
+    "id": "aalto-pieni-small",
+    "level": "A1",
+    "german": "pieni",
+    "english": "small",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on pieni.",
+    "exampleEnglish": "This is small."
+  },
+  {
+    "id": "aalto-porkkana-a-carrot",
+    "level": "A1",
+    "german": "porkkana",
+    "english": "a carrot",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on porkkana.",
+    "exampleEnglish": "This is a carrot."
+  },
+  {
+    "id": "aalto-portugali-portugese-languge",
+    "level": "A1",
+    "german": "portugali",
+    "english": "Portugese (languge)",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on portugali.",
+    "exampleEnglish": "This is Portugese (languge)."
+  },
+  {
+    "id": "aalto-postinumero-postal-code",
+    "level": "A1",
+    "german": "postinumero",
+    "english": "postal code",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on postinumero.",
+    "exampleEnglish": "This is postal code."
+  },
+  {
+    "id": "aalto-praha-prague",
+    "level": "A1",
+    "german": "Praha",
+    "english": "Prague",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Praha.",
+    "exampleEnglish": "This place is Prague."
+  },
+  {
+    "id": "aalto-pubi-a-pub",
+    "level": "A1",
+    "german": "pubi",
+    "english": "a pub",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on pubi.",
+    "exampleEnglish": "This is a pub."
+  },
+  {
+    "id": "aalto-puhelinnumero-a-telephone-number",
+    "level": "A1",
+    "german": "puhelinnumero",
+    "english": "a telephone number",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on puhelinnumero.",
+    "exampleEnglish": "This is a telephone number."
+  },
+  {
+    "id": "aalto-puhua-to-speak",
+    "level": "A1",
+    "german": "puhua",
+    "english": "to speak",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin puhua.",
+    "exampleEnglish": "I can speak.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-pulla-a-bun",
+    "level": "A1",
+    "german": "pulla",
+    "english": "a bun",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on pulla.",
+    "exampleEnglish": "This is a bun."
+  },
+  {
+    "id": "aalto-puola-poland",
+    "level": "A1",
+    "german": "Puola",
+    "english": "Poland",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Puola.",
+    "exampleEnglish": "This place is Poland."
+  },
+  {
+    "id": "aalto-pussi-a-plastic-bag",
+    "level": "A1",
+    "german": "pussi",
+    "english": "a (plastic) bag",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on pussi.",
+    "exampleEnglish": "This is a (plastic) bag."
+  },
+  {
+    "id": "aalto-puuro-porridge",
+    "level": "A1",
+    "german": "puuro",
+    "english": "porridge",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on puuro.",
+    "exampleEnglish": "This is porridge."
+  },
+  {
+    "id": "aalto-pysakki-a-bus-stop",
+    "level": "A1",
+    "german": "pysäkki",
+    "english": "a bus stop",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on pysäkki.",
+    "exampleEnglish": "This place is a bus stop."
+  },
+  {
+    "id": "aalto-paiva-day",
+    "level": "A1",
+    "german": "päivä",
+    "english": "day",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa päivä.",
+    "exampleEnglish": "Today we practise the word day."
+  },
+  {
+    "id": "aalto-paivallinen-a-supper",
+    "level": "A1",
+    "german": "päivällinen",
+    "english": "a supper",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on päivällinen.",
+    "exampleEnglish": "This is a supper."
+  },
+  {
+    "id": "aalto-paivaa-hello-good-day",
+    "level": "A1",
+    "german": "Päivää!",
+    "english": "Hello! Good Day!",
+    "category": "Greetings",
+    "exampleGerman": "Päivää!",
+    "exampleEnglish": "Hello! Good Day!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-paaaine-major-main-subject",
+    "level": "A1",
+    "german": "pääaine",
+    "english": "major, main subject",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on pääaine.",
+    "exampleEnglish": "This is major, main subject."
+  },
+  {
+    "id": "aalto-paakaupunki-a-capital",
+    "level": "A1",
+    "german": "pääkaupunki",
+    "english": "a capital",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on pääkaupunki.",
+    "exampleEnglish": "This is a capital."
+  },
+  {
+    "id": "aalto-ranska-france",
+    "level": "A1",
+    "german": "Ranska",
+    "english": "France",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Ranska.",
+    "exampleEnglish": "This place is France."
+  },
+  {
+    "id": "aalto-ranska-kieli-french-language",
+    "level": "A1",
+    "german": "ranska (kieli)",
+    "english": "French (language)",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on ranska (kieli).",
+    "exampleEnglish": "This is French (language)."
+  },
+  {
+    "id": "aalto-ranskalainen-french-person",
+    "level": "A1",
+    "german": "ranskalainen",
+    "english": "French (person)",
+    "category": "People",
+    "exampleGerman": "Tämä on ranskalainen.",
+    "exampleEnglish": "This is French (person)."
+  },
+  {
+    "id": "aalto-rautakauppa-hardware-store",
+    "level": "A1",
+    "german": "rautakauppa",
+    "english": "hardware store",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on rautakauppa.",
+    "exampleEnglish": "This place is hardware store."
+  },
+  {
+    "id": "aalto-ravintola-a-restaurant",
+    "level": "A1",
+    "german": "ravintola",
+    "english": "a restaurant",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on ravintola.",
+    "exampleEnglish": "This is a restaurant."
+  },
+  {
+    "id": "aalto-riisi-rice",
+    "level": "A1",
+    "german": "riisi",
+    "english": "rice",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on riisi.",
+    "exampleEnglish": "This is rice."
+  },
+  {
+    "id": "aalto-rikki-broken",
+    "level": "A1",
+    "german": "rikki",
+    "english": "broken",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on rikki.",
+    "exampleEnglish": "This is broken."
+  },
+  {
+    "id": "aalto-rooma-rome",
+    "level": "A1",
+    "german": "Rooma",
+    "english": "Rome",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Rooma.",
+    "exampleEnglish": "This place is Rome."
+  },
+  {
+    "id": "aalto-ruotsi-sweden",
+    "level": "A1",
+    "german": "Ruotsi",
+    "english": "Sweden",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Ruotsi.",
+    "exampleEnglish": "This place is Sweden."
+  },
+  {
+    "id": "aalto-ruotsi-kieli-swedish-language",
+    "level": "A1",
+    "german": "ruotsi (kieli)",
+    "english": "Swedish (language)",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on ruotsi (kieli).",
+    "exampleEnglish": "This is Swedish (language)."
+  },
+  {
+    "id": "aalto-sairaala-a-hospital",
+    "level": "A1",
+    "german": "sairaala",
+    "english": "a hospital",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on sairaala.",
+    "exampleEnglish": "This place is a hospital."
+  },
+  {
+    "id": "aalto-saksa-germany",
+    "level": "A1",
+    "german": "Saksa",
+    "english": "Germany",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Saksa.",
+    "exampleEnglish": "This place is Germany."
+  },
+  {
+    "id": "aalto-saksa-kieli-german-language",
+    "level": "A1",
+    "german": "saksa (kieli)",
+    "english": "German (language)",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on saksa (kieli).",
+    "exampleEnglish": "This is German (language)."
+  },
+  {
+    "id": "aalto-saksalainen-german",
+    "level": "A1",
+    "german": "saksalainen",
+    "english": "German",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on saksalainen.",
+    "exampleEnglish": "This is German."
+  },
+  {
+    "id": "aalto-salaatti-a-salad-lettuce",
+    "level": "A1",
+    "german": "salaatti",
+    "english": "a salad, lettuce",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on salaatti.",
+    "exampleEnglish": "This is a salad, lettuce."
+  },
+  {
+    "id": "aalto-samoin-you-too",
+    "level": "A1",
+    "german": "Samoin!",
+    "english": "(You) too!",
+    "category": "Places",
+    "exampleGerman": "Samoin!",
+    "exampleEnglish": "(You) too!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-sataa-to-rain",
+    "level": "A1",
+    "german": "sataa",
+    "english": "to rain",
+    "category": "Weather",
+    "exampleGerman": "Minä voin sataa.",
+    "exampleEnglish": "I can rain.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-se-it",
+    "level": "A1",
+    "german": "se",
+    "english": "it",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on se.",
+    "exampleEnglish": "This is it."
+  },
+  {
+    "id": "aalto-sinun-your-yours",
+    "level": "A1",
+    "german": "sinun",
+    "english": "your, yours",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on sinun.",
+    "exampleEnglish": "This is your, yours."
+  },
+  {
+    "id": "aalto-sina-you",
+    "level": "A1",
+    "german": "sinä",
+    "english": "you",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on sinä.",
+    "exampleEnglish": "This is you."
+  },
+  {
+    "id": "aalto-sipuli-an-onion",
+    "level": "A1",
+    "german": "sipuli",
+    "english": "an onion",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on sipuli.",
+    "exampleEnglish": "This is an onion."
+  },
+  {
+    "id": "aalto-sitruuna-a-lemon",
+    "level": "A1",
+    "german": "sitruuna",
+    "english": "a lemon",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on sitruuna.",
+    "exampleEnglish": "This is a lemon."
+  },
+  {
+    "id": "aalto-suklaa-chocolate",
+    "level": "A1",
+    "german": "suklaa",
+    "english": "chocolate",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on suklaa.",
+    "exampleEnglish": "This is chocolate."
+  },
+  {
+    "id": "aalto-sukunimi-last-name",
+    "level": "A1",
+    "german": "sukunimi",
+    "english": "last name",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on sukunimi.",
+    "exampleEnglish": "This is last name."
+  },
+  {
+    "id": "aalto-suljettu-kiinni-closed",
+    "level": "A1",
+    "german": "suljettu, kiinni",
+    "english": "closed",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on suljettu, kiinni.",
+    "exampleEnglish": "This is closed."
+  },
+  {
+    "id": "aalto-sunnuntai-sunday",
+    "level": "A1",
+    "german": "sunnuntai",
+    "english": "Sunday",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa sunnuntai.",
+    "exampleEnglish": "Today we practise the word Sunday."
+  },
+  {
+    "id": "aalto-suomalainen-finnish-person",
+    "level": "A1",
+    "german": "suomalainen",
+    "english": "Finnish (person)",
+    "category": "People",
+    "exampleGerman": "Tämä on suomalainen.",
+    "exampleEnglish": "This is Finnish (person)."
+  },
+  {
+    "id": "aalto-suomi-finland",
+    "level": "A1",
+    "german": "Suomi",
+    "english": "Finland",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Suomi.",
+    "exampleEnglish": "This place is Finland."
+  },
+  {
+    "id": "aalto-suomi-kieli-finnish-language",
+    "level": "A1",
+    "german": "suomi (kieli)",
+    "english": "Finnish (language)",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on suomi (kieli).",
+    "exampleEnglish": "This is Finnish (language)."
+  },
+  {
+    "id": "aalto-syksy-fall",
+    "level": "A1",
+    "german": "syksy",
+    "english": "fall",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on syksy.",
+    "exampleEnglish": "Today the word is fall."
+  },
+  {
+    "id": "aalto-syyskuu-september",
+    "level": "A1",
+    "german": "syyskuu",
+    "english": "September",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa syyskuu.",
+    "exampleEnglish": "Today we practise the word September."
+  },
+  {
+    "id": "aalto-syoda-to-eat",
+    "level": "A1",
+    "german": "syödä",
+    "english": "to eat",
+    "category": "Verbs",
+    "exampleGerman": "Syön keittoa illalla.",
+    "exampleEnglish": "I eat soup in the evening.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-sahkopostiosoite-email-address",
+    "level": "A1",
+    "german": "sähköpostiosoite",
+    "english": "email address",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on sähköpostiosoite.",
+    "exampleEnglish": "This is email address."
+  },
+  {
+    "id": "aalto-taide-art",
+    "level": "A1",
+    "german": "taide",
+    "english": "art",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on taide.",
+    "exampleEnglish": "This is art."
+  },
+  {
+    "id": "aalto-tallinna-tallinn",
+    "level": "A1",
+    "german": "Tallinna",
+    "english": "Tallinn",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Tallinna.",
+    "exampleEnglish": "This place is Tallinn."
+  },
+  {
+    "id": "aalto-talvi-winter",
+    "level": "A1",
+    "german": "talvi",
+    "english": "winter",
+    "category": "Weather",
+    "exampleGerman": "Tänään sana on talvi.",
+    "exampleEnglish": "Today the word is winter."
+  },
+  {
+    "id": "aalto-tammikuu-january",
+    "level": "A1",
+    "german": "tammikuu",
+    "english": "January",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa tammikuu.",
+    "exampleEnglish": "Today we practise the word January."
+  },
+  {
+    "id": "aalto-tanska-denmark",
+    "level": "A1",
+    "german": "Tanska",
+    "english": "Denmark",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Tanska.",
+    "exampleEnglish": "This place is Denmark."
+  },
+  {
+    "id": "aalto-tarjota-to-offer",
+    "level": "A1",
+    "german": "tarjota",
+    "english": "to offer",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin tarjota.",
+    "exampleEnglish": "I can offer.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-te-you-plural",
+    "level": "A1",
+    "german": "te",
+    "english": "you (plural)",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on te.",
+    "exampleEnglish": "This is you (plural)."
+  },
+  {
+    "id": "aalto-teatteri-a-theater",
+    "level": "A1",
+    "german": "teatteri",
+    "english": "a theater",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on teatteri.",
+    "exampleEnglish": "This place is a theater."
+  },
+  {
+    "id": "aalto-tee-tea",
+    "level": "A1",
+    "german": "tee",
+    "english": "tea",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on tee.",
+    "exampleEnglish": "This is tea."
+  },
+  {
+    "id": "aalto-tehda-to-do",
+    "level": "A1",
+    "german": "tehdä",
+    "english": "to do",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin tehdä.",
+    "exampleEnglish": "I can do.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-teidan-your-yours-plural",
+    "level": "A1",
+    "german": "teidän",
+    "english": "your, yours (plural)",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on teidän.",
+    "exampleEnglish": "This is your, yours (plural)."
+  },
+  {
+    "id": "aalto-teknologia-technology",
+    "level": "A1",
+    "german": "teknologia",
+    "english": "technology",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on teknologia.",
+    "exampleEnglish": "This is technology."
+  },
+  {
+    "id": "aalto-terve-hi",
+    "level": "A1",
+    "german": "Terve!",
+    "english": "Hi!",
+    "category": "Places",
+    "exampleGerman": "Terve!",
+    "exampleEnglish": "Hi!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-tervetuloa-welcome",
+    "level": "A1",
+    "german": "Tervetuloa!",
+    "english": "Welcome!",
+    "category": "Greetings",
+    "exampleGerman": "Tervetuloa!",
+    "exampleEnglish": "Welcome!",
+    "grammarNote": "Useful phrase from the Aalto beginner Finnish glossary."
+  },
+  {
+    "id": "aalto-tiistai-tuesday",
+    "level": "A1",
+    "german": "tiistai",
+    "english": "Tuesday",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa tiistai.",
+    "exampleEnglish": "Today we practise the word Tuesday."
+  },
+  {
+    "id": "aalto-tohtoriohjelma-a-doctoral-program",
+    "level": "A1",
+    "german": "tohtoriohjelma",
+    "english": "a doctoral program",
+    "category": "Work & study",
+    "exampleGerman": "Tämä on tohtoriohjelma.",
+    "exampleEnglish": "This is a doctoral program."
+  },
+  {
+    "id": "aalto-tokio-tokyo",
+    "level": "A1",
+    "german": "Tokio",
+    "english": "Tokyo",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Tokio.",
+    "exampleEnglish": "This place is Tokyo."
+  },
+  {
+    "id": "aalto-tomaatti-a-tomato",
+    "level": "A1",
+    "german": "tomaatti",
+    "english": "a tomato",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on tomaatti.",
+    "exampleEnglish": "This is a tomato."
+  },
+  {
+    "id": "aalto-tori-a-market",
+    "level": "A1",
+    "german": "tori",
+    "english": "a market",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on tori.",
+    "exampleEnglish": "This is a market."
+  },
+  {
+    "id": "aalto-torstai-thursday",
+    "level": "A1",
+    "german": "torstai",
+    "english": "Thursday",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa torstai.",
+    "exampleEnglish": "Today we practise the word Thursday."
+  },
+  {
+    "id": "aalto-toukokuu-may",
+    "level": "A1",
+    "german": "toukokuu",
+    "english": "May",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa toukokuu.",
+    "exampleEnglish": "Today we practise the word May."
+  },
+  {
+    "id": "aalto-tsekki-czech-rebublic",
+    "level": "A1",
+    "german": "Tšekki",
+    "english": "Czech Rebublic",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Tšekki.",
+    "exampleEnglish": "This place is Czech Rebublic."
+  },
+  {
+    "id": "aalto-tukholma-stockholm",
+    "level": "A1",
+    "german": "Tukholma",
+    "english": "Stockholm",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Tukholma.",
+    "exampleEnglish": "This place is Stockholm."
+  },
+  {
+    "id": "aalto-tulla-to-come",
+    "level": "A1",
+    "german": "tulla",
+    "english": "to come",
+    "category": "Verbs",
+    "exampleGerman": "Tuletko huomenna?",
+    "exampleEnglish": "Are you coming tomorrow?",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-tuoli-a-chair",
+    "level": "A1",
+    "german": "tuoli",
+    "english": "a chair",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on tuoli.",
+    "exampleEnglish": "This is a chair."
+  },
+  {
+    "id": "aalto-turisti-a-tourist",
+    "level": "A1",
+    "german": "turisti",
+    "english": "a tourist",
+    "category": "Travel",
+    "exampleGerman": "Tämä on turisti.",
+    "exampleEnglish": "This is a tourist."
+  },
+  {
+    "id": "aalto-turkki-turkey",
+    "level": "A1",
+    "german": "Turkki",
+    "english": "Turkey",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Turkki.",
+    "exampleEnglish": "This place is Turkey."
+  },
+  {
+    "id": "aalto-turkkilainen-turkish",
+    "level": "A1",
+    "german": "turkkilainen",
+    "english": "Turkish",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on turkkilainen.",
+    "exampleEnglish": "This is Turkish."
+  },
+  {
+    "id": "aalto-tutkija-researcher-scientist-scholar",
+    "level": "A1",
+    "german": "tutkija",
+    "english": "researcher, scientist, scholar",
+    "category": "People",
+    "exampleGerman": "Tämä on tutkija.",
+    "exampleEnglish": "This is researcher, scientist, scholar."
+  },
+  {
+    "id": "aalto-tuulla-to-blow-wind",
+    "level": "A1",
+    "german": "tuulla",
+    "english": "to blow (wind)",
+    "category": "Weather",
+    "exampleGerman": "Minä voin tuulla.",
+    "exampleEnglish": "I can blow (wind).",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-tyttoystava-a-girlfriend",
+    "level": "A1",
+    "german": "tyttöystävä",
+    "english": "a girlfriend",
+    "category": "People",
+    "exampleGerman": "Tämä on tyttöystävä.",
+    "exampleEnglish": "This is a girlfriend."
+  },
+  {
+    "id": "aalto-tyo-work",
+    "level": "A1",
+    "german": "työ",
+    "english": "work",
+    "category": "Work & study",
+    "exampleGerman": "Työ alkaa yhdeksältä.",
+    "exampleEnglish": "Work starts at nine."
+  },
+  {
+    "id": "aalto-tama-this",
+    "level": "A1",
+    "german": "tämä",
+    "english": "this",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on tämä.",
+    "exampleEnglish": "This is this."
+  },
+  {
+    "id": "aalto-tanaan-today",
+    "level": "A1",
+    "german": "tänään",
+    "english": "today",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa tänään.",
+    "exampleEnglish": "Today we practise the word today."
+  },
+  {
+    "id": "aalto-tassa-here",
+    "level": "A1",
+    "german": "tässä",
+    "english": "here",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on tässä.",
+    "exampleEnglish": "This is here."
+  },
+  {
+    "id": "aalto-taytyy-must-have-to",
+    "level": "A1",
+    "german": "täytyy",
+    "english": "must, have to",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on täytyy.",
+    "exampleEnglish": "This is must, have to."
+  },
+  {
+    "id": "aalto-uimahalli-a-swimming-hall",
+    "level": "A1",
+    "german": "uimahalli",
+    "english": "a swimming hall",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on uimahalli.",
+    "exampleEnglish": "This place is a swimming hall."
+  },
+  {
+    "id": "aalto-vanha-old",
+    "level": "A1",
+    "german": "vanha",
+    "english": "old",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on vanha.",
+    "exampleEnglish": "This is old."
+  },
+  {
+    "id": "aalto-varsova-warsaw",
+    "level": "A1",
+    "german": "Varsova",
+    "english": "Warsaw",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Varsova.",
+    "exampleEnglish": "This place is Warsaw."
+  },
+  {
+    "id": "aalto-venaja-russia",
+    "level": "A1",
+    "german": "Venäjä",
+    "english": "Russia",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Venäjä.",
+    "exampleEnglish": "This place is Russia."
+  },
+  {
+    "id": "aalto-vesi-water",
+    "level": "A1",
+    "german": "vesi",
+    "english": "water",
+    "category": "Food & drink",
+    "exampleGerman": "Juon vettä aamulla.",
+    "exampleEnglish": "I drink water in the morning."
+  },
+  {
+    "id": "aalto-viikonloppu-weekend",
+    "level": "A1",
+    "german": "viikonloppu",
+    "english": "weekend",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa viikonloppu.",
+    "exampleEnglish": "Today we practise the word weekend."
+  },
+  {
+    "id": "aalto-viini-wine",
+    "level": "A1",
+    "german": "viini",
+    "english": "wine",
+    "category": "Food & drink",
+    "exampleGerman": "Tämä on viini.",
+    "exampleEnglish": "This is wine."
+  },
+  {
+    "id": "aalto-viro-estonia",
+    "level": "A1",
+    "german": "Viro",
+    "english": "Estonia",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Viro.",
+    "exampleEnglish": "This place is Estonia."
+  },
+  {
+    "id": "aalto-voida-to-can",
+    "level": "A1",
+    "german": "voida",
+    "english": "to can",
+    "category": "Verbs",
+    "exampleGerman": "Minä voin voida.",
+    "exampleEnglish": "I can can.",
+    "grammarNote": "Aalto glossary marks many verbs with a type number in brackets. LingoGarden removes the number in the card title but keeps the verb as an infinitive."
+  },
+  {
+    "id": "aalto-vuoronumero-a-queuing-number",
+    "level": "A1",
+    "german": "vuoronumero",
+    "english": "a queuing number",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on vuoronumero.",
+    "exampleEnglish": "This is a queuing number."
+  },
+  {
+    "id": "aalto-vuosi-a-year",
+    "level": "A1",
+    "german": "vuosi",
+    "english": "a year",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa vuosi.",
+    "exampleEnglish": "Today we practise the word a year."
+  },
+  {
+    "id": "aalto-wien-vienna",
+    "level": "A1",
+    "german": "Wien",
+    "english": "Vienna",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Wien.",
+    "exampleEnglish": "This place is Vienna."
+  },
+  {
+    "id": "aalto-yhdysvallat-united-states",
+    "level": "A1",
+    "german": "Yhdysvallat",
+    "english": "United States",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on Yhdysvallat.",
+    "exampleEnglish": "This place is United States."
+  },
+  {
+    "id": "aalto-yhdysvaltalainen-american-person",
+    "level": "A1",
+    "german": "yhdysvaltalainen",
+    "english": "American (person)",
+    "category": "People",
+    "exampleGerman": "Tämä on yhdysvaltalainen.",
+    "exampleEnglish": "This is American (person)."
+  },
+  {
+    "id": "aalto-yhteydenottotapa-contact-method",
+    "level": "A1",
+    "german": "yhteydenottotapa",
+    "english": "contact method",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on yhteydenottotapa.",
+    "exampleEnglish": "This is contact method."
+  },
+  {
+    "id": "aalto-yksikko-singular",
+    "level": "A1",
+    "german": "yksikkö",
+    "english": "singular",
+    "category": "Everyday words",
+    "exampleGerman": "Tämä on yksikkö.",
+    "exampleEnglish": "This is singular."
+  },
+  {
+    "id": "aalto-yliopisto-university",
+    "level": "A1",
+    "german": "yliopisto",
+    "english": "university",
+    "category": "Places",
+    "exampleGerman": "Tämä paikka on yliopisto.",
+    "exampleEnglish": "This place is university."
+  },
+  {
+    "id": "aalto-ystava-a-friend",
+    "level": "A1",
+    "german": "ystävä",
+    "english": "a friend",
+    "category": "People",
+    "exampleGerman": "Ystävä tulee tänään.",
+    "exampleEnglish": "A friend is coming today."
+  },
+  {
+    "id": "aalto-yo-night",
+    "level": "A1",
+    "german": "yö",
+    "english": "night",
+    "category": "Time",
+    "exampleGerman": "Tänään harjoittelemme sanaa yö.",
+    "exampleEnglish": "Today we practise the word night."
+  }
+]
