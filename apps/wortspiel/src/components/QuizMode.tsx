@@ -4,10 +4,9 @@ import { createQuizItems } from '../utils/quiz'
 
 interface QuizModeProps {
   cards: VocabularyCard[]
-  languageLabel: string
 }
 
-export function QuizMode({ cards, languageLabel }: QuizModeProps) {
+export function QuizMode({ cards }: QuizModeProps) {
   const [items, setItems] = useState<QuizItem[]>(() => createQuizItems(cards))
   const [currentIndex, setCurrentIndex] = useState(0)
   const [feedback, setFeedback] = useState<string | null>(null)
@@ -59,29 +58,28 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
   }
 
   return (
-    <section className="rounded-[22px] p-2 sm:p-3 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
+    <section>
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-notebook">
+        <span className="rounded-full bg-white/78 px-4 py-2 text-sm font-bold text-notebook">
           Question {currentIndex + 1} of {total}
         </span>
-        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-ink">
+        <span className="rounded-full bg-white/78 px-4 py-2 text-sm font-bold text-ink">
           Score {score}/{Math.max(1, currentIndex + (answeredCorrectly ? 1 : 0))}
         </span>
       </div>
 
-      <div className="mt-3 rounded-[20px] bg-paper/82 p-4 xl:min-h-0 xl:flex-1">
+      <div className="mt-3 rounded-[28px] bg-white/78 p-5 shadow-soft">
         <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
-          {currentItem.type === 'meaning' ? 'Meaning check' : 'Article check'}
+          {currentItem.type === 'meaning' ? 'Clue check' : 'Article check'}
         </p>
         <h3 className="mt-2.5 font-display text-[1.8rem] font-bold leading-tight text-ink">
           {currentItem.type === 'meaning'
-            ? `Choose the English meaning of “${currentItem.prompt}”.`
-            : languageLabel === 'German'
-              ? `Which article fits “${currentItem.prompt}”?`
-              : languageLabel === 'Dutch'
-                ? `Choose de or het for “${currentItem.prompt}”.`
-              : `Match the word “${currentItem.prompt}”.`}
+            ? 'Which German word fits this English clue?'
+            : `Which article fits “${currentItem.prompt}”?`}
         </h3>
+        {currentItem.type === 'meaning' && (
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-notebook">{currentItem.prompt}</p>
+        )}
 
         <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
           {currentItem.choices.map((choice) => (
@@ -89,7 +87,7 @@ export function QuizMode({ cards, languageLabel }: QuizModeProps) {
               key={choice}
               type="button"
               onClick={() => handleChoice(choice)}
-              className="rounded-[18px] bg-paper px-4 py-3 text-left text-base font-bold text-ink transition hover:bg-paper/90"
+              className="rounded-[18px] bg-[#fff8ec] px-4 py-3 text-left text-base font-bold text-ink transition hover:-translate-y-0.5"
             >
               {choice}
             </button>

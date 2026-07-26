@@ -106,13 +106,12 @@ export function PracticeSession({
             totalCards={cards.length}
             onPrevious={goPrevious}
             onNext={goNext}
-            languageLabel={selectedLanguage}
             sentencePlaceholder={sentencePlaceholder}
             onSave={(text) => onSentenceSave(currentCard.id, text)}
           />
         )}
 
-        {mode === 'quiz' && <QuizMode cards={cards} languageLabel={selectedLanguage} />}
+        {mode === 'quiz' && <QuizMode cards={cards} />}
       </div>
     </section>
   )

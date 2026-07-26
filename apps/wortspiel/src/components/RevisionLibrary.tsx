@@ -1,136 +1,57 @@
-import { useEffect, useMemo, useState } from 'react'
-import type { RevisionCollection, VocabularyCard } from '../types'
+import { useEffect, useState } from 'react'
+import type { RevisionCollection } from '../types'
 
 interface RevisionLibraryProps {
-  cards: VocabularyCard[]
   revision: RevisionCollection
-  languageLabel: string
-  allowedViews?: RevisionView[]
-  initialView?: RevisionView
-  title?: string
-  description?: string
+  levelLabel: string
+  cardCount: number
 }
 
-type RevisionView = 'themes' | 'grammar' | 'words'
+type ReviewView = 'themes' | 'grammar'
 
-interface WordBankEntry {
-  key: string
-  label: string
-  translations: string[]
-  category: string
-}
-
-const revisionViews: Array<{ id: RevisionView; label: string }> = [
+const reviewViews: Array<{ id: ReviewView; label: string }> = [
   { id: 'themes', label: 'Topics' },
   { id: 'grammar', label: 'Grammar' },
-  { id: 'words', label: 'Word bank' },
 ]
 
-function getDisplayLabel(card: VocabularyCard) {
-  return card.article ? `${card.article} ${card.german}` : card.german
-}
-
-export function RevisionLibrary({
-  cards,
-  revision,
-  languageLabel,
-  allowedViews = revisionViews.map((item) => item.id),
-  initialView = allowedViews[0] ?? 'themes',
-  title = 'Need a refresher?',
-  description = 'Use topics, grammar, or the word bank when you get stuck.',
-}: RevisionLibraryProps) {
-  const [view, setView] = useState<RevisionView>(initialView)
-  const [query, setQuery] = useState('')
+export function RevisionLibrary({ revision, levelLabel, cardCount }: RevisionLibraryProps) {
+  const [view, setView] = useState<ReviewView>('themes')
   const [selectedThemeId, setSelectedThemeId] = useState(revision.themes[0]?.id ?? '')
   const [selectedGrammarId, setSelectedGrammarId] = useState(revision.grammar[0]?.id ?? '')
-  const visibleViews = revisionViews.filter((item) => allowedViews.includes(item.id))
-
-  const wordBank = useMemo<WordBankEntry[]>(() => {
-    const entries = new Map<string, WordBankEntry>()
-
-    cards.forEach((card) => {
-      const label = getDisplayLabel(card)
-      const key = label.toLowerCase()
-      const existing = entries.get(key)
-
-      if (!existing) {
-        entries.set(key, {
-          key,
-          label,
-          translations: [card.english],
-          category: card.category,
-        })
-        return
-      }
-
-      if (!existing.translations.includes(card.english)) {
-        existing.translations.push(card.english)
-      }
-    })
-
-    return [...entries.values()].sort((left, right) => left.label.localeCompare(right.label))
-  }, [cards])
-
-  const filteredWordBank = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase()
-
-    if (!normalizedQuery) {
-      return wordBank.slice(0, 48)
-    }
-
-    return wordBank
-      .filter((entry) => {
-        const translations = entry.translations.join(' ').toLowerCase()
-        return (
-          entry.label.toLowerCase().includes(normalizedQuery) ||
-          translations.includes(normalizedQuery) ||
-          entry.category.toLowerCase().includes(normalizedQuery)
-        )
-      })
-      .slice(0, 80)
-  }, [query, wordBank])
-
-  const currentConcepts = view === 'themes' ? revision.themes : revision.grammar
-  const selectedConceptId = view === 'themes' ? selectedThemeId : selectedGrammarId
-  const currentConcept =
-    currentConcepts.find((concept) => concept.id === selectedConceptId) ?? currentConcepts[0]
 
   useEffect(() => {
     setSelectedThemeId(revision.themes[0]?.id ?? '')
     setSelectedGrammarId(revision.grammar[0]?.id ?? '')
   }, [revision])
 
-  useEffect(() => {
-    if (!allowedViews.includes(view)) {
-      setView(initialView)
-    }
-  }, [allowedViews, initialView, view])
+  const concepts = view === 'themes' ? revision.themes : revision.grammar
+  const selectedId = view === 'themes' ? selectedThemeId : selectedGrammarId
+  const selectedConcept = concepts.find((concept) => concept.id === selectedId) ?? concepts[0]
 
   return (
-    <section className="flex flex-1 flex-col">
-      <div className="flex flex-wrap items-start justify-between gap-2">
-        <div className="min-w-0">
-          <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-notebook">
-            Review
-          </p>
-          <h2 className="mt-1 font-display text-lg font-bold text-ink">{title}</h2>
-          <p className="mt-1 text-sm leading-5 text-notebook">{description}</p>
-        </div>
+    <section className="mt-6">
+      <div>
+        <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-notebook">
+          Quick reminders
+        </p>
+        <h2 className="mt-2 font-display text-[1.35rem] font-bold text-ink">
+          Revise one idea fast.
+        </h2>
+        <p className="mt-2 text-sm leading-6 text-notebook">
+          {levelLabel} has {cardCount} cards. Pick one topic or one grammar point whenever you need a reset.
+        </p>
       </div>
 
-      <div className={`mt-4 grid gap-2 ${visibleViews.length > 1 ? 'grid-cols-3' : 'grid-cols-1'}`}>
-        {visibleViews.map((item) => {
+      <div className="mt-4 flex flex-wrap gap-2.5">
+        {reviewViews.map((item) => {
           const active = item.id === view
-
           return (
             <button
               key={item.id}
               type="button"
               onClick={() => setView(item.id)}
-              className={`rounded-full px-3 py-2 text-sm font-bold transition ${
-                active
-                  ? 'bg-splash text-white'
-                  : 'bg-paper/78 text-ink hover:bg-paper/92'
+              className={`rounded-full px-4 py-2.5 text-sm font-bold transition ${
+                active ? 'bg-splash text-paper' : 'bg-white text-ink hover:bg-white/90'
               }`}
             >
               {item.label}
@@ -139,97 +60,56 @@ export function RevisionLibrary({
         })}
       </div>
 
-      {view !== 'words' && (
-        <div className="mt-4 flex flex-1 flex-col gap-3">
-          <label className="max-w-xl">
-            <span className="mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
-              {view === 'themes' ? 'Choose a topic' : 'Choose a grammar point'}
-            </span>
-            <div className="relative">
-              <select
-                value={selectedConceptId}
-                onChange={(event) => {
-                  if (view === 'themes') {
-                    setSelectedThemeId(event.target.value)
-                  } else {
-                    setSelectedGrammarId(event.target.value)
-                  }
-                }}
-                className="w-full appearance-none rounded-[16px] border border-line/45 bg-paper/82 px-4 py-2.5 pr-10 text-sm font-bold text-ink outline-none transition focus:border-sun"
-              >
-                {currentConcepts.map((concept) => (
-                  <option key={concept.id} value={concept.id}>
-                    {concept.title}
-                  </option>
-                ))}
-              </select>
-              <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-notebook">
-                v
-              </span>
-            </div>
-          </label>
-
-          {currentConcept && (
-            <article className="flex flex-1 flex-col rounded-[18px] bg-paper/74 p-4">
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
-                {view === 'themes' ? `${languageLabel} topic` : `${languageLabel} grammar note`}
-              </p>
-              <h3 className="mt-1.5 font-display text-base font-bold text-ink">
-                {currentConcept.title}
-              </h3>
-              <p className="mt-1 text-sm leading-5 text-notebook">{currentConcept.summary}</p>
-              <ul className="mt-3 flex flex-wrap gap-2 text-sm text-ink">
-                {currentConcept.bullets.map((bullet) => (
-                  <li key={bullet} className="rounded-full bg-paper/86 px-3 py-2">
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-              {currentConcept.example && (
-                <p className="mt-3 rounded-[14px] bg-paper/88 px-3 py-3 text-sm font-bold leading-6 text-ink">
-                  {currentConcept.example}
-                </p>
-              )}
-            </article>
-          )}
-        </div>
-      )}
-
-      {view === 'words' && (
-        <div className="mt-4">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <label className="min-w-0 flex-1">
-              <span className="sr-only">Search the word bank</span>
-              <input
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder={`Search ${languageLabel.toLowerCase()} or English`}
-                className="w-full rounded-full border border-line/45 bg-paper/82 px-4 py-2.5 text-sm text-ink outline-none transition focus:border-sun"
-              />
-            </label>
-            <div className="rounded-full bg-paper/82 px-3 py-1.5 text-xs font-bold text-ink">
-              {query.trim()
-                ? `${filteredWordBank.length} matches`
-                : `${wordBank.length} words`}
-            </div>
-          </div>
-
-          <div className="mt-3 grid max-h-[20rem] gap-2 overflow-y-auto pr-1 xl:flex-1">
-            {filteredWordBank.map((entry) => (
-              <article
-                key={entry.key}
-                className="rounded-[14px] bg-paper/72 p-2.5"
-              >
-                <p className="font-display text-base font-bold text-ink">{entry.label}</p>
-                <p className="mt-1 text-sm text-notebook">{entry.translations.join(' • ')}</p>
-                <p className="mt-2 text-xs font-extrabold uppercase tracking-[0.18em] text-notebook">
-                  {entry.category}
-                </p>
-              </article>
+      <label className="mt-4 block">
+        <span className="mb-2 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
+          {view === 'themes' ? 'Choose a topic' : 'Choose a grammar point'}
+        </span>
+        <div className="relative">
+          <select
+            value={selectedId}
+            onChange={(event) => {
+              if (view === 'themes') {
+                setSelectedThemeId(event.target.value)
+              } else {
+                setSelectedGrammarId(event.target.value)
+              }
+            }}
+            className="w-full appearance-none rounded-[16px] border border-line/35 bg-white px-4 py-3 pr-10 text-sm font-bold text-ink outline-none transition focus:border-splash"
+          >
+            {concepts.map((concept) => (
+              <option key={concept.id} value={concept.id}>
+                {concept.title}
+              </option>
             ))}
-          </div>
+          </select>
+          <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-notebook">
+            v
+          </span>
         </div>
+      </label>
+
+      {selectedConcept && (
+        <article className="mt-4 rounded-[22px] bg-white/72 px-4 py-4">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-notebook">
+            {view === 'themes' ? `${levelLabel} topic` : `${levelLabel} grammar`}
+          </p>
+          <h3 className="mt-2 font-display text-[1.2rem] font-bold text-ink">
+            {selectedConcept.title}
+          </h3>
+          <p className="mt-2 text-sm leading-6 text-notebook">{selectedConcept.summary}</p>
+          <ul className="mt-4 grid gap-2 text-sm leading-6 text-ink">
+            {selectedConcept.bullets.map((bullet) => (
+              <li key={bullet} className="rounded-[14px] bg-[#fff8ec] px-3 py-2.5">
+                {bullet}
+              </li>
+            ))}
+          </ul>
+          {selectedConcept.example && (
+            <p className="mt-4 rounded-[16px] bg-[#f5f2ff] px-3 py-3 text-sm font-bold leading-6 text-ink">
+              {selectedConcept.example}
+            </p>
+          )}
+        </article>
       )}
     </section>
   )

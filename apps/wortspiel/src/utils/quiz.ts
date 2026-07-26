@@ -12,36 +12,34 @@ function shuffle<T>(items: T[]) {
 }
 
 export function createQuizItems(cards: VocabularyCard[]): QuizItem[] {
+  const displayLabel = (card: VocabularyCard) => (card.article ? `${card.article} ${card.german}` : card.german)
   const meaningCards = shuffle(cards).slice(0, 8)
   const nouns = shuffle(cards.filter((card) => card.article)).slice(0, 6)
-  const articleChoices = [...new Set(cards.map((card) => card.article).filter(Boolean))] as string[]
+  const articleChoices = ['der', 'die', 'das']
 
   const meaningItems = meaningCards.map((card) => {
     const distractors = shuffle(
       cards
         .filter((candidate) => candidate.id !== card.id)
-        .map((candidate) => candidate.english),
+        .map((candidate) => displayLabel(candidate)),
     ).slice(0, 3)
 
     return {
       id: `${card.id}-meaning`,
       type: 'meaning' as const,
-      prompt: card.german,
-      choices: shuffle([card.english, ...distractors]),
-      answer: card.english,
+      prompt: card.english || card.exampleEnglish,
+      choices: shuffle([displayLabel(card), ...distractors]),
+      answer: displayLabel(card),
     }
   })
 
-  const articleItems =
-    articleChoices.length >= 2
-      ? nouns.map((card) => ({
-          id: `${card.id}-article`,
-          type: 'article' as const,
-          prompt: card.german,
-          choices: articleChoices,
-          answer: card.article!,
-        }))
-      : []
+  const articleItems = nouns.map((card) => ({
+    id: `${card.id}-article`,
+    type: 'article' as const,
+    prompt: card.german,
+    choices: articleChoices,
+    answer: card.article!,
+  }))
 
   return shuffle([...meaningItems, ...articleItems])
 }

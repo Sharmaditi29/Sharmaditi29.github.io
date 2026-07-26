@@ -6,7 +6,6 @@ interface SentencePracticeProps {
   answer?: SentenceAnswer
   currentIndex: number
   totalCards: number
-  languageLabel: string
   sentencePlaceholder: string
   onPrevious: () => void
   onNext: () => void
@@ -18,7 +17,6 @@ export function SentencePractice({
   answer,
   currentIndex,
   totalCards,
-  languageLabel,
   sentencePlaceholder,
   onPrevious,
   onNext,
@@ -44,25 +42,25 @@ export function SentencePractice({
   }
 
   return (
-    <section className="rounded-[24px] p-3 sm:p-4 xl:flex xl:h-full xl:min-h-0 xl:flex-col">
+    <section>
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-notebook">
+        <span className="rounded-full bg-white/78 px-4 py-2 text-sm font-bold text-notebook">
           Prompt {currentIndex + 1} of {totalCards}
         </span>
-        <span className="rounded-full bg-paper/82 px-4 py-2 text-sm font-bold text-ink">
+        <span className="rounded-full bg-white/78 px-4 py-2 text-sm font-bold text-ink">
           Use: {card.article ? `${card.article} ${card.german}` : card.german}
         </span>
       </div>
 
-      <div className="mt-4 rounded-[22px] bg-paper/82 p-5 xl:min-h-0 xl:flex-1">
+      <div className="mt-4 rounded-[28px] bg-white/78 p-5 shadow-soft">
         <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
           Write
         </p>
-        <h3 className="mt-2.5 font-display text-[2rem] font-bold leading-tight text-ink">
+        <h3 className="mt-2.5 font-display text-[1.95rem] font-bold leading-tight text-ink">
           Write your own sentence using {card.german}.
         </h3>
         <p className="mt-2 text-sm leading-6 text-notebook">
-          One simple {languageLabel.toLowerCase()} sentence is enough.
+          One simple German sentence is enough.
         </p>
 
         <label className="mt-4 block">
@@ -72,7 +70,7 @@ export function SentencePractice({
             onChange={(event) => setText(event.target.value)}
             rows={4}
             placeholder={sentencePlaceholder}
-            className="w-full rounded-[22px] border border-line/45 bg-paper px-4 py-4 text-base text-ink outline-none transition focus:border-sun"
+            className="w-full rounded-[22px] border border-line/35 bg-white px-4 py-4 text-base text-ink outline-none transition focus:border-splash"
           />
         </label>
 
@@ -93,7 +91,7 @@ export function SentencePractice({
       </div>
 
       {submitted && (
-        <div className="mt-4 rounded-[20px] bg-paper p-4">
+        <div className="mt-4 rounded-[22px] bg-[#fffaf1] p-4">
           <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-notebook">
             Example from the deck
           </p>
@@ -107,14 +105,14 @@ export function SentencePractice({
         <button
           type="button"
           onClick={onPrevious}
-          className="rounded-full bg-paper/82 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-paper"
+          className="rounded-full bg-white/78 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-white"
         >
           Back
         </button>
         <button
           type="button"
           onClick={onNext}
-          className="rounded-full bg-paper/82 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-paper"
+          className="rounded-full bg-white/78 px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-white"
         >
           Next
         </button>

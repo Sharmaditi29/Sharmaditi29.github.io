@@ -1,18 +1,15 @@
 # LingoGarden
 
-LingoGarden is a playful language-learning MVP built with React, TypeScript, Vite, and Tailwind CSS.
+LingoGarden is a simple German study app built with React, TypeScript, Vite, and Tailwind CSS.
 
 ## Features
 
-- Goethe-based German A1 deck with 813 translated practice cards
-- Aalto-based Finnish beginner deck with 313 public glossary cards
-- NT2 TaalMenu-based Dutch beginner deck with 2089 public reference cards
-- Compact revision area with dropdown-based themes, grammar refreshers, and a searchable word bank
+- Goethe-based German A1, A2, and B1 deck with 7277 practice cards
+- Compact revision area with dropdown-based themes and grammar refreshers
 - Flashcard mode with meaning reveal, example sentences, and review buttons
 - Sentence practice with saved answers in local storage
 - Quiz mode with meaning checks and article challenges
-- Progress dashboard with review stats, sentence count, and daily streak
-- Local language switching between German, Finnish, and Dutch
+- Daily study targets with review stats, sentence count, and streak tracking
 
 ## Local setup
 
@@ -55,28 +52,20 @@ Then open:
 - `http://localhost:1314/`
 - `http://localhost:1314/Experiments/wortspiel/`
 
-## Refresh the source decks
+## Refresh the source deck
 
-The expanded German deck is generated from a public translated deck based on the Goethe A1 list.
-The expanded Finnish deck is generated from Aalto OpenLearning's public Finnish-English glossary.
-The expanded Dutch deck is generated from NT2 TaalMenu's public A1 vocabulary list.
+The expanded German deck is generated from official Goethe A1, A2, and B1 materials plus a public TSV extraction used to keep example-based English clues attached to the cards.
 
 ```bash
-pnpm run sync:goethe-a1
-pnpm run sync:finnish-a1
-pnpm run sync:dutch-a1
+'/Users/aditis/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3' ./scripts/generate-german-a1-a2-b1.py
 ```
 
 Sources:
 
 - Official Goethe A1 list: `https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf`
-- Public translated deck by patsytau, licensed CC BY-SA 4.0: `https://github.com/patsytau/anki_german_a1_vocab`
-- Aalto Basic Finnish 1 course materials: `https://openlearning.aalto.fi/course/view.php?id=272&lang=en&section=2`
-- Aalto Finnish-English glossary: `https://openlearning.aalto.fi/mod/glossary/view.php?fullsearch=0&hook=ALL&id=3370&mode=letter&page=-1&sortkey=&sortorder=asc`
-- Aalto Finnish Online Grammar: `https://openlearning.aalto.fi/course/view.php?id=158`
-- University of Groningen Dutch Survival Kit: `https://www.rug.nl/language-centre/language-courses/dutch/survival-kit?lang=en`
-- NT2 TaalMenu Dutch A1 vocabulary page: `https://nt2taalmenu.nl/learn-dutch-a1-vocabulary-word-lists-dutch-english/`
-- NT2 TaalMenu Dutch alphabetical vocabulary PDF: `https://nt2taalmenu.nl/nt2/lijsten/engels_al.pdf`
+- Official Goethe A2 list: `https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf`
+- Official Goethe B1 list: `https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_B1_Wortliste.pdf`
+- Public TSV extraction of Goethe word lists: `https://github.com/ilkermeliksitki/goethe-institute-wordlist`
 
 ## Notes for future versions
 
