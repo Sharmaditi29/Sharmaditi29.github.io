@@ -1,5 +1,5 @@
 {{ if not .IsHome }}
-{{ $anchor := "about" }}
+{{ $anchor := "home" }}
 {{ if or (eq .Title "Projects") (eq .Title "Research") }}{{ $anchor = "projects" }}{{ else if eq .Title "Contact" }}{{ $anchor = "contact" }}{{ end }}
 {{ $target := printf "%s#%s" ("/" | relURL) $anchor }}
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0; url={{ $target }}"><link rel="canonical" href="{{ "/" | absURL }}"><title>Aditi Sharma</title></head><body><p><a href="{{ $target }}">Continue to {{ $anchor }}</a></p></body></html>
@@ -23,7 +23,6 @@
   <nav aria-label="Main navigation">
     <a href="#home" aria-current="page">Home</a>
     <a href="#projects">Projects</a>
-    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
   <details class="appearance"><summary aria-label="Theme settings"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16Z"/></svg></summary><fieldset><legend>Appearance</legend><label><input type="radio" name="appearance" value="auto" checked>Automatic</label><label><input type="radio" name="appearance" value="paper">Warm paper</label><label><input type="radio" name="appearance" value="sage">Sage</label><label><input type="radio" name="appearance" value="ink">Blue ink</label><label><input type="radio" name="appearance" value="night">Night</label></fieldset></details>
@@ -43,10 +42,6 @@
     <div class="section-heading"><p class="eyebrow">Projects</p><h2 id="projects-heading">Selected projects.</h2></div>
     <div>{{ $projectPage := .Site.GetPage "/research" }}{{ $projectsPage := .Site.GetPage "/projects" }}{{ $projects := $projectPage.Params.projects | default $projectsPage.Params.projects }}
     {{ with $projects }}<div class="project-list">{{ range . }}<article><h3>{{ .title }}</h3><p>{{ .description }}</p>{{ with .role }}<p><strong>My contribution</strong><br>{{ . }}</p>{{ end }}{{ with .methods }}<p><strong>Methods</strong><br>{{ . }}</p>{{ end }}{{ with .outcome }}<p><strong>Outcome</strong><br>{{ . }}</p>{{ end }}{{ with .url }}<a class="text-link" href="{{ . }}">View project ↗</a>{{ end }}</article>{{ end }}</div>{{ else }}<div class="project-preview"><p class="section-copy">Detailed project notes are coming soon.</p><p class="project-note">Explore my public repositories on GitHub.</p><a class="resource-link" href="https://github.com/Sharmaditi29"><span>Browse GitHub</span><span aria-hidden="true">↗</span></a></div>{{ end }}</div>
-  </section>
-  <section id="about" class="section wrap single-section" hidden tabindex="-1" aria-labelledby="about-heading">
-    <div class="section-heading"><p class="eyebrow">About</p><h2 id="about-heading">About me.</h2></div>
-    <div class="section-copy about-copy"><p class="about-lead">I’m Aditi, interested in how computation can help us understand biology.</p><p>My research interests span machine learning, deep learning, and the analysis of omics data.</p><div class="personal-detail"><span>Beyond research</span><p>I enjoy exploring new places and photography.</p></div></div>
   </section>
   <section id="contact" class="section wrap single-section" hidden tabindex="-1" aria-labelledby="contact-heading">
     <div class="section-heading"><p class="eyebrow">Contact</p><h2 id="contact-heading">Get in touch.</h2></div>
