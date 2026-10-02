@@ -148,3 +148,43 @@ html { scroll-behavior:smooth; }
   .compact-interests .interest-list h3 { font-size:20px; margin-bottom:5px; }
   .compact-interests .interest-list p { padding-right:30px; }
 }
+
+/* One-screen portfolio: navigation replaces the visible view. */
+[hidden] { display:none!important; }
+html { scroll-behavior:auto; }
+.is-home { min-height:100svh; display:flex; flex-direction:column; }
+.is-home .site-header { flex:0 0 84px; min-height:84px; position:relative; }
+.is-home #main { flex:1; display:flex; min-height:0; }
+.screen-home { width:100%; min-height:calc(100svh - 84px); display:flex; flex-direction:column; }
+.screen-home .hero { flex:1; min-height:0; padding-block:32px; }
+.screen-home .compact-interests { flex:0 0 auto; padding-block:24px; }
+.single-section { align-self:center; padding-block:40px; border:0; }
+.single-section .section-heading h2 { font-size:clamp(28px,3.5vw,44px); }
+@media(max-width:620px) {
+ .is-home .site-header { gap:14px; flex-basis:72px; min-height:72px; padding-block:10px; }
+ .is-home .site-header nav { gap:18px; font-size:15px; }
+ .appearance summary { width:36px; height:36px; }
+ .screen-home { min-height:calc(100svh - 72px); }
+ .screen-home .hero { padding-block:24px; }
+ .screen-home h1 { font-size:clamp(38px,11vw,54px); }
+ .screen-home .hero-statement { font-size:clamp(23px,6.6vw,30px); }
+ .screen-home .compact-interests { padding-block:18px; }
+ .compact-interests .interest-list { gap:16px; }
+ .compact-interests .interest-list h3 { font-size:18px; }
+ .compact-interests .interest-list p { font-size:14px; }
+ .single-section { padding-block:24px; }
+}
+@media(max-height:740px) and (max-width:620px) {
+ .compact-interests .interest-list p { display:none; }
+ .compact-interests .interest-list { gap:12px; }
+ .screen-home .hero-copy h1 { margin-bottom:16px; }
+}
+@media(max-height:500px) and (min-width:621px) {
+ .is-home .site-header { flex-basis:64px; min-height:64px; }
+ .screen-home { min-height:calc(100svh - 64px); }
+ .screen-home h1 { font-size:42px; margin-bottom:12px; }
+ .screen-home .hero-statement { font-size:25px; }
+ .screen-home .hero { padding-block:16px; }
+ .screen-home .compact-interests { padding-block:12px; }
+ .compact-interests .interest-list p { display:none; }
+}
