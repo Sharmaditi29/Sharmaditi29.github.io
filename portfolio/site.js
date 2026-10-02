@@ -1,10 +1,9 @@
 (() => {
-  const choices = ['auto', 'paper', 'sage', 'ink', 'night'];
-  const media = matchMedia('(prefers-color-scheme: dark)');
+  const choices = ['paper', 'sage', 'ink', 'night'];
   let selected = 'paper';
-  try { const saved = localStorage.getItem('portfolio-theme'); if (choices.includes(saved)) selected = saved; } catch {}
+  try { const saved = localStorage.getItem('portfolio-theme'); if (saved === 'auto') selected = 'night'; else if (choices.includes(saved)) selected = saved; } catch {}
   function apply() {
-    document.body.dataset.theme = selected === 'auto' ? (media.matches ? 'night' : 'paper') : selected;
+    document.body.dataset.theme = selected;
     document.querySelectorAll('[name=appearance]').forEach(input => { input.checked = input.value === selected; });
   }
   document.querySelectorAll('[name=appearance]').forEach(input => input.addEventListener('change', () => {
@@ -13,7 +12,6 @@
   const panel = document.querySelector('.appearance');
   document.addEventListener('click', event => { if (!panel.contains(event.target)) panel.open = false; });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && panel.open) { panel.open = false; panel.querySelector('summary').focus(); } });
-  media.addEventListener('change', apply);
   apply();
 })();
 
