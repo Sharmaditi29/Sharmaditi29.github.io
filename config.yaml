@@ -2,6 +2,7 @@ baseURL: https://sharmaditi29.github.io
 languageCode: en-us
 title: Aditi Sharma | Researcher & Artist
 theme: hugo-refresh
+timeout: 180000
 # theme: ../..
 
 #########################################
