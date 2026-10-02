@@ -17,20 +17,31 @@
   apply();
 })();
 
-// Keep navigation in sync with the section being read, without rewriting history.
+// Switch views inside the same page; native hashes preserve shareable links.
 (() => {
-  const links = [...document.querySelectorAll('.site-header nav a[href^="#"]')];
-  const sections = links.map(link => document.querySelector(link.getAttribute('href')));
-  let queued = false;
-  function update() {
-    queued = false;
-    const threshold = document.querySelector('.site-header').getBoundingClientRect().bottom + 100;
-    let active = -1;
-    sections.forEach((section, index) => { if (section && section.getBoundingClientRect().top <= threshold) active = index; });
-    if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) active = sections.length - 1;
-    links.forEach((link, index) => { if (index === active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+  const links = [...document.querySelectorAll('.site-header nav a')];
+  const views = [...document.querySelectorAll('#home, .single-section')];
+  function show(focus = false) {
+    const id = location.hash.slice(1);
+    const current = views.find(view => view.id === id) || views[0];
+    views.forEach(view => { view.hidden = view !== current; });
+    links.forEach(link => {
+      if (link.hash === '#' + current.id) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    if (focus) {
+      const heading = current.querySelector('h1, h2');
+      heading.setAttribute('tabindex', '-1');
+      heading.focus({preventScroll:true});
+    }
+    window.scrollTo(0, 0);
   }
-  addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive:true });
-  addEventListener('resize', update);
-  update();
+  links.forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+    show(true);
+  }));
+  addEventListener('popstate', () => show());
+  addEventListener('hashchange', () => show());
+  show();
 })();
