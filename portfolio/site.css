@@ -232,3 +232,4 @@ body[data-theme=night] #main:has(.single-section:not([hidden]))::before { filter
  .personal-detail p { font-size:16px; }
  .single-section .section-heading h2 { font-size:30px; }
 }
+.single-section .contact-email { max-width:100%; overflow-wrap:anywhere; font-size:clamp(19px,2.5vw,30px); }
