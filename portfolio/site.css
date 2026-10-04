@@ -233,3 +233,23 @@ body[data-theme=night] #main:has(.single-section:not([hidden]))::before { filter
  .single-section .section-heading h2 { font-size:30px; }
 }
 .single-section .contact-email { max-width:100%; overflow-wrap:anywhere; font-size:clamp(19px,2.5vw,30px); }
+
+.project-categories { display:flex; gap:20px; margin-top:28px; }
+.project-categories button { padding:8px 0; border:0; border-bottom:1px solid transparent; background:none; color:var(--muted); cursor:pointer; }
+.project-categories button[aria-pressed=true] { color:var(--ink); border-bottom-color:var(--copper); }
+.project-categories button:focus-visible { outline:2px solid var(--copper); outline-offset:4px; }
+.personal-project { max-width:520px; }
+.project-image { display:block; height:190px; overflow:hidden; border:1px solid var(--rule); margin-bottom:20px; }
+.project-image img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
+.project-kind { font-size:12px; letter-spacing:.06em; color:var(--copper); margin-bottom:8px; }
+.personal-project h3 { font-size:30px; margin-bottom:12px; }
+.personal-project>p:not(.project-kind) { font-size:17px; color:var(--muted); margin-bottom:12px; }
+@media(max-width:620px) {
+ #projects { gap:18px; }
+ #projects .section-heading h2 { font-size:28px; }
+ .project-categories { margin-top:12px; }
+ .project-image { height:120px; margin-bottom:14px; }
+ .personal-project h3 { font-size:26px; margin-bottom:8px; }
+ .personal-project>p:not(.project-kind) { font-size:16px; line-height:1.4; }
+}
+@media(max-height:740px) { .project-image { display:none; } }

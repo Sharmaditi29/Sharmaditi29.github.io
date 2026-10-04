@@ -43,3 +43,14 @@
   addEventListener('hashchange', () => show());
   show();
 })();
+
+// Project categories share the existing Projects view.
+document.querySelectorAll('[data-project-category]').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('[data-project-category]').forEach(item => {
+      const active = item === button;
+      item.setAttribute('aria-pressed', String(active));
+      document.getElementById(item.getAttribute('aria-controls')).hidden = !active;
+    });
+  });
+});
