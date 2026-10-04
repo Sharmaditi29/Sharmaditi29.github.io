@@ -253,3 +253,16 @@ body[data-theme=night] #main:has(.single-section:not([hidden]))::before { filter
  .personal-project>p:not(.project-kind) { font-size:16px; line-height:1.4; }
 }
 @media(max-height:740px) { .project-image { display:none; } }
+
+/* Let the artwork fill the viewport independently of the content width. */
+body.is-home { position:relative; isolation:isolate; }
+.is-home>.hero-background { position:fixed; inset:0; width:100%; height:100%; z-index:-1; overflow:hidden; }
+.is-home>.hero-background img { width:100%; height:100%; object-fit:cover; object-position:center; mask-image:none; opacity:.22; }
+.is-home:has(.single-section:not([hidden]))>.hero-background img { opacity:.09; }
+body[data-theme=night]>.hero-background img { opacity:.19; }
+body[data-theme=night]:has(.single-section:not([hidden]))>.hero-background img { opacity:.08; }
+.is-home .site-header { background:transparent; }
+.is-home #main:has(.single-section:not([hidden]))::before { content:none; }
+@media(max-width:620px) {
+ .is-home>.hero-background img { opacity:.14; object-position:55% center; }
+}
