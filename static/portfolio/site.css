@@ -266,3 +266,12 @@ body[data-theme=night]:has(.single-section:not([hidden]))>.hero-background img {
 @media(max-width:620px) {
  .is-home>.hero-background img { opacity:.14; object-position:55% center; }
 }
+
+/* Perspective on the original artwork, with a projected molecular foreground. */
+.is-home>.hero-background { perspective:1400px; }
+.is-home>.hero-background img { transform:scale(1.06) rotateX(var(--depth-rx,0deg)) rotateY(var(--depth-ry,0deg)); }
+.molecular-depth { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; opacity:.45; }
+body:has(.single-section:not([hidden])) .molecular-depth { display:none; }
+body[data-theme=night] .molecular-depth { opacity:.65; }
+@media(max-width:620px) { .molecular-depth { opacity:.22; } }
+@media(prefers-reduced-motion:reduce) { .is-home>.hero-background img { transform:scale(1.06); } }
