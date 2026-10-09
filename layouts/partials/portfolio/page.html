@@ -42,7 +42,13 @@
     <div class="section-heading"><p class="eyebrow">Projects</p><h2 id="projects-heading">Selected projects.</h2><div class="project-categories" role="group" aria-label="Project category"><button type="button" data-project-category="personal" aria-pressed="true" aria-controls="personal-projects">Personal</button><button type="button" data-project-category="research" aria-pressed="false" aria-controls="research-projects">Research</button></div></div>
     <div id="research-projects" hidden>{{ $projectPage := .Site.GetPage "/research" }}{{ $projectsPage := .Site.GetPage "/projects" }}{{ $projects := $projectPage.Params.projects | default $projectsPage.Params.projects }}
     {{ with $projects }}<div class="project-list">{{ range . }}<article><h3>{{ .title }}</h3><p>{{ .description }}</p>{{ with .role }}<p><strong>My contribution</strong><br>{{ . }}</p>{{ end }}{{ with .methods }}<p><strong>Methods</strong><br>{{ . }}</p>{{ end }}{{ with .outcome }}<p><strong>Outcome</strong><br>{{ . }}</p>{{ end }}{{ with .url }}<a class="text-link" href="{{ . }}">View project ↗</a>{{ end }}</article>{{ end }}</div>{{ else }}<div class="project-preview"><p class="section-copy">Detailed project notes are coming soon.</p></div>{{ end }}</div>
-    <div id="personal-projects" class="project-preview"><p class="section-copy">Personal projects will be added here.</p></div>
+    <article id="personal-projects" class="personal-project">
+      <p class="project-kind">Personal project · German vocabulary</p>
+      <h3>Fünf Minuten Deutsch</h3>
+      <p>A German vocabulary app for five-minute daily practice. Picture flashcards, German–English recall, and immediate feedback help turn unfamiliar words into lasting knowledge.</p>
+      <p>Progress is saved in the browser, with focused practice for words that need another look.</p>
+      <p class="project-kind">Private app</p>
+    </article>
   </section>
   <section id="contact" class="section wrap single-section" hidden tabindex="-1" aria-labelledby="contact-heading">
     <div class="contact-simple">
