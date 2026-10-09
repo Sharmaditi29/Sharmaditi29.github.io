@@ -42,17 +42,14 @@
     <div class="section-heading"><p class="eyebrow">Projects</p><h2 id="projects-heading">Selected projects.</h2><div class="project-categories" role="group" aria-label="Project category"><button type="button" data-project-category="personal" aria-pressed="true" aria-controls="personal-projects">Personal</button><button type="button" data-project-category="research" aria-pressed="false" aria-controls="research-projects">Research</button></div></div>
     <div id="research-projects" hidden>{{ $projectPage := .Site.GetPage "/research" }}{{ $projectsPage := .Site.GetPage "/projects" }}{{ $projects := $projectPage.Params.projects | default $projectsPage.Params.projects }}
     {{ with $projects }}<div class="project-list">{{ range . }}<article><h3>{{ .title }}</h3><p>{{ .description }}</p>{{ with .role }}<p><strong>My contribution</strong><br>{{ . }}</p>{{ end }}{{ with .methods }}<p><strong>Methods</strong><br>{{ . }}</p>{{ end }}{{ with .outcome }}<p><strong>Outcome</strong><br>{{ . }}</p>{{ end }}{{ with .url }}<a class="text-link" href="{{ . }}">View project ↗</a>{{ end }}</article>{{ end }}</div>{{ else }}<div class="project-preview"><p class="section-copy">Detailed project notes are coming soon.</p></div>{{ end }}</div>
-    <article id="personal-projects" class="personal-project">
-      <a class="project-image" href="{{ "Experiments/wortspiel/" | relURL }}" target="_blank" rel="noopener" aria-label="Open LingoGarden in a new tab"><img src="{{ "portfolio/lingogarden-preview.png" | relURL }}" alt="LingoGarden's German study desk with daily practice goals and vocabulary cards" width="1200" height="800"></a>
-      <p class="project-kind">Personal project · Language learning</p>
-      <h3>LingoGarden</h3>
-      <p>A German study companion for small, everyday sessions. Practise A1–B1 vocabulary with flashcards, writing prompts, and short quizzes.</p>
-      <a class="resource-link" href="{{ "Experiments/wortspiel/" | relURL }}" target="_blank" rel="noopener"><span>Open LingoGarden</span><span aria-hidden="true">↗</span></a>
-    </article>
+    <div id="personal-projects" class="project-preview"><p class="section-copy">Personal projects will be added here.</p></div>
   </section>
   <section id="contact" class="section wrap single-section" hidden tabindex="-1" aria-labelledby="contact-heading">
-    <div class="section-heading"><p class="eyebrow">Contact</p><h2 id="contact-heading">Get in touch.</h2></div>
-    <div class="section-copy"><p>For research conversations, collaboration, or questions about my work:</p><a class="contact-email" href="mailto:aditi.sharma.bioinfo@gmail.com">aditi.sharma.bioinfo@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-resources"><a class="resource-link" href="https://github.com/Sharmaditi29"><span>GitHub</span><span aria-hidden="true">↗</span></a><a class="resource-link" href="{{ "portfolio/documents/Aditi_Sharma_CV.pdf" | relURL }}" download="Aditi_Sharma_CV.pdf"><span>Download CV (PDF)</span><span aria-hidden="true">↓</span></a></div></div>
+    <div class="contact-simple">
+      <h2 id="contact-heading">Get in touch.</h2>
+      <a class="contact-address" href="mailto:aditi.sharma.bioinfo@gmail.com">aditi.sharma.bioinfo@gmail.com</a>
+      <div class="contact-links"><a href="https://github.com/Sharmaditi29">GitHub</a><a href="{{ "portfolio/documents/Aditi_Sharma_CV.pdf" | relURL }}" download="Aditi_Sharma_CV.pdf">CV (PDF)</a></div>
+    </div>
   </section>
 </main>
 
