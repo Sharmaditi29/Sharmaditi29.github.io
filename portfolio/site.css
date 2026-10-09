@@ -275,3 +275,11 @@ body:has(.single-section:not([hidden])) .molecular-depth { display:none; }
 body[data-theme=night] .molecular-depth { opacity:.65; }
 @media(max-width:620px) { .molecular-depth { opacity:.22; } }
 @media(prefers-reduced-motion:reduce) { .is-home>.hero-background img { transform:scale(1.06); } }
+
+/* A single quiet contact block. */
+#contact { display:block; }
+.contact-simple { max-width:650px; margin-inline:auto; text-align:center; }
+.contact-simple h2 { font-size:clamp(32px,4vw,48px); letter-spacing:-.035em; margin:0 0 24px; }
+.contact-address { display:inline-block; max-width:100%; overflow-wrap:anywhere; color:var(--accent); font-size:clamp(19px,2.4vw,30px); line-height:1.5; }
+.contact-links { display:flex; justify-content:center; gap:28px; margin-top:24px; font-size:16px; color:var(--muted); }
+.contact-links a { padding:10px 4px; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:5px; }
